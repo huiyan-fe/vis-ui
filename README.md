@@ -33,26 +33,26 @@ npm run examples:build
 ## 目录结构
 ```
 .
-├── lib					// babel打包生成
+├── lib                 // babel打包生成
 │   ├── components 
 │   └── index.js
-├── pages				// 示例页面目录
-│   ├── dist			// 打包后的组件输出
-│   ├── examples		// 示例页面
+├── pages               // 示例页面目录
+│   ├── dist            // 打包后的组件输出
+│   ├── examples        // 示例页面
 │   │   ├── build
-│   │   ├── components	// 编写示例组件
-│   │   ├── index.html	// 示例页面入口
+│   │   ├── components  // 编写示例组件
+│   │   ├── index.html  // 示例页面入口
 │   └── index.html		
-├── src					// UI组件资源文件
-│   ├── components		// 编写组件目录
-│   │   ├── button		// 组件示例（如button）
+├── src                 // UI组件资源文件
+│   ├── components      // 编写组件目录
+│   │   ├── button      // 组件示例（如button）
 │   │   └── style		
-│   │       ├── color	// 配色
-│   │       ├── core	// 基础样式
+│   │       ├── color   // 配色
+│   │       ├── core    // 基础样式
 │   │       ├── index.js// 样式组件入口
 │   │       └── themes	// 主题变量定义
-│   └── index.js		// 组件总入口
-├── static				// 静态资源
+│   └── index.js        // 组件总入口
+├── static              // 静态资源
 ```
 
 ## 编码规范
