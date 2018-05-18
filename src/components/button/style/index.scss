@@ -1,0 +1,11 @@
+@import "../../style/themes/default";
+
+$btn-prefix-cls: #{$vis-prefix}-btn;
+
+.#{$btn-prefix-cls} {
+    border: 1px solid $primary-color;
+
+    &-danger {
+        border: 1px solid $danger-color;
+    }
+}

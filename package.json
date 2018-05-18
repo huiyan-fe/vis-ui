@@ -1,0 +1,47 @@
+{
+  "name": "vis-ui",
+  "version": "1.0.0",
+  "description": "A library of UI components for React",
+  "main": "lib/index.js",
+  "scripts": {
+    "build:lib": "rm -rf lib && babel src -d lib",
+    "build:dist": "webpack",
+    "examples:build": "webpack --config ./pages/examples/webpack.config.js --mode production",
+    "examples": "webpack-dev-server --config ./pages/examples/webpack.config.js --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huiyan-fe/vis-ui.git"
+  },
+  "author": "junior2ran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huiyan-fe/vis-ui/issues"
+  },
+  "homepage": "https://github.com/huiyan-fe/vis-ui#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.11",
+    "cz-conventional-changelog": "^2.1.0",
+    "node-sass": "^4.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-bundle-analyzer": "^2.11.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
