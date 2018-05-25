@@ -1,5 +1,5 @@
 /**
- * file: 主题包括所有颜色/阴影/padding/动画时间/size等变量的定义，以及hover/focus/active/visited等状态的定义 
+ * file: 主题包括所有颜色/阴影/padding/动画时间/size等变量的定义，以及hover/focus/active/visited等状态的定义
  * @author: junior2ran
  * @date: 2018-05-17 19:36:56
  */
@@ -9,5 +9,6 @@
 $vis-prefix : visui;
 
 // -------- Colors -----------
-$primary-color : $blue;
-$danger-color : $red;
+$primary-color : $blue !default;
+$danger-color: $red !default;
+$gay: #fff !default;
