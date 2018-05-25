@@ -34,7 +34,7 @@ npm run examples:build
 ```
 .
 ├── lib                 // babel打包生成
-│   ├── components 
+│   ├── components
 │   └── index.js
 ├── pages               // 示例页面目录
 │   ├── dist            // 打包后的组件输出
@@ -42,11 +42,11 @@ npm run examples:build
 │   │   ├── build
 │   │   ├── components  // 编写示例组件
 │   │   ├── index.html  // 示例页面入口
-│   └── index.html		
+│   └── index.html
 ├── src                 // UI组件资源文件
 │   ├── components      // 编写组件目录
 │   │   ├── button      // 组件示例（如button）
-│   │   └── style		
+│   │   └── style
 │   │       ├── color   // 配色
 │   │       ├── core    // 基础样式
 │   │       ├── index.js// 样式组件入口
@@ -56,6 +56,6 @@ npm run examples:build
 ```
 
 ## 编码规范
-1. 遵循`eslint`和`stylelint`规范，依赖中已（其实还没）安装
+1. 遵循`eslint`和`stylelint`规范，依赖中已安装，规则见配置文件
 2. 注意提交注释请使用`git cz`
 3. 组件开发时请设置`propTypes`和`defaultProps`规范接口传参
