@@ -1,32 +1,59 @@
+@import 'colorPalette';
 /**
  * @file: 调色板
  * @author: junior2ran
  * @date: 2018-05-17 19:42:28
  */
+
+// ---------common---------
 // white
 $white: #ffffff;
 
 // black
 $black: #000000;
 
-// brand red
-$brand-red: #F5533D;
-
-// blue
-$blue: #627CBE;
-// $blue60: mix($black, $blue, 10%);
-
-// blue gray
-$blue-gray: #8890A4;
-
-// yellow
-$yellow: #F39800;
-
-// red
-$red: #E91F1F;
-
-// green
-$green: #8FC320;
-
 // gray
 $gray: #333333;
+
+// ------brand default-------
+// brand red
+$default-brand-red: #F5533D;
+
+// blue
+$default-blue: #627CBE;
+// $default-blue60: mix($black, $blue, 10%);
+
+// blue gray
+$default-blue-gray: #8890A4;
+
+// yellow
+$default-yellow: #F39800;
+
+// red
+$default-red: #E91F1F;
+
+// green
+$default-green: #8FC320;
+
+// ------brand huiyan------
+// brand blue
+$huiyan-brand-blue: #5E87DB;
+$huiyan-brand-blue10: #6E93DE;
+$huiyan-brand-blue30: #8EABE5;
+$huiyan-brand-blue40: #9EB7E9;
+$huiyan-brand-blue60: #BECFF0;
+$huiyan-brand-blue80: #DEE7F7;
+$huiyan-brand-blue90: #EEF2FB;
+
+// brand dark blue
+$huiyan-brand-dark-blue: #1A284D;
+$huiyan-brand-dark-blue10: colorPalette($huiyan-brand-dark-blue, $white, 10);
+
+// blue
+$huiyan-blue: #4E6DF1;
+
+// orange
+$huiyan-orange: #FF6C13;
+
+// green
+$huiyan-green: #67C600;

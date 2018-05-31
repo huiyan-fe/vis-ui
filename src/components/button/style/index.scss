@@ -1,4 +1,4 @@
-@import "../../style/themes/default";
+@import "../../style/themes/huiyan";
 
 $btn-prefix-cls: #{$vis-prefix}-btn;
 
@@ -7,5 +7,6 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
 
     &-danger {
         border: 1px solid $danger-color;
+        background-color: $gay;
     }
 }

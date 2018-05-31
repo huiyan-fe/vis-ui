@@ -4,7 +4,30 @@
 $vis-prefix: visui;
 
 // -------- Colors -----------
-$primary-color: $red;
-$danger-color: $blue;
-$gay: #ccc;
+$deep-color: $huiyan-brand-dark-blue;
+$primary-color: $huiyan-brand-blue;
+$secondary-color: $huiyan-blue;
+$danger-color: $huiyan-orange;
+$success-color: $huiyan-green;
+$gay: $huiyan-brand-dark-blue10; // ?
+
+// ---TEXT---
+$font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
+$font-size-base: 14px;
+$font-size-sm: 12px;
+$text-color: $gray;
+
+// ---NAV---
+$nav-color: $deep-color;
+
+// ---BORDER---
+$border-width: 1px;
+$border-style: solid;
+$border-radius-base: 2px;
+$border-radius-lg: 100px;
+$border-radius-round: 50%;
+
+// ---BUTTON---
+$btn-height-base: 30px;
+$btn-height-sm: 26px;
 

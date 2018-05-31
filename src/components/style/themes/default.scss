@@ -9,6 +9,8 @@
 $vis-prefix : visui;
 
 // -------- Colors -----------
-$primary-color : $blue !default;
-$danger-color: $red !default;
+$primary-color : $default-brand-red !default;
+$danger-color: $default-red !default;
+$warning-color: $default-yellow !default;
+$success-color: $default-green !default;
 $gay: #fff !default;

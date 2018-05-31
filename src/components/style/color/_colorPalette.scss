@@ -1,0 +1,5 @@
+@function colorPalette ($base-color:#000, $add-color:#fff, $add-percent:0) {
+    $percent: 100 / (100 + $add-percent);
+    $return: mix($base-color, $add-color, $percent*100);
+    @return $return;
+}
