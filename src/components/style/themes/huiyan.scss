@@ -6,11 +6,20 @@ $vis-prefix: visui;
 // -------- Colors -----------
 $deep-color: $huiyan-brand-dark-blue;
 $primary-color: $huiyan-brand-blue;
-$primary-color-w8: $huiyan-brand-blue80;
 $secondary-color: $huiyan-blue;
 $danger-color: $huiyan-orange;
 $success-color: $huiyan-green;
-$gay: $huiyan-brand-dark-blue10; // ?
+
+$primary-color-w1: $huiyan-brand-blue-w10;
+$primary-color-w3: $huiyan-brand-blue-w30;
+$primary-color-w8: $huiyan-brand-blue-w80;
+$primary-color-b1: $huiyan-brand-blue-b10;
+
+// -------- Paddings -----------
+$padding-lg: 24px;
+$padding-md: 16px;
+$padding-sm: 12px;
+$padding-xs: 8px;
 
 // ---TEXT---
 $font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
@@ -29,14 +38,22 @@ $border-radius-lg: 100px;
 $border-radius-round: 50%;
 
 // ---BUTTON---
+$btn-font-size-base: $font-size-base;
+$btn-font-size-sm: $font-size-sm;
 $btn-height-base: 30px;
 $btn-height-sm: 26px;
-$btn-border-radius: $border-radius-round;
+$btn-padding-base: 0 $padding-md - 1px;
+$btn-padding-sm: 0 $padding-sm;
+$btn-border-radius: $border-radius-lg;
 
-$btn-primary-color : #fff;
-$btn-primary-bg : $primary-color;
+$btn-primary-color: #fff;
+$btn-primary-bg: $primary-color;
+$btn-primary-bg-hover: $primary-color-w1;
+$btn-primary-bg-active: $primary-color-b1;
 
 $btn-default-color: $primary-color;
 $btn-default-bg: $primary-color-w8;
-$btn-default-border: $primary-color;
+$btn-default-border: $primary-color-w3;
+$btn-default-border-hover: $primary-color;
+$btn-default-border-active: $primary-color-b1;
 

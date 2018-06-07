@@ -4,10 +4,40 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
 
 .#{$btn-prefix-cls} {
     display: inline-block;
-    border: 1px solid $primary-color;
+    font-size: $btn-font-size-base;
+    height: $btn-height-base;
+    line-height: $btn-height-base;
+    border-radius: $btn-border-radius;
+    padding: $btn-padding-base;
+    cursor: pointer;
 
-    &-danger {
-        border: 1px solid $danger-color;
-        background-color: $gay;
+    &-default {
+        color: $btn-default-color;
+        background-color: $btn-default-bg;
+        border: $border-width $border-style $btn-default-border;
+        &:hover {
+            border-color: $btn-default-border-hover;
+        }
+        &:active {
+            border-color: $btn-default-border-active;
+        }
+    }
+
+    &-primary {
+        color: $btn-primary-color;
+        background-color: $btn-primary-bg;
+        &:hover {
+            background-color: $btn-primary-bg-hover;
+        }
+        &:active {
+            background-color: $btn-primary-bg-active;
+        }
+    }
+
+    &-small {
+        font-size: $btn-font-size-sm;
+        height: $btn-height-sm;
+        line-height: $btn-height-sm;
+        padding: $btn-padding-sm;
     }
 }
