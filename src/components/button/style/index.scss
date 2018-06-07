@@ -3,6 +3,7 @@
 $btn-prefix-cls: #{$vis-prefix}-btn;
 
 .#{$btn-prefix-cls} {
+    display: inline-block;
     border: 1px solid $primary-color;
 
     &-danger {
