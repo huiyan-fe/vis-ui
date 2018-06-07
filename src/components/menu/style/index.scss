@@ -1,0 +1,75 @@
+@import "../../style/themes/huiyan";
+
+$menu-prefix-cls: #{$vis-prefix}-menu;
+
+.#{$menu-prefix-cls} {
+    height: 60px;
+    background: #1A284D;
+    font-size: 14px;
+    &-item {
+        position: relative;
+    }
+    a {
+        text-decoration: none;
+        color: #8597C2;
+        &:hover {
+            color: #fff;
+        }
+        &:before {
+            position: absolute;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: '';
+        }
+    }
+    &>div {
+        cursor: pointer;
+        color: #8597C2;
+        line-height: 50px;
+        height: 60px;
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+        padding: 5px 10px;
+        &:hover,
+        &.active {
+            background: #20305D;
+            color: #fff;
+            border-bottom: 4px solid #5E87DB;
+        }
+        &:hover {
+            .subNav {
+                display: block;
+            }
+        }
+    }
+    .subNav {
+        display: none;
+        background: blue;
+        width: 150px;
+        background: #1A284D;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        &>div {
+            cursor: pointer;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            color: #8597C2;
+            text-align: left;
+            padding-left: 20px;
+            &.active,
+            &:hover{
+                background: #20305D;
+                color: #fff;
+            }
+        }
+    }
+}

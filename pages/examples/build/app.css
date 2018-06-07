@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+/**
+ * file: 主题包括所有颜色/阴影/padding/动画时间/size等变量的定义，以及hover/focus/active/visited等状态的定义
+ * @author: junior2ran
+ * @date: 2018-05-17 19:36:56
+ */
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+/**
+ * @file: 基础core样式
+ * @author: junior2ran
+ * @date: 2018-05-17 19:53:23
+ */
+html,
+body {
+  padding: 0;
+  margin: 0; }
+html body {
+  padding: 0 10px; }
+@charset "UTF-8";
+/**
+ * file: 主题包括所有颜色/阴影/padding/动画时间/size等变量的定义，以及hover/focus/active/visited等状态的定义
+ * @author: junior2ran
+ * @date: 2018-05-17 19:36:56
+ */
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+/**
+ * @file: 基础core样式
+ * @author: junior2ran
+ * @date: 2018-05-17 19:53:23
+ */
+html,
+body {
+  padding: 0;
+  margin: 0; }
+@charset "UTF-8";
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+.visui-btn {
+  display: inline-block;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 100px;
+  padding: 0 15px;
+  cursor: pointer; }
+  .visui-btn-default {
+    color: #5E87DB;
+    background-color: #dfe7f8;
+    border: 1px solid #8eabe6; }
+    .visui-btn-default:hover {
+      border-color: #5E87DB; }
+    .visui-btn-default:active {
+      border-color: #557ac5; }
+  .visui-btn-primary {
+    color: #fff;
+    background-color: #5E87DB; }
+    .visui-btn-primary:hover {
+      background-color: #6e93df; }
+    .visui-btn-primary:active {
+      background-color: #557ac5; }
+  .visui-btn-small {
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 12px; }
+@charset "UTF-8";
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+.visui-menu {
+  height: 60px;
+  background: #1A284D;
+  font-size: 14px; }
+  .visui-menu-item {
+    position: relative; }
+  .visui-menu a {
+    text-decoration: none;
+    color: #8597C2; }
+    .visui-menu a:hover {
+      color: #fff; }
+    .visui-menu a:before {
+      position: absolute;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: ''; }
+  .visui-menu > div {
+    cursor: pointer;
+    color: #8597C2;
+    line-height: 50px;
+    height: 60px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    padding: 5px 10px; }
+    .visui-menu > div:hover, .visui-menu > div.active {
+      background: #20305D;
+      color: #fff;
+      border-bottom: 4px solid #5E87DB; }
+    .visui-menu > div:hover .subNav {
+      display: block; }
+  .visui-menu .subNav {
+    display: none;
+    background: blue;
+    width: 150px;
+    background: #1A284D;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0; }
+    .visui-menu .subNav > div {
+      cursor: pointer;
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      color: #8597C2;
+      text-align: left;
+      padding-left: 20px; }
+      .visui-menu .subNav > div.active, .visui-menu .subNav > div:hover {
+        background: #20305D;
+        color: #fff; }

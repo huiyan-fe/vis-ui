@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import './index.scss';
 import './style.scss';
 import Button from './button';
+import Menu from './menu';
 
 const examples = (
     <div>
@@ -10,6 +11,8 @@ const examples = (
         <hr />
         <h2>按钮</h2>
         <Button />
+        <h2>导航菜单Menu</h2>
+        <Menu />
     </div>
 );
 
