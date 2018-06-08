@@ -4,13 +4,52 @@
  * @date: 2018-05-17 19:53:23
  */
 
-$font-face: "Microsoft Yahei";
-html,
 body {
     padding: 0;
     margin: 0;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    color: $text-color;
+    background-color: $body-bg-color;
 }
 
-div {
-    //background: $gay;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+a {
+    color: $link-color;
+    background-color: transparent; // remove the gray background on active links in IE 10.
+    text-decoration: $link-decoration;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s;
+    -webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
+
+    &:hover {
+        color: $link-hover-color;
+    }
+
+    &:active {
+        color: $link-active-color;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+        outline: 0;
+        text-decoration: $link-hover-decoration;
+    }
+
 }

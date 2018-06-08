@@ -15,10 +15,10 @@ class Button extends React.Component {
             'visui-btn-small': this.props.size === 'small',
             [this.props.className]: this.props.className
         });
-        return <div className={classname} onClick={this.onClick.bind(this)} disabled={this.props.disabled} style={this.props.style}>
+        return <button className={classname} onClick={this.onClick.bind(this)} disabled={this.props.disabled} style={this.props.style}>
             {this.props.icon && <i>icon</i>}
             <span>{this.props.children}</span>
-        </div>;
+        </button>;
     }
 }
 

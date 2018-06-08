@@ -6,8 +6,8 @@ export default class App extends Component {
         return <div>
             <Button style={{marginRight: '10px'}}>按钮default</Button>
             <Button style={{marginRight: '10px'}} type="primary">按钮primary</Button>
-            <Button size="small">按钮small</Button>
-            {/* <Button disabled>按钮disabled</Button> */}
+            <Button style={{marginRight: '10px'}} size="small">按钮small</Button>
+            <Button disabled>按钮disabled</Button>
         </div>;
     }
 }

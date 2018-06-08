@@ -13,6 +13,7 @@ $success-color: $huiyan-green;
 $primary-color-w1: $huiyan-brand-blue-w10;
 $primary-color-w3: $huiyan-brand-blue-w30;
 $primary-color-w8: $huiyan-brand-blue-w80;
+$primary-color-w9: $huiyan-brand-blue-w90;
 $primary-color-b1: $huiyan-brand-blue-b10;
 
 // -------- Paddings -----------
@@ -26,6 +27,14 @@ $font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
 $font-size-base: 14px;
 $font-size-sm: 12px;
 $text-color: $gray;
+$body-bg-color: $white;
+
+// ---LINK---
+$link-color: $primary-color;
+$link-hover-color: $primary-color-w1;
+$link-active-color: $primary-color-b1;
+$link-decoration: none;
+$link-hover-decoration: none;
 
 // ---NAV---
 $nav-color: $deep-color;
@@ -56,4 +65,8 @@ $btn-default-bg: $primary-color-w8;
 $btn-default-border: $primary-color-w3;
 $btn-default-border-hover: $primary-color;
 $btn-default-border-active: $primary-color-b1;
+
+$btn-disabled-color: $white;
+$btn-disabled-bg: $primary-color-w9;
+$btn-disabled-border: $primary-color-w8;
 

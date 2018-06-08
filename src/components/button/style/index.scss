@@ -21,6 +21,13 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
         &:active {
             border-color: $btn-default-border-active;
         }
+        &[disabled] {
+            cursor: not-allowed;
+            pointer-events: none;
+            color: $btn-disabled-color;
+            background-color: $btn-disabled-bg;
+            border-color: $btn-disabled-border;
+        }
     }
 
     &-primary {
@@ -31,6 +38,13 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
         }
         &:active {
             background-color: $btn-primary-bg-active;
+        }
+        &[disabled] {
+            cursor: not-allowed;
+            pointer-events: none;
+            color: $btn-disabled-color;
+            background-color: $btn-disabled-bg;
+            border-color: $btn-disabled-border;
         }
     }
 
