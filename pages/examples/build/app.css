@@ -5,11 +5,6 @@
  * @date: 2018-05-17 19:42:28
  */
 /**
- * file: 主题包括所有颜色/阴影/padding/动画时间/size等变量的定义，以及hover/focus/active/visited等状态的定义
- * @author: junior2ran
- * @date: 2018-05-17 19:36:56
- */
-/**
  * @file: 调色板
  * @author: junior2ran
  * @date: 2018-05-17 19:42:28
@@ -19,19 +14,46 @@
  * @author: junior2ran
  * @date: 2018-05-17 19:53:23
  */
-html,
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 10px; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 6px; }
+
+a {
+  color: #5E87DB;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s;
+  -webkit-text-decoration-skip: objects; }
+  a:hover {
+    color: #6e93df; }
+  a:active {
+    color: #557ac5; }
+  a:active, a:hover, a:focus {
+    outline: 0;
+    text-decoration: none; }
 html body {
   padding: 0 10px; }
 @charset "UTF-8";
 /**
- * file: 主题包括所有颜色/阴影/padding/动画时间/size等变量的定义，以及hover/focus/active/visited等状态的定义
- * @author: junior2ran
- * @date: 2018-05-17 19:36:56
- */
-/**
  * @file: 调色板
  * @author: junior2ran
  * @date: 2018-05-17 19:42:28
@@ -41,10 +63,42 @@ html body {
  * @author: junior2ran
  * @date: 2018-05-17 19:53:23
  */
-html,
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 10px; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 6px; }
+
+a {
+  color: #5E87DB;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s;
+  -webkit-text-decoration-skip: objects; }
+  a:hover {
+    color: #6e93df; }
+  a:active {
+    color: #557ac5; }
+  a:active, a:hover, a:focus {
+    outline: 0;
+    text-decoration: none; }
 @charset "UTF-8";
 /**
  * @file: 调色板
@@ -58,7 +112,8 @@ body {
   line-height: 30px;
   border-radius: 100px;
   padding: 0 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   .visui-btn-default {
     color: #5E87DB;
     background-color: #dfe7f8;
@@ -67,18 +122,84 @@ body {
       border-color: #5E87DB; }
     .visui-btn-default:active {
       border-color: #557ac5; }
+    .visui-btn-default[disabled] {
+      cursor: not-allowed;
+      color: #ffffff;
+      background-color: #eff3fb;
+      border-color: #dfe7f8; }
   .visui-btn-primary {
     color: #fff;
-    background-color: #5E87DB; }
+    background-color: #5E87DB;
+    border: 1px solid #5E87DB; }
     .visui-btn-primary:hover {
+      border-color: #6e93df;
       background-color: #6e93df; }
     .visui-btn-primary:active {
+      border-color: #557ac5;
       background-color: #557ac5; }
+    .visui-btn-primary[disabled] {
+      cursor: not-allowed;
+      border-style: solid;
+      border-color: #eff3fb;
+      color: #ffffff;
+      background-color: #eff3fb; }
+  .visui-btn-ghost {
+    color: #666;
+    background-color: transparent; }
+    .visui-btn-ghost:hover {
+      color: #fff;
+      border-color: transparent;
+      background-color: #6e93df; }
+    .visui-btn-ghost:active {
+      color: #fff;
+      border-color: transparent;
+      background-color: #557ac5; }
+    .visui-btn-ghost[disabled] {
+      cursor: not-allowed;
+      color: #E9E9E9;
+      background-color: #F3F4F6;
+      border-color: #E9E9E9;
+      border-style: solid; }
+  .visui-btn-danger {
+    color: #FF6C13;
+    background-color: #fff0e7;
+    border: 1px solid #ff985a; }
+    .visui-btn-danger:hover {
+      border-color: #ff7b2b; }
+    .visui-btn-danger:active {
+      border-color: #FF6C13; }
+    .visui-btn-danger[disabled] {
+      cursor: not-allowed;
+      color: #ffe2d0;
+      border-color: #ffe2d0;
+      border-style: solid; }
+  .visui-btn-success {
+    color: #85d133;
+    background-color: #f0f9e6;
+    border: 1px solid #b3e380; }
+    .visui-btn-success:hover {
+      border-color: #a4dd66; }
+    .visui-btn-success:active {
+      border-color: #95d74d; }
+    .visui-btn-success[disabled] {
+      cursor: not-allowed;
+      color: #c2e899;
+      border-color: #c2e899;
+      border-style: solid; }
   .visui-btn-small {
     font-size: 12px;
     height: 26px;
     line-height: 26px;
     padding: 0 12px; }
+  .visui-btn-large {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 48px; }
+  .visui-btn + .visui-btn {
+    margin-left: 8px; }
+
+.visui-btn-group {
+  margin: 0 0 8px; }
 @charset "UTF-8";
 /**
  * @file: 调色板
