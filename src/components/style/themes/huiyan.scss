@@ -72,8 +72,12 @@ $btn-padding-base: 0 $padding-md - 1px;
 $btn-padding-lg: 0 $padding-lg * 2;
 $btn-padding-sm: 0 $padding-sm;
 $btn-border-radius: $border-radius-lg;
+$btn-margin: $padding-xs;
 
 $btn-primary-color: #fff;
+$btn-primary-border: $primary-color;
+$btn-primary-border-hover: $primary-color-w1;
+$btn-primary-border-active: $primary-color-b1;
 $btn-primary-bg: $primary-color;
 $btn-primary-bg-hover: $primary-color-w1;
 $btn-primary-bg-active: $primary-color-b1;
@@ -109,5 +113,4 @@ $btn-disabled-color: $white;
 $btn-disabled-bg: $primary-color-w9;
 $btn-disabled-border: $primary-color-w8;
 
-$btn-group-margin: 0 0 $padding-sm;
-$btn-margin: $padding-xs;
+$btn-group-margin: 0 0 $padding-xs;

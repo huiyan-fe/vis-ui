@@ -34,15 +34,19 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
     &-primary {
         color: $btn-primary-color;
         background-color: $btn-primary-bg;
+        border: $border-width $border-style $btn-primary-border;
         &:hover {
+            border-color: $btn-primary-border-hover;
             background-color: $btn-primary-bg-hover;
         }
         &:active {
+            border-color: $btn-primary-border-active;
             background-color: $btn-primary-bg-active;
         }
         &[disabled] {
             cursor: not-allowed;
-            border-style: none;
+            border-style: solid;
+            border-color: $btn-disabled-bg;
             color: $btn-disabled-color;
             background-color: $btn-disabled-bg;
         }
@@ -119,8 +123,8 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
         padding: $btn-padding-lg;
     }
 
-    .#{$btngrp-prefix-cls} & {
-        margin-right: $btn-margin;
+    & + & {
+        margin-left: $btn-margin;
     }
 }
 
