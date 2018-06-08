@@ -13,6 +13,7 @@ class Button extends React.Component {
             'visui-btn': true,
             [`visui-btn-${this.props.type}`]: this.props.type,
             'visui-btn-small': this.props.size === 'small',
+            'visui-btn-large': this.props.size === 'large',
             [this.props.className]: this.props.className
         });
         return <button className={classname} onClick={this.onClick.bind(this)} disabled={this.props.disabled} style={this.props.style}>

@@ -5,16 +5,32 @@ $vis-prefix: visui;
 
 // -------- Colors -----------
 $deep-color: $huiyan-brand-dark-blue;
-$primary-color: $huiyan-brand-blue;
 $secondary-color: $huiyan-blue;
-$danger-color: $huiyan-orange;
-$success-color: $huiyan-green;
 
+$primary-color: $huiyan-brand-blue;
 $primary-color-w1: $huiyan-brand-blue-w10;
 $primary-color-w3: $huiyan-brand-blue-w30;
 $primary-color-w8: $huiyan-brand-blue-w80;
 $primary-color-w9: $huiyan-brand-blue-w90;
 $primary-color-b1: $huiyan-brand-blue-b10;
+
+$danger-color: $huiyan-orange;
+$danger-color-w1: $huiyan-orange-w10;
+$danger-color-w3: $huiyan-orange-w30;
+$danger-color-w4: $huiyan-orange-w40;
+$danger-color-w6: $huiyan-orange-w60;
+$danger-color-w8: $huiyan-orange-w80;
+$danger-color-w9: $huiyan-orange-w90;
+
+$success-color: $huiyan-green;
+$success-color-w1: $huiyan-green-w10;
+$success-color-w2: $huiyan-green-w20;
+$success-color-w3: $huiyan-green-w30;
+$success-color-w4: $huiyan-green-w40;
+$success-color-w5: $huiyan-green-w50;
+$success-color-w6: $huiyan-green-w60;
+$success-color-w8: $huiyan-green-w80;
+$success-color-w9: $huiyan-green-w90;
 
 // -------- Paddings -----------
 $padding-lg: 24px;
@@ -50,8 +66,10 @@ $border-radius-round: 50%;
 $btn-font-size-base: $font-size-base;
 $btn-font-size-sm: $font-size-sm;
 $btn-height-base: 30px;
+$btn-height-lg: 34px;
 $btn-height-sm: 26px;
 $btn-padding-base: 0 $padding-md - 1px;
+$btn-padding-lg: 0 $padding-lg * 2;
 $btn-padding-sm: 0 $padding-sm;
 $btn-border-radius: $border-radius-lg;
 
@@ -66,7 +84,30 @@ $btn-default-border: $primary-color-w3;
 $btn-default-border-hover: $primary-color;
 $btn-default-border-active: $primary-color-b1;
 
+$btn-ghost-color-default: #666;
+$btn-ghost-bg: transparent;
+$btn-ghost-border: #999;
+$btn-ghost-color: $btn-primary-color;
+$btn-ghost-bg-hover: $btn-primary-bg-hover;
+$btn-ghost-bg-active: $btn-primary-bg-active;
+
+$btn-danger-color: $danger-color;
+$btn-danger-bg: $danger-color-w9;
+$btn-danger-border: $danger-color-w3;
+$btn-danger-border-hover: $danger-color-w1;
+$btn-danger-border-active: $danger-color;
+$btn-danger-disabled: $danger-color-w8;
+
+$btn-success-color: $success-color-w2;
+$btn-success-bg: $success-color-w9;
+$btn-success-border: $success-color-w5;
+$btn-success-border-hover: $success-color-w4;
+$btn-success-border-active: $success-color-w3;
+$btn-success-disabled: $success-color-w6;
+
 $btn-disabled-color: $white;
 $btn-disabled-bg: $primary-color-w9;
 $btn-disabled-border: $primary-color-w8;
 
+$btn-group-margin: 0 0 $padding-sm;
+$btn-margin: $padding-xs;

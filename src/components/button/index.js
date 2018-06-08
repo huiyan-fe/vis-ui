@@ -1,8 +1,6 @@
 import Button from './button';
-// import ButtonGroup from './button-group';
-// import SuperButton from './super-button';
+import ButtonGroup from './button-group';
 
-// Button.Group = ButtonGroup;
-// Button.SpperButton = SuperButton;
+Button.Group = ButtonGroup;
 
 export default Button;

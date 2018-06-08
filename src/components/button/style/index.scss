@@ -1,5 +1,6 @@
 @import "../../style/themes/huiyan";
 
+$btngrp-prefix-cls: #{$vis-prefix}-btn-group;
 $btn-prefix-cls: #{$vis-prefix}-btn;
 
 .#{$btn-prefix-cls} {
@@ -10,6 +11,7 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
     border-radius: $btn-border-radius;
     padding: $btn-padding-base;
     cursor: pointer;
+    outline: none;
 
     &-default {
         color: $btn-default-color;
@@ -23,7 +25,6 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
         }
         &[disabled] {
             cursor: not-allowed;
-            pointer-events: none;
             color: $btn-disabled-color;
             background-color: $btn-disabled-bg;
             border-color: $btn-disabled-border;
@@ -41,10 +42,67 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
         }
         &[disabled] {
             cursor: not-allowed;
-            pointer-events: none;
+            border-style: none;
             color: $btn-disabled-color;
             background-color: $btn-disabled-bg;
-            border-color: $btn-disabled-border;
+        }
+    }
+
+    &-ghost {
+        color: $btn-ghost-color-default;
+        background-color: $btn-ghost-bg;
+        &:hover {
+            color: $btn-ghost-color;
+            border-color: transparent;
+            background-color: $btn-ghost-bg-hover;
+        }
+        &:active {
+            color: $btn-ghost-color;
+            border-color: transparent;
+            background-color: $btn-ghost-bg-active;
+        }
+        &[disabled] {
+            cursor: not-allowed;
+            color: #E9E9E9;
+            background-color: #F3F4F6;
+            border-color: #E9E9E9;
+            border-style: solid;
+        }
+    }
+
+    &-danger {
+        color: $btn-danger-color;
+        background-color: $btn-danger-bg;
+        border: $border-width $border-style $btn-danger-border;
+        &:hover {
+            border-color: $btn-danger-border-hover;
+        }
+        &:active {
+            border-color: $btn-danger-border-active;
+        }
+        &[disabled] {
+            cursor: not-allowed;
+            color: $btn-danger-disabled;
+            border-color: $btn-danger-disabled;
+            border-style: solid;
+        }
+    }
+
+    &-success {
+        color: $btn-success-color;
+        background-color: $btn-success-bg;
+        border: $border-width $border-style $btn-success-border;
+        &:hover {
+            border-color: $btn-success-border-hover;
+        }
+        &:active {
+            border-color: $btn-success-border-active;
+        }
+        &[disabled] {
+            cursor: not-allowed;
+            color: $btn-success-disabled;
+            border-color: $btn-success-disabled;
+            border-style: solid;
         }
     }
 
@@ -54,4 +112,18 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
         line-height: $btn-height-sm;
         padding: $btn-padding-sm;
     }
+
+    &-large {
+        height: $btn-height-lg;
+        line-height: $btn-height-lg;
+        padding: $btn-padding-lg;
+    }
+
+    .#{$btngrp-prefix-cls} & {
+        margin-right: $btn-margin;
+    }
+}
+
+.#{$btngrp-prefix-cls} {
+    margin: $btn-group-margin;
 }

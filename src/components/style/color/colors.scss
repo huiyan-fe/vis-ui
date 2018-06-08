@@ -60,6 +60,20 @@ $huiyan-blue: #4E6DF1;
 
 // orange
 $huiyan-orange: #FF6C13;
+$huiyan-orange-w10: colorPalette($huiyan-orange, $white, 10);   // #FF7A2A
+$huiyan-orange-w30: colorPalette($huiyan-orange, $white, 30);   // #FF985A
+$huiyan-orange-w40: colorPalette($huiyan-orange, $white, 40);   // #FFA671
+$huiyan-orange-w60: colorPalette($huiyan-orange, $white, 60);   // #
+$huiyan-orange-w80: colorPalette($huiyan-orange, $white, 80);   // #FFE2D0
+$huiyan-orange-w90: colorPalette($huiyan-orange, $white, 90);   // #FFF0E7
 
 // green
 $huiyan-green: #67C600;
+$huiyan-green-w10: colorPalette($huiyan-green, $white, 10);   // #76CB1A
+$huiyan-green-w20: colorPalette($huiyan-green, $white, 20);   // #85D133
+$huiyan-green-w30: colorPalette($huiyan-green, $white, 30);   // #94D64C
+$huiyan-green-w40: colorPalette($huiyan-green, $white, 40);   // #A3DC66
+$huiyan-green-w50: colorPalette($huiyan-green, $white, 50);   // #B3E380
+$huiyan-green-w60: colorPalette($huiyan-green, $white, 60);   // #C2E899
+$huiyan-green-w80: colorPalette($huiyan-green, $white, 80);   // #E1F4CC
+$huiyan-green-w90: colorPalette($huiyan-green, $white, 90);   // #F0F9E6
