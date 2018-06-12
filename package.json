@@ -1,11 +1,12 @@
 {
   "name": "vis-ui",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A library of UI components for React",
   "main": "lib/index.js",
   "scripts": {
     "build:lib": "rm -rf lib && babel src -d lib",
     "build:dist": "webpack",
+    "prepublish": "npm run build:lib",
     "examples:build": "webpack --config ./pages/examples/webpack.config.js --mode production",
     "examples": "webpack-dev-server --config ./pages/examples/webpack.config.js --mode development"
   },

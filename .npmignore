@@ -1,6 +1,7 @@
 node_modules
-build
+.svn
+.DS_STORE
 .DS_Store
-*.log
+*.*~
 npm-debug.log
 package-lock.json
