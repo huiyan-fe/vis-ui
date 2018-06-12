@@ -4,113 +4,113 @@
 $vis-prefix: visui;
 
 // -------- Colors -----------
-$deep-color: $huiyan-brand-dark-blue;
-$secondary-color: $huiyan-blue;
+$deep-color: $huiyan-brand-dark-blue !default;
+$secondary-color: $huiyan-blue !default;
 
-$primary-color: $huiyan-brand-blue;
-$primary-color-w1: $huiyan-brand-blue-w10;
-$primary-color-w3: $huiyan-brand-blue-w30;
-$primary-color-w8: $huiyan-brand-blue-w80;
-$primary-color-w9: $huiyan-brand-blue-w90;
-$primary-color-b1: $huiyan-brand-blue-b10;
+$primary-color: $huiyan-brand-blue !default;
+$primary-color-w1: $huiyan-brand-blue-w10 !default;
+$primary-color-w3: $huiyan-brand-blue-w30 !default;
+$primary-color-w8: $huiyan-brand-blue-w80 !default;
+$primary-color-w9: $huiyan-brand-blue-w90 !default;
+$primary-color-b1: $huiyan-brand-blue-b10 !default;
 
-$danger-color: $huiyan-orange;
-$danger-color-w1: $huiyan-orange-w10;
-$danger-color-w3: $huiyan-orange-w30;
-$danger-color-w4: $huiyan-orange-w40;
-$danger-color-w6: $huiyan-orange-w60;
-$danger-color-w8: $huiyan-orange-w80;
-$danger-color-w9: $huiyan-orange-w90;
+$danger-color: $huiyan-orange !default;
+$danger-color-w1: $huiyan-orange-w10 !default;
+$danger-color-w3: $huiyan-orange-w30 !default;
+$danger-color-w4: $huiyan-orange-w40 !default;
+$danger-color-w6: $huiyan-orange-w60 !default;
+$danger-color-w8: $huiyan-orange-w80 !default;
+$danger-color-w9: $huiyan-orange-w90 !default;
 
-$success-color: $huiyan-green;
-$success-color-w1: $huiyan-green-w10;
-$success-color-w2: $huiyan-green-w20;
-$success-color-w3: $huiyan-green-w30;
-$success-color-w4: $huiyan-green-w40;
-$success-color-w5: $huiyan-green-w50;
-$success-color-w6: $huiyan-green-w60;
-$success-color-w8: $huiyan-green-w80;
-$success-color-w9: $huiyan-green-w90;
+$success-color: $huiyan-green !default;
+$success-color-w1: $huiyan-green-w10 !default;
+$success-color-w2: $huiyan-green-w20 !default;
+$success-color-w3: $huiyan-green-w30 !default;
+$success-color-w4: $huiyan-green-w40 !default;
+$success-color-w5: $huiyan-green-w50 !default;
+$success-color-w6: $huiyan-green-w60 !default;
+$success-color-w8: $huiyan-green-w80 !default;
+$success-color-w9: $huiyan-green-w90 !default;
 
 // -------- Paddings -----------
-$padding-lg: 24px;
-$padding-md: 16px;
-$padding-sm: 12px;
-$padding-xs: 8px;
+$padding-lg: 24px !default;
+$padding-md: 16px !default;
+$padding-sm: 12px !default;
+$padding-xs: 8px !default;
 
 // ---TEXT---
-$font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
-$font-size-base: 14px;
-$font-size-sm: 12px;
-$text-color: $gray;
-$body-bg-color: $white;
+$font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei" !default;
+$font-size-base: 14px !default;
+$font-size-sm: 12px !default;
+$text-color: $gray !default;
+$body-bg-color: $white !default;
 
 // ---LINK---
-$link-color: $primary-color;
-$link-hover-color: $primary-color-w1;
-$link-active-color: $primary-color-b1;
-$link-decoration: none;
-$link-hover-decoration: none;
+$link-color: $primary-color !default;
+$link-hover-color: $primary-color-w1 !default;
+$link-active-color: $primary-color-b1 !default;
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
 
 // ---NAV---
-$nav-color: $deep-color;
+$nav-color: $deep-color !default;
 
 // ---BORDER---
-$border-width: 1px;
-$border-style: solid;
-$border-radius-base: 2px;
-$border-radius-lg: 100px;
-$border-radius-round: 50%;
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-radius-base: 2px !default;
+$border-radius-lg: 100px !default;
+$border-radius-round: 50% !default;
 
 // ---BUTTON---
-$btn-font-size-base: $font-size-base;
-$btn-font-size-sm: $font-size-sm;
-$btn-height-base: 30px;
-$btn-height-lg: 34px;
-$btn-height-sm: 26px;
-$btn-padding-base: 0 $padding-md - 1px;
-$btn-padding-lg: 0 $padding-lg * 2;
-$btn-padding-sm: 0 $padding-sm;
-$btn-border-radius: $border-radius-lg;
-$btn-margin: $padding-xs;
+$btn-font-size-base: $font-size-base !default;
+$btn-font-size-sm: $font-size-sm !default;
+$btn-height-base: 30px !default;
+$btn-height-lg: 34px !default;
+$btn-height-sm: 26px !default;
+$btn-padding-base: 0 $padding-md - 1px !default;
+$btn-padding-lg: 0 $padding-lg * 2 !default;
+$btn-padding-sm: 0 $padding-sm !default;
+$btn-border-radius: $border-radius-lg !default;
+$btn-margin: $padding-xs !default;
 
-$btn-primary-color: #fff;
-$btn-primary-border: $primary-color;
-$btn-primary-border-hover: $primary-color-w1;
-$btn-primary-border-active: $primary-color-b1;
-$btn-primary-bg: $primary-color;
-$btn-primary-bg-hover: $primary-color-w1;
-$btn-primary-bg-active: $primary-color-b1;
+$btn-primary-color: #fff !default;
+$btn-primary-border: $primary-color !default;
+$btn-primary-border-hover: $primary-color-w1 !default;
+$btn-primary-border-active: $primary-color-b1 !default;
+$btn-primary-bg: $primary-color !default;
+$btn-primary-bg-hover: $primary-color-w1 !default;
+$btn-primary-bg-active: $primary-color-b1 !default;
 
-$btn-default-color: $primary-color;
-$btn-default-bg: $primary-color-w8;
-$btn-default-border: $primary-color-w3;
-$btn-default-border-hover: $primary-color;
-$btn-default-border-active: $primary-color-b1;
+$btn-default-color: $primary-color !default;
+$btn-default-bg: $primary-color-w8 !default;
+$btn-default-border: $primary-color-w3 !default;
+$btn-default-border-hover: $primary-color !default;
+$btn-default-border-active: $primary-color-b1 !default;
 
-$btn-ghost-color-default: #666;
-$btn-ghost-bg: transparent;
-$btn-ghost-border: #999;
-$btn-ghost-color: $btn-primary-color;
-$btn-ghost-bg-hover: $btn-primary-bg-hover;
-$btn-ghost-bg-active: $btn-primary-bg-active;
+$btn-ghost-color-default: #666 !default;
+$btn-ghost-bg: transparent !default;
+$btn-ghost-border: #999 !default;
+$btn-ghost-color: $btn-primary-color !default;
+$btn-ghost-bg-hover: $btn-primary-bg-hover !default;
+$btn-ghost-bg-active: $btn-primary-bg-active !default;
 
-$btn-danger-color: $danger-color;
-$btn-danger-bg: $danger-color-w9;
-$btn-danger-border: $danger-color-w3;
-$btn-danger-border-hover: $danger-color-w1;
-$btn-danger-border-active: $danger-color;
-$btn-danger-disabled: $danger-color-w8;
+$btn-danger-color: $danger-color !default;
+$btn-danger-bg: $danger-color-w9 !default;
+$btn-danger-border: $danger-color-w3 !default;
+$btn-danger-border-hover: $danger-color-w1 !default;
+$btn-danger-border-active: $danger-color !default;
+$btn-danger-disabled: $danger-color-w8 !default;
 
-$btn-success-color: $success-color-w2;
-$btn-success-bg: $success-color-w9;
-$btn-success-border: $success-color-w5;
-$btn-success-border-hover: $success-color-w4;
-$btn-success-border-active: $success-color-w3;
-$btn-success-disabled: $success-color-w6;
+$btn-success-color: $success-color-w2 !default;
+$btn-success-bg: $success-color-w9 !default;
+$btn-success-border: $success-color-w5 !default;
+$btn-success-border-hover: $success-color-w4 !default;
+$btn-success-border-active: $success-color-w3 !default;
+$btn-success-disabled: $success-color-w6 !default;
 
-$btn-disabled-color: $white;
-$btn-disabled-bg: $primary-color-w9;
-$btn-disabled-border: $primary-color-w8;
+$btn-disabled-color: $white !default;
+$btn-disabled-bg: $primary-color-w9 !default;
+$btn-disabled-border: $primary-color-w8 !default;
 
-$btn-group-margin: 0 0 $padding-xs;
+$btn-group-margin: 0 0 $padding-xs !default;

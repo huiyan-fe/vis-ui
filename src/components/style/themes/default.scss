@@ -1,16 +1,1 @@
-/**
- * file: 主题包括所有颜色/阴影/padding/动画时间/size等变量的定义，以及hover/focus/active/visited等状态的定义
- * @author: junior2ran
- * @date: 2018-05-17 19:36:56
- */
-@import "../color/colors";
-
-// The prefix to use on all css classes from vis-ui.
-$vis-prefix : visui;
-
-// -------- Colors -----------
-$primary-color : $default-brand-red !default;
-$danger-color: $default-red !default;
-$warning-color: $default-yellow !default;
-$success-color: $default-green !default;
-$gay: #fff !default;
+@import "./huiyan";

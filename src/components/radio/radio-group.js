@@ -1,10 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
+import './style/index';
 
-class ButtonGroup extends React.Component {
+class RadioGroup extends React.Component {
     render() {
         const classname = classNames({
-            'visui-btn-group': true,
+            'visui-radio-group': true,
             [this.props.className]: this.props.className
         });
         return <div className={classname} style={this.props.style}>
@@ -13,10 +14,10 @@ class ButtonGroup extends React.Component {
     }
 }
 
-ButtonGroup.defaultProps = {
+RadioGroup.defaultProps = {
 };
 
-ButtonGroup.propTypes = {
+RadioGroup.propTypes = {
 };
 
-export default ButtonGroup;
+export default RadioGroup;
