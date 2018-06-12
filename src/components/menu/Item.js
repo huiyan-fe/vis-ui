@@ -11,7 +11,9 @@ export default class MenuItem extends React.Component {
     }
 
     render() {
-        const classname = classNames('visui-menu-item', this.props.className);
+        const classname = classNames('visui-menu-item', this.props.className, {
+            active: this.props.index === '11'
+        });
         return <div className={classname}>
             {this.props.children}
         </div>;
