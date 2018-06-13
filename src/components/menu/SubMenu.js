@@ -13,7 +13,7 @@ class SubMenu extends React.Component {
 
     render() {
         const classname = classNames('visui-menu-submenu', this.props.className, {
-            active: this.context.menu.props.defaultSelectedKeys && this.context.menu.props.defaultSelectedKeys.indexOf(this.props.index) > -1
+            active: this.context.menu.props.defaultSelectedIndexs && this.context.menu.props.defaultSelectedIndexs.indexOf(this.props.index) > -1
         });
         return <div className={classname}>
             {this.props.title}

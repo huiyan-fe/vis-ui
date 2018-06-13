@@ -3,7 +3,7 @@ import { Menu } from '../../../../src';
 
 export default class App extends Component {
     render() {
-        return <Menu defaultSelectedKeys={['1', '11']}>
+        return <Menu defaultSelectedIndexs={['1', '11']}>
             <span style={{
                 padding: '0 20px',
                 color: '#fff'

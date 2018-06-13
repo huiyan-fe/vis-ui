@@ -11,7 +11,7 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
     }
     a {
         text-decoration: none;
-        color: #8597C2;
+        color: #8690A6;
         &:hover {
             color: #fff;
         }
@@ -30,7 +30,7 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
     &-item,
     &-submenu{
         cursor: pointer;
-        color: #8597C2;
+        color: #8690A6;
         line-height: 50px;
         height: 60px;
         box-sizing: border-box;
@@ -63,7 +63,7 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             display: block;
             height: 40px;
             line-height: 40px;
-            color: #8597C2;
+            color: #8690A6;
             text-align: left;
             padding: 0 0 0 20px;
             &.active,
