@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from "classnames";
 
-export default class MenuItem extends React.Component {
+class MenuItem extends React.Component {
 
     constructor(props: Object) {
         super(props);
@@ -12,7 +13,7 @@ export default class MenuItem extends React.Component {
 
     render() {
         const classname = classNames('visui-menu-item', this.props.className, {
-            active: this.props.index === '11'
+            active: this.context.menu.props.defaultSelectedKeys && this.context.menu.props.defaultSelectedKeys.indexOf(this.props.index) > -1
         });
         return <div className={classname}>
             {this.props.children}
@@ -20,3 +21,9 @@ export default class MenuItem extends React.Component {
     }
 
 }
+
+MenuItem.contextTypes = {
+    menu: PropTypes.any
+};
+
+export default MenuItem;

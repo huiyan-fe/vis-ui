@@ -27,8 +27,8 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             content: '';
         }
     }
-    & > &-item,
-    & > &-submenu{
+    &-item,
+    &-submenu{
         cursor: pointer;
         color: #8597C2;
         line-height: 50px;
@@ -65,10 +65,11 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             line-height: 40px;
             color: #8597C2;
             text-align: left;
-            padding-left: 20px;
+            padding: 0 0 0 20px;
             &.active,
             &.active a,
             &:hover{
+                border-bottom: none;
                 background: #20305D;
                 color: #fff;
             }

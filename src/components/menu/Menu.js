@@ -1,13 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style/index';
 
-export default class Menu extends React.Component {
+class Menu extends React.Component {
 
     constructor(props: Object) {
         super(props);
+        this.instanceType = 'Menu';
 
         this.state = {
         }
+    }
+
+    getChildContext() {
+        return {
+            menu: this
+        };
     }
 
     render() {
@@ -17,3 +25,9 @@ export default class Menu extends React.Component {
     }
 
 }
+
+Menu.childContextTypes = {
+    menu: PropTypes.any
+};
+
+export default Menu;

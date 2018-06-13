@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from "classnames";
 
-export default class SubMenu extends React.Component {
+class SubMenu extends React.Component {
 
     constructor(props: Object) {
         super(props);
@@ -11,7 +12,9 @@ export default class SubMenu extends React.Component {
     }
 
     render() {
-        const classname = classNames('visui-menu-submenu', this.props.className);
+        const classname = classNames('visui-menu-submenu', this.props.className, {
+            active: this.context.menu.props.defaultSelectedKeys && this.context.menu.props.defaultSelectedKeys.indexOf(this.props.index) > -1
+        });
         return <div className={classname}>
             {this.props.title}
             <div className="subNav">{this.props.children}</div>
@@ -19,3 +22,9 @@ export default class SubMenu extends React.Component {
     }
 
 }
+
+SubMenu.contextTypes = {
+    menu: PropTypes.any
+};
+
+export default SubMenu;
