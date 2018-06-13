@@ -12,6 +12,9 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
     a {
         text-decoration: none;
         color: #8690A6;
+        &:hover {
+            color: #fff;
+        }
         &:before {
             position: absolute;
             background-color: transparent;
@@ -24,11 +27,6 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             content: '';
         }
     }
-    a.active,
-    a:hover {
-        color: #fff;
-    }
-    &-item,
     &-submenu{
         cursor: pointer;
         color: #8690A6;
@@ -43,6 +41,9 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             background: #20305D;
             color: #fff;
             border-bottom: 4px solid #5E87DB;
+            a {
+                color: #fff;
+            }
         }
         &:hover {
             .subNav {
