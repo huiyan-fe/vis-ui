@@ -27,6 +27,7 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             content: '';
         }
     }
+    &-item,
     &-submenu{
         cursor: pointer;
         color: #8690A6;
@@ -66,6 +67,9 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             height: 40px;
             line-height: 40px;
             color: #8690A6;
+            a {
+                color: #8690A6;
+            }
             text-align: left;
             padding: 0 0 0 20px;
             &.active,
@@ -74,6 +78,9 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
                 border-bottom: none;
                 background: #20305D;
                 color: #fff;
+                a {
+                    color: #fff;
+                }
             }
         }
     }

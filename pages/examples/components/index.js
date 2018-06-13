@@ -9,10 +9,10 @@ const examples = (
     <div>
         <h1>Vis-UI 示例</h1>
         <hr />
-        <h2>按钮 Button</h2>
-        <Button />
         <h2>导航菜单 Menu</h2>
         <Menu />
+        <h2>按钮 Button</h2>
+        <Button />
     </div>
 );
 

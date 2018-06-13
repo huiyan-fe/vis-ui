@@ -8,10 +8,10 @@ export default class App extends Component {
                 padding: '0 20px',
                 color: '#fff'
             }}>我的标题</span>
-            <Menu.SubMenu title="导航菜单1" index="1">
-                <Menu.Item index="11"><a href="http://www.baidu.com">导航菜单1</a></Menu.Item>
-                <Menu.Item index="12">导航2</Menu.Item>
-                <Menu.Item index="13">导航3</Menu.Item>
+            <Menu.SubMenu title={<a href="http://www.baidu.com">导航菜单1</a>} index="1">
+                <Menu.Item index="11"><a href="http://www.baidu.com">导航11</a></Menu.Item>
+                <Menu.Item index="12"><a href="http://www.baidu.com">导航12</a></Menu.Item>
+                <Menu.Item index="13">导航13</Menu.Item>
             </Menu.SubMenu>
             <Menu.SubMenu title="导航菜单2" index="2">
                 <Menu.Item index="21"><a href="http://www.baidu.com">导航菜单2</a></Menu.Item>
