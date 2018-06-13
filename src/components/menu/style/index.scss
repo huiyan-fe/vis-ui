@@ -12,10 +12,6 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
     a {
         text-decoration: none;
         color: #8690A6;
-        &.active,
-        &:hover {
-            color: #fff;
-        }
         &:before {
             position: absolute;
             background-color: transparent;
@@ -27,6 +23,10 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             right: 0;
             content: '';
         }
+    }
+    .active a,
+    a:hover {
+        color: #fff;
     }
     &-item,
     &-submenu{
