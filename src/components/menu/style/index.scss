@@ -12,6 +12,7 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
     a {
         text-decoration: none;
         color: #8690A6;
+        &.active,
         &:hover {
             color: #fff;
         }
