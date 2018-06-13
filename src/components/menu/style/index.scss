@@ -24,7 +24,7 @@ $menu-prefix-cls: #{$vis-prefix}-menu;
             content: '';
         }
     }
-    .active a,
+    a.active,
     a:hover {
         color: #fff;
     }
