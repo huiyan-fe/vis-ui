@@ -8,16 +8,17 @@ class Button extends React.Component {
     }
 
     render() {
+        const {disabled, icon, type, size, className, style, children} = this.props;
         const classname = classNames({
             'visui-btn': true,
-            [`visui-btn-${this.props.type}`]: this.props.type,
-            'visui-btn-small': this.props.size === 'small',
-            'visui-btn-large': this.props.size === 'large',
-            [this.props.className]: this.props.className
+            [`visui-btn-${type}`]: type,
+            'visui-btn-small': size === 'small',
+            'visui-btn-large': size === 'large',
+            [className]: className
         });
-        return <button className={classname} onClick={this.onClick.bind(this)} disabled={this.props.disabled} style={this.props.style}>
-            {this.props.icon && <i>icon</i>}
-            <span>{this.props.children}</span>
+        return <button className={classname} onClick={this.onClick.bind(this)} disabled={disabled} style={style}>
+            {icon && <i>icon</i>}
+            <span>{children}</span>
         </button>;
     }
 }
