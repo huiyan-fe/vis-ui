@@ -1,33 +1,16 @@
 const gulp = require('gulp');
 const path = require('path');
 const sass = require('gulp-sass');
-// const getBabelCommonConfig = require('./babelrc');
 
 const cwd = process.cwd();
-const libDir = path.join(cwd, 'lib/components');
-const esDir = path.join(cwd, 'es');
+const libDir = path.join(cwd, 'lib');
 
 function compile(modules) {
-    const sass = gulp.src(['src/components/**/*.scss'])
-        .pipe(gulp.dest(modules === false ? esDir : libDir));
-
-    // const js = [];
-    // babelify(js, modules);
+    const scss = gulp.src(['src/**/*.scss'])
+        // .pipe(sass())
+        .pipe(gulp.dest(libDir));
 }
 
-function babelify(js, modules) {
-    const babelConfig = getBabelCommonConfig(modules);
-    const stream = js.pipe(babel(babelConfig))
-        .pipe(gulp.dest(modules === false ? esDir : libDir));
-}
-
-gulp.task('test', ['compile-with-es'], () => {
-    compile();
-});
-gulp.task('compile-with-es', () => {
-    compile(false);
-});
-
-gulp.task('style', () => {
+gulp.task('compile', () => {
     compile();
 });

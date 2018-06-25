@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build:lib": "rm -rf lib && babel src -d lib && npm run build:sass",
-    "build:sass": "gulp style",
+    "build:sass": "gulp compile",
     "build:dist": "webpack",
     "prepublish": "npm run build:lib",
     "examples:build": "webpack --config ./pages/examples/webpack.config.js --mode production",

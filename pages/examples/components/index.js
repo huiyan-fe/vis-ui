@@ -1,9 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import './index.scss';
-import './style.scss';
 import Button from './button';
 import Menu from './menu';
+import './index.scss';
+import './style.scss';
 
 const examples = (
     <div>

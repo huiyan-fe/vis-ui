@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './style/index';
 
 class Menu extends React.Component {
 

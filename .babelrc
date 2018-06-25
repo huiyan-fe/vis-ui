@@ -1,6 +1,14 @@
 {
     "presets": [
         "react",
-        ["env", {"modules": false}]
+        [
+            "env", 
+            {
+                "modules": "commonjs",
+                "targets": {
+                    "browsers": ["last 2 versions", "safari >= 7"]
+                }
+            }
+        ]
     ]
 }
