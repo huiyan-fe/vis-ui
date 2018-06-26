@@ -5,38 +5,37 @@ import classNames from 'classnames';
 class Radio extends React.Component {
     constructor(props) {
         super(props);
-    
         this.state = {
-          checked: this.getChecked(props)
         };
-      }
+    }
     
-    onClick(e) {
-        this.props.onClick && this.props.onClick(e);
+    onChange(e) {
+        this.props.onChange && this.props.onChange(e);
     }
 
     render() {
+        const {disabled, type, size, className, style, children} = this.props;
         const classname = classNames({
             'visui-radio': true,
-            [`visui-radio-${this.props.type}`]: this.props.type,
-            'visui-radio-small': this.props.size === 'small',
-            'visui-radio-large': this.props.size === 'large',
-            [this.props.className]: this.props.className
+            [`visui-radio-${type}`]: type,
+            'visui-radio-small': size === 'small',
+            'visui-radio-large': size === 'large',
+            [className]: className
         });
-        return <label style={this.style()} className={this.className('el-radio')}>
+        return <label className={classname} style={style}>
             <span className={classname}>
-                <span className="el-radio__inner"></span>
+                <span className="visui-radio-inner"></span>
                 <input
                     type="radio"
-                    className="el-radio__original"
+                    className="visui-radio-original"
                     checked={checked}
-                    disabled={this.props.disabled}
+                    disabled={disabled}
                     onChange={this.onChange.bind(this)}
                     onFocus={this.onFocus.bind(this)}
                     onBlur={this.onBlur.bind(this)}
                 />
             </span>
-            <span className="el-radio__label">
+            <span className="visui-radio-label">
                 {children || value}
             </span>
         </label>;

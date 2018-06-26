@@ -6,9 +6,9 @@ vis-ui的目标：
 - 具有良好的可拓展性，对组件开发者友好，能持续沉淀UI组件
 - 提供完善的文档与API接口，对用户友好，简单可依赖
 
-参考ant-design的文件结构，考虑到可拓展性，在搭建初期就设置了较多入口文件，便于组件持续沉淀。
+如果您是vis-ui的贡献开发者，下面的内容简直就是为您量身定制书写的，请仔细阅读~
 
-参考react-bmap的文件结构，分为src、lib、pages三大块，方便组件开发、打包、在线预览等需求分割。
+如果您是vis-ui的用户，希望灵活的使用vis-ui来创建自己美丽动人的项目，可以阅读[vis-ui 使用说明](https://github.com/huiyan-fe/vis-ui/blob/master/README2.md)。
 
 ## 开发框架
 react + sass + webpack + gulp
@@ -31,6 +31,10 @@ npm run build:lib
 npm run examples:build
 ```
 ## 目录结构
+参考ant-design的文件结构，考虑到可拓展性，在搭建初期就设置了较多入口文件，便于组件持续沉淀。
+
+参考react-bmap的文件结构，分为src、lib、pages三大块，方便组件开发、打包、在线预览等需求分割。
+
 ```
 .
 ├── lib                 // babel打包生成
@@ -56,7 +60,7 @@ npm run examples:build
 ```
 
 ## 开发步骤
-1. `src/components/index.js`注册组件
+1. `src/components/index.js`注册组件js入口，`src/index.scss`注册组件样式入口
 2. 创建`xxx组件`文件夹，编写组件
 3. 编写组件样式，放在`xxx组件/style`目录下
 4. 编写组件说明与API，放在`xxx组件/docs`目录下
