@@ -31,7 +31,7 @@ export default class App extends Component {
             <Button type="success" disabled>按钮success</Button>
             <br/><br/>
             <Button type="primary" onClick={()=>{alert('haha');}}>点击onClick出弹窗</Button>
-            <br/><br/>
+            <br/>
             <h2>按钮组 Button.Group</h2>
             <ButtonGroup>
                 <Button type="primary">按钮1</Button>
@@ -39,7 +39,6 @@ export default class App extends Component {
                 <Button type="primary">按钮3</Button>
                 <Button type="primary">按钮4</Button>
             </ButtonGroup>
-            <br/>
         </div>;
     }
 }

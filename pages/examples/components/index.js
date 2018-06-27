@@ -2,6 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import Button from './button';
 import Menu from './menu';
+import Radio from './radio';
 import './index.scss';
 import './style.scss';
 
@@ -13,6 +14,8 @@ const examples = (
         <Menu />
         <h2>按钮 Button</h2>
         <Button />
+        <h2>单选框 Radio</h2>
+        <Radio />
     </div>
 );
 

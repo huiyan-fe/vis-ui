@@ -60,7 +60,7 @@ npm run examples:build
 ```
 
 ## 开发步骤
-1. `src/components/index.js`注册组件js入口，`src/index.scss`注册组件样式入口
+1. `src/index.js`注册组件js入口，`src/components/style/components.scss`注册组件样式入口
 2. 创建`xxx组件`文件夹，编写组件
 3. 编写组件样式，放在`xxx组件/style`目录下
 4. 编写组件说明与API，放在`xxx组件/docs`目录下

@@ -114,3 +114,29 @@ $btn-disabled-bg: $primary-color-w9 !default;
 $btn-disabled-border: $primary-color-w8 !default;
 
 $btn-group-margin: 0 0 $padding-xs !default;
+
+// ---RADIO---
+$radio-width-base: 16px !default;
+$radio-height-base: 16px !default;
+$radio-border-radius: $border-radius-round !default;
+$radio-font-size-base: $font-size-sm !default;
+$radio-font-size-lg: $font-size-base !default;
+$radio-margin-sapce: $padding-xs !default;
+$radio-margin-between: $padding-sm !default;
+$radio-margin-lg: $padding-md !default;
+
+$radio-text-color: #999 !default;
+$radio-border-color: #E9E9E9 !default;
+$radio-select-color: $primary-color !default;
+$radio-disabled-color: #E9E9E9 !default;
+$radio-disabled-bg: #F5F5F5 !default;
+
+$radio-btn-height-base: 30px !default;
+$radio-btn-height-lg: 34px !default;
+$radio-btn-height-sm: 26px !default;
+$radio-btn-border-radius: $border-radius-base !default;
+
+$radio-btn-select-border: $primary-color-w3 !default;
+$radio-btn-select-bg: $primary-color-w8 !default;
+$radio-btn-select-color: $primary-color !default;
+$radio-btn-disabled-bg: #F5F5F5 !default;
