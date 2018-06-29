@@ -8,5 +8,14 @@
  * 按钮组件
  */
 export { default as Button } from './components/button';
-export { default as Menu } from './components/menu';
+
+/**
+ * 表单组件
+ */
 export { default as Radio } from './components/radio';
+export { default as Checkbox } from './components/checkbox';
+
+/**
+ * 菜单组件
+ */
+export { default as Menu } from './components/menu';

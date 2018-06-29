@@ -5,11 +5,6 @@
  * @date: 2018-05-17 19:42:28
  */
 /**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
-/**
  * @file: 基础core样式
  * @author: junior2ran
  * @date: 2018-05-17 19:53:23
@@ -50,56 +45,7 @@ a {
   a:active, a:hover, a:focus {
     outline: 0;
     text-decoration: none; }
-html body {
-  padding: 0 10px; }
-@charset "UTF-8";
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
-/**
- * @file: 基础core样式
- * @author: junior2ran
- * @date: 2018-05-17 19:53:23
- */
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
-  font-size: 14px;
-  color: #333333;
-  background-color: #ffffff; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 10px; }
-
-p {
-  margin-top: 0;
-  margin-bottom: 6px; }
-
-a {
-  color: #5E87DB;
-  background-color: transparent;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  transition: color .3s;
-  -webkit-text-decoration-skip: objects; }
-  a:hover {
-    color: #6e93df; }
-  a:active {
-    color: #557ac5; }
-  a:active, a:hover, a:focus {
-    outline: 0;
-    text-decoration: none; }
-@charset "UTF-8";
 /**
  * @file: 调色板
  * @author: junior2ran
@@ -183,8 +129,8 @@ a {
       border-color: #95d74d; }
     .visui-btn-success[disabled] {
       cursor: not-allowed;
-      color: #c2e899;
-      border-color: #c2e899;
+      color: #d1eeb3;
+      border-color: #d1eeb3;
       border-style: solid; }
   .visui-btn-small {
     font-size: 12px;
@@ -200,7 +146,212 @@ a {
 
 .visui-btn-group {
   margin: 0 0 8px; }
-@charset "UTF-8";
+
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+.visui-radio {
+  position: relative; }
+  .visui-radio-original {
+    width: 0;
+    height: 0;
+    display: none; }
+  .visui-radio-inner {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid #E9E9E9; }
+    .visui-radio-inner:after {
+      position: absolute;
+      content: " ";
+      width: 10px;
+      height: 10px;
+      left: 3px;
+      top: 5px;
+      display: table;
+      border: none;
+      border-radius: 50%;
+      background-color: #5E87DB;
+      opacity: 0;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+      transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86); }
+  .visui-radio-label {
+    display: inline-block;
+    vertical-align: middle; }
+  .visui-radio-wrapper {
+    font-size: 12px;
+    color: #999;
+    margin-right: 12px;
+    cursor: pointer; }
+    .visui-radio-wrapper:hover .visui-radio-inner {
+      border-color: #5E87DB; }
+    .visui-radio-wrapper-disabled {
+      cursor: not-allowed; }
+      .visui-radio-wrapper-disabled:hover .visui-radio-inner {
+        border-color: #E9E9E9; }
+  .visui-radio-checked .visui-radio-inner {
+    border-color: #5E87DB; }
+    .visui-radio-checked .visui-radio-inner:after {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 1;
+      -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+      transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86); }
+  .visui-radio-disabled .visui-radio-inner {
+    border-color: #E9E9E9;
+    background-color: #F5F5F5; }
+    .visui-radio-disabled .visui-radio-inner:after {
+      background-color: #E9E9E9; }
+
+.visui-radio-group {
+  margin: 0 0 8px; }
+
+.visui-radio-btn {
+  width: 0;
+  height: 0; }
+  .visui-radio-btn-original {
+    width: 0;
+    height: 0;
+    display: none; }
+  .visui-radio-btn-wrapper {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 0 -1px;
+    padding: 0 12px;
+    cursor: pointer;
+    border: 1px solid #E9E9E9;
+    border-radius: 2px;
+    background: #ffffff;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease; }
+    .visui-radio-btn-wrapper-checked {
+      z-index: 1;
+      color: #5E87DB;
+      border-color: #8eabe6;
+      background: #dfe7f8; }
+    .visui-radio-btn-wrapper-disabled {
+      color: #E9E9E9;
+      border-color: #E9E9E9;
+      background: #F5F5F5;
+      cursor: not-allowed; }
+  .visui-radio-btn-large {
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 16px; }
+  .visui-radio-btn-small {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 8px; }
+
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+.visui-checkbox {
+  position: relative; }
+  .visui-checkbox-original {
+    width: 0;
+    height: 0;
+    display: none; }
+  .visui-checkbox-inner {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    margin-right: 8px;
+    border-radius: 2px;
+    border: 1px solid #E9E9E9;
+    -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86); }
+    .visui-checkbox-inner:after {
+      position: absolute;
+      content: " ";
+      width: 5px;
+      height: 10px;
+      left: 4px;
+      top: 2px;
+      display: table;
+      border-right: 3px solid #ffffff;
+      border-bottom: 3px solid #ffffff;
+      border-radius: 2px;
+      opacity: 0;
+      -webkit-transform: rotate(0deg) scale(0);
+      -ms-transform: rotate(0deg) scale(0);
+      transform: rotate(0deg) scale(0);
+      -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+      transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86); }
+  .visui-checkbox-label {
+    display: inline-block;
+    vertical-align: middle; }
+  .visui-checkbox-wrapper {
+    font-size: 12px;
+    color: #999;
+    margin-right: 12px;
+    cursor: pointer; }
+    .visui-checkbox-wrapper:hover .visui-checkbox-inner {
+      border-color: #5E87DB; }
+    .visui-checkbox-wrapper-disabled {
+      cursor: not-allowed; }
+      .visui-checkbox-wrapper-disabled:hover .visui-checkbox-inner {
+        border-color: #E9E9E9; }
+  .visui-checkbox-checked .visui-checkbox-inner {
+    border-color: #5E87DB;
+    background-color: #5E87DB; }
+    .visui-checkbox-checked .visui-checkbox-inner:after {
+      -webkit-transform: rotate(45deg) scale(0.8);
+      -ms-transform: rotate(45deg) scale(0.8);
+      transform: rotate(45deg) scale(0.8);
+      opacity: 1;
+      -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+      transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86); }
+  .visui-checkbox-disabled .visui-checkbox-inner {
+    border-color: #E9E9E9;
+    background-color: #F5F5F5; }
+    .visui-checkbox-disabled .visui-checkbox-inner:after {
+      background-color: #E9E9E9; }
+
+.visui-checkbox-checked.visui-checkbox-disabled .visui-checkbox-inner {
+  border-color: #E9E9E9;
+  background-color: #E9E9E9; }
+
+.visui-checkbox-indeterminate {
+  border-color: #5E87DB;
+  background-color: #5E87DB; }
+  .visui-checkbox-indeterminate .visui-checkbox-inner:after {
+    width: 12px;
+    height: 6px;
+    left: 2px;
+    top: 3px;
+    border-right: 0;
+    border-bottom: 3px solid #ffffff;
+    border-radius: 0;
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(0.8);
+    -ms-transform: rotate(0deg) scale(0.8);
+    transform: rotate(0deg) scale(0.8);
+    -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86); }
+
+.visui-checkbox-group {
+  margin: 0 0 8px; }
+
 /**
  * @file: 调色板
  * @author: junior2ran
@@ -214,7 +365,7 @@ a {
     position: relative; }
   .visui-menu a {
     text-decoration: none;
-    color: #8597C2; }
+    color: #8690A6; }
     .visui-menu a:hover {
       color: #fff; }
     .visui-menu a:before {
@@ -227,20 +378,22 @@ a {
       bottom: 0;
       right: 0;
       content: ''; }
-  .visui-menu > div {
+  .visui-menu-item, .visui-menu-submenu {
     cursor: pointer;
-    color: #8597C2;
+    color: #8690A6;
     line-height: 50px;
     height: 60px;
     box-sizing: border-box;
     display: inline-block;
     position: relative;
     padding: 5px 10px; }
-    .visui-menu > div:hover, .visui-menu > div.active {
+    .visui-menu-item:hover, .visui-menu-item.active, .visui-menu-submenu:hover, .visui-menu-submenu.active {
       background: #20305D;
       color: #fff;
       border-bottom: 4px solid #5E87DB; }
-    .visui-menu > div:hover .subNav {
+      .visui-menu-item:hover a, .visui-menu-item.active a, .visui-menu-submenu:hover a, .visui-menu-submenu.active a {
+        color: #fff; }
+    .visui-menu-item:hover .subNav, .visui-menu-submenu:hover .subNav {
       display: block; }
   .visui-menu .subNav {
     display: none;
@@ -251,14 +404,26 @@ a {
     position: absolute;
     top: 60px;
     left: 0; }
-    .visui-menu .subNav > div {
+    .visui-menu .subNav .visui-menu-item {
       cursor: pointer;
       display: block;
       height: 40px;
       line-height: 40px;
-      color: #8597C2;
+      color: #8690A6;
       text-align: left;
-      padding-left: 20px; }
-      .visui-menu .subNav > div.active, .visui-menu .subNav > div:hover {
+      padding: 0 0 0 20px; }
+      .visui-menu .subNav .visui-menu-item a {
+        color: #8690A6; }
+      .visui-menu .subNav .visui-menu-item.active,
+      .visui-menu .subNav .visui-menu-item.active a, .visui-menu .subNav .visui-menu-item:hover {
+        border-bottom: none;
         background: #20305D;
         color: #fff; }
+        .visui-menu .subNav .visui-menu-item.active a,
+        .visui-menu .subNav .visui-menu-item.active a a, .visui-menu .subNav .visui-menu-item:hover a {
+          color: #fff; }
+html body {
+  padding: 0 10px; }
+
+h2 {
+  margin-top: 10px; }

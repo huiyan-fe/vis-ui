@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-class RadioGroup extends React.Component {
+class CheckboxGroup extends React.Component {
     getChildContext() {
         return {
             component: this
@@ -18,10 +18,10 @@ class RadioGroup extends React.Component {
     render() {
         const {value, children, className, style} = this.props;
         const classname = classNames({
-            'visui-radio-group': true,
+            'visui-checkbox-group': true,
             [className]: className
         });
-        return <div ref="RadioGroup" className={classname} style={style}>
+        return <div ref="CheckboxGroup" className={classname} style={style}>
         {
             React.Children.map(children, element => {
                 if (!element || !element.type) {
@@ -29,7 +29,7 @@ class RadioGroup extends React.Component {
                 }
 
                 const {elementType} = element.type;
-                if (elementType !== 'Radio' && elementType !== 'RadioButton') {
+                if (elementType !== 'Checkbox') {
                     return null;
                 }
 
@@ -44,17 +44,16 @@ class RadioGroup extends React.Component {
     }
 }
 
-RadioGroup.defaultProps = {
+CheckboxGroup.defaultProps = {
 };
-RadioGroup.childContextTypes = {
+CheckboxGroup.childContextTypes = {
     component: PropTypes.any
 };
-RadioGroup.propTypes = {
+CheckboxGroup.propTypes = {
     name: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]),
     disabled: PropTypes.bool,
-    size: PropTypes.string,     // 只对 RadioButton 有效
     onChange: PropTypes.func
 };
 
-export default RadioGroup;
+export default CheckboxGroup;

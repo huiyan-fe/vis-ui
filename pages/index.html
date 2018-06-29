@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vis-UI - 您的顶呱呱UI组件库</title>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            color: #fff;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .main {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            padding-top: 20px;
+            bottom: 0;
+        }
+        h1 {
+            color: rgb(51, 153, 255);
+            font-size: 80px;
+            text-shadow: 0px 0px 50px rgba(51, 153, 255, 0.2);
+        }
+        a.btn:hover{
+            background: #333;
+        }
+        a {
+            display: block;
+            color: white;
+            background: #5E87DB;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 0 auto;
+            text-align: center;
+            -webkit-transition: all .5s cubic-bezier(.78,.14,.15,.86);
+            transition: all .5s cubic-bezier(.78,.14,.15,.86);
+        }
+        a:hover {
+            background: rgb(51, 153, 255);
+        }
+        a.examples {
+            height: 40px;
+            line-height: 40px;
+            width: 160px;
+        }
+        a.github {
+            opacity: 0;
+            font-size: 50px;
+            height: 140px;
+            line-height: 140px;
+            width: 960px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Vis-UI</h1>
+        <a class="examples" href="https://huiyan-fe.github.io/vis-ui/pages/examples/">组件库示例</a>
+        <br>
+        <a class="github" href="https://github.com/huiyan-fe/vis-ui">等等！先来GitHub点star ★</a>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var timer;
+        // $('.examples').mouseenter(function(){
+        //     $('.github').slideDown(1000);
+        // });
+        // $('.examples').mouseleave(function(){
+        //     timer = setTimeout(() => {
+        //         $('.github').slideUp(1000);
+        //     }, 1000);
+        // });
+        // $('.github').mouseenter(function(){
+        //     console.log(1)
+        //     $('.github').slideDown(1000);
+        //     clearTimeout(timer);
+        // });
+        $('.examples').mouseenter(function(){
+            $('.github').css('opacity','1');
+        });
+        $('.examples').mouseleave(function(){
+            $('.github').css('opacity','0');
+        });
+        $('.github').mouseenter(function(){
+            $('.github').css('opacity','1');
+        });
+        $('.github').mouseleave(function(){
+            $('.github').css('opacity','0');
+        });
+    </script>
+</body>
+</html>

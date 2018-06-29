@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import Button from './button';
 import Menu from './menu';
 import Radio from './radio';
+import Checkbox from './checkbox';
 import './index.scss';
 import './style.scss';
 
@@ -16,6 +17,8 @@ const examples = (
         <Button />
         <h2>单选框 Radio</h2>
         <Radio />
+        <h2>多选框 Checkbox</h2>
+        {/* <Checkbox /> */}
     </div>
 );
 

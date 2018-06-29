@@ -29,6 +29,7 @@ $success-color-w3: $huiyan-green-w30 !default;
 $success-color-w4: $huiyan-green-w40 !default;
 $success-color-w5: $huiyan-green-w50 !default;
 $success-color-w6: $huiyan-green-w60 !default;
+$success-color-w7: $huiyan-green-w70 !default;
 $success-color-w8: $huiyan-green-w80 !default;
 $success-color-w9: $huiyan-green-w90 !default;
 
@@ -107,7 +108,7 @@ $btn-success-bg: $success-color-w9 !default;
 $btn-success-border: $success-color-w5 !default;
 $btn-success-border-hover: $success-color-w4 !default;
 $btn-success-border-active: $success-color-w3 !default;
-$btn-success-disabled: $success-color-w6 !default;
+$btn-success-disabled: $success-color-w7 !default;
 
 $btn-disabled-color: $white !default;
 $btn-disabled-bg: $primary-color-w9 !default;
@@ -140,3 +141,19 @@ $radio-btn-select-border: $primary-color-w3 !default;
 $radio-btn-select-bg: $primary-color-w8 !default;
 $radio-btn-select-color: $primary-color !default;
 $radio-btn-disabled-bg: #F5F5F5 !default;
+
+// ---CHECKBOX---
+$checkbox-width-base: 16px !default;
+$checkbox-height-base: 16px !default;
+$checkbox-border-radius: $border-radius-base !default;
+$checkbox-font-size-base: $font-size-sm !default;
+$checkbox-font-size-lg: $font-size-base !default;
+$checkbox-margin-sapce: $padding-xs !default;
+$checkbox-margin-between: $padding-sm !default;
+$checkbox-margin-lg: $padding-md !default;
+
+$checkbox-text-color: #999 !default;
+$checkbox-border-color: #E9E9E9 !default;
+$checkbox-select-color: $primary-color !default;
+$checkbox-disabled-color: #E9E9E9 !default;
+$checkbox-disabled-bg: #F5F5F5 !default;
