@@ -14,23 +14,20 @@ class Checkbox extends React.Component {
     componentWillReceiveProps(props) {
         this.setState({ checked: props.checked });
     }
-    
+
+    parent() {
+        return this.context.component;
+    }
+
+    isDisabled() {
+        if (!this.parent()) {
+            return this.props.disabled;
+        }
+        return this.props.disabled || this.parent().props.disabled;
+    }
+
     onChange(e) {
         const checked = e.target.checked;
-        const group = this.context.component;
-        console.log(e.target.checked)
-
-        if (group) {
-            const length = group.state.options.length + (checked ? 1 : -1);
-  
-            if (group.props.min !== undefined && length < group.props.min) {
-                return;
-            }
-  
-            if (group.props.max !== undefined && length > group.props.max) {
-                return;
-            }
-        }
 
         this.setState({
             checked: checked
@@ -43,24 +40,24 @@ class Checkbox extends React.Component {
 
     render() {
         const {checked} = this.state;
-        const {name, disabled, value, indeterminate, className, style, children} = this.props;
+        const {value, indeterminate, className, style, children} = this.props;
+        const disabled = this.isDisabled();
         const classname = classNames({
             'visui-checkbox': true,
-            [`visui-checkbox-indeterminate`]: indeterminate,
-            [`visui-checkbox-checked`]: checked,
-            [`visui-checkbox-disabled`]: disabled,
+            'visui-checkbox-indeterminate': indeterminate,
+            'visui-checkbox-checked': checked,
+            'visui-checkbox-disabled': disabled,
             [className]: className
         });
         const wrapperClassname = classNames({
             'visui-checkbox-wrapper': true,
-            [`visui-checkbox-wrapper-disabled`]: disabled,
+            'visui-checkbox-wrapper-disabled': disabled,
         });
         return <label className={wrapperClassname} style={style}>
             <span className={classname}>
                 <input
                     type="checkbox"
                     className="visui-checkbox-original"
-                    name={name}
                     checked={checked}
                     disabled={disabled}
                     onChange={this.onChange.bind(this)}

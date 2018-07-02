@@ -18,7 +18,7 @@ const examples = (
         <h2>单选框 Radio</h2>
         <Radio />
         <h2>多选框 Checkbox</h2>
-        {/* <Checkbox /> */}
+        <Checkbox />
     </div>
 );
 

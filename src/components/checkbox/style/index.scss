@@ -101,9 +101,9 @@ $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
 }
 
 .#{$checkbox-prefix-cls}-indeterminate {
-    border-color: $checkbox-select-color;
-    background-color: $checkbox-select-color;
     .#{$checkbox-prefix-cls}-inner {
+        border-color: $checkbox-select-color;
+        background-color: $checkbox-select-color;
         &:after {
             width: 12px;
             height: 6px;

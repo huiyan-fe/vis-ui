@@ -16,6 +16,9 @@ class RadioButton extends Radio {
     }
 
     isDisabled() {
+        if (!this.parent()) {
+            return this.props.disabled;
+        }
         return this.props.disabled || this.parent().props.disabled;
     }
 

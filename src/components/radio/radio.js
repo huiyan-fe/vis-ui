@@ -18,6 +18,17 @@ class Radio extends React.Component {
             this.setState({ checked });
         }
     }
+
+    parent() {
+        return this.context.component;
+    }
+
+    isDisabled() {
+        if (!this.parent()) {
+            return this.props.disabled;
+        }
+        return this.props.disabled || this.parent().props.disabled;
+    }
     
     onChange(e) {
         const checked = e.target.checked;
@@ -37,7 +48,8 @@ class Radio extends React.Component {
 
     render() {
         const {checked} = this.state;
-        const {name, disabled, value, className, style, children} = this.props;
+        const {name, value, className, style, children} = this.props;
+        const disabled = this.isDisabled();
         const classname = classNames({
             'visui-radio': true,
             [`visui-radio-checked`]: checked,
@@ -68,6 +80,9 @@ class Radio extends React.Component {
 }
 
 Radio.elementType = 'Radio';
+Radio.contextTypes = {
+    component: PropTypes.any
+};
 Radio.defaultProps = {
     value: '',
     checked: false,

@@ -11,7 +11,9 @@ vis-ui的目标：
 如果您是vis-ui的用户，希望灵活的使用vis-ui来创建自己美丽动人的项目，可以阅读[vis-ui 使用说明](https://github.com/huiyan-fe/vis-ui/blob/master/README2.md)。
 
 ## 开发框架
-react + sass + webpack + gulp
+开发技术选型：react + sass
+
+打包输出：babel + gulp
 
 ## 构建过程
 安装

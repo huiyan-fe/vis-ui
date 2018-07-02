@@ -331,7 +331,7 @@ a {
   border-color: #E9E9E9;
   background-color: #E9E9E9; }
 
-.visui-checkbox-indeterminate {
+.visui-checkbox-indeterminate .visui-checkbox-inner {
   border-color: #5E87DB;
   background-color: #5E87DB; }
   .visui-checkbox-indeterminate .visui-checkbox-inner:after {
