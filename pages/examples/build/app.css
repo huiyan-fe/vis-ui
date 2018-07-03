@@ -422,6 +422,27 @@ a {
         .visui-menu .subNav .visui-menu-item.active a,
         .visui-menu .subNav .visui-menu-item.active a a, .visui-menu .subNav .visui-menu-item:hover a {
           color: #fff; }
+
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+.visui-icon {
+  display: inline-block; }
+  .visui-icon.visui-icon-down {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-top: 6px solid #5E87DB;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    transition: all .2s linear; }
 html body {
   padding: 0 10px; }
 

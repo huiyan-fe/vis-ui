@@ -1,0 +1,16 @@
+@import "../../style/themes/huiyan";
+
+$icon-prefix-cls: #{$vis-prefix}-icon;
+
+.#{$icon-prefix-cls} {
+    display: inline-block;
+    &.#{$icon-prefix-cls}-down {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border-top: 6px solid $icon-color;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        transition: all .2s linear;
+    }
+}
