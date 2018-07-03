@@ -9,7 +9,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        publicPath: '/build',
+        publicPath: '/build/',
         path: path.resolve(__dirname, 'build')
     },
     module: {
@@ -54,22 +54,22 @@ module.exports = {
             disable: false,
             allChunks: true,
         }),
-        new UglifyJSPlugin({
-            uglifyOptions: {
-                ie8: false,
-                output: {
-                    comments: false,
-                    beautify: false
-                },
-                mangle: {
-                    keep_fnames: true
-                },
-                compress: {
-                    dead_code: true,
-                    warnings: false,
-                    drop_console: true
-                }
-            }
-        })
+        // new UglifyJSPlugin({
+        //     uglifyOptions: {
+        //         ie8: false,
+        //         output: {
+        //             comments: false,
+        //             beautify: false
+        //         },
+        //         mangle: {
+        //             keep_fnames: true
+        //         },
+        //         compress: {
+        //             dead_code: true,
+        //             warnings: false,
+        //             drop_console: true
+        //         }
+        //     }
+        // })
     ]
 };

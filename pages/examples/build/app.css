@@ -448,3 +448,8 @@ html body {
 
 h2 {
   margin-top: 10px; }
+
+hr {
+  border-width: .6px;
+  border-style: dashed;
+  border-color: #9EB7E9; }
