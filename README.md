@@ -1,4 +1,4 @@
-# vis-ui
+# Vis-UI [![npm version](https://img.shields.io/npm/v/vis-ui.svg)](https://www.npmjs.com/package/vis-ui)
 👍基于react的前端UI组件化通用库
 
 vis-ui的目标：
@@ -71,3 +71,6 @@ npm run examples:build
 1. 遵循`eslint`和`stylelint`规范，依赖中已安装，规则见配置文件
 2. 注意提交注释请使用`git cz`
 3. 组件开发时请设置`propTypes`和`defaultProps`规范接口传参
+
+## 许可证
+[MIT](./LICENSE)

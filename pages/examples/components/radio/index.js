@@ -45,7 +45,7 @@ export default class App extends Component {
             <br/>
 
             <h2>单选框组 Radio.Group</h2>
-            <RadioGroup value={this.state.radioValue} onChange={this.onChangeRadioValue.bind(this)} disabled>
+            <RadioGroup value={this.state.radioValue} onChange={this.onChangeRadioValue.bind(this)}>
                 <Radio value="1">A</Radio>
                 <Radio value="2">B</Radio>
                 <Radio value="3">C</Radio>
