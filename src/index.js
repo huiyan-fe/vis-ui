@@ -25,5 +25,8 @@ export { default as Icon } from './components/icon';
  * 增强型组件
  */
 
+// 下拉多选组件
+export { default as Dropdown } from './components/dropdown';
+
 // 单选下拉组件
 export { default as CheckboxList } from './components/checkbox-list';

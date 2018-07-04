@@ -48,7 +48,7 @@ class Radio extends React.Component {
 
     render() {
         const {checked} = this.state;
-        const {name, value, className, style, children} = this.props;
+        const {name, value, className, style, children, onMouseEnter, onMouseLeave} = this.props;
         const disabled = this.isDisabled();
         const classname = classNames({
             'visui-radio': true,
@@ -60,7 +60,12 @@ class Radio extends React.Component {
             'visui-radio-wrapper': true,
             [`visui-radio-wrapper-disabled`]: disabled,
         });
-        return <label className={wrapperClassname} style={style}>
+        return <label 
+            className={wrapperClassname} 
+            style={style} 
+            onMouseEnter={onMouseEnter} 
+            onMouseLeave={onMouseLeave}
+        >
             <span className={classname}>
                 <input
                     type="radio"
@@ -90,9 +95,11 @@ Radio.defaultProps = {
 };
 Radio.propTypes = {
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]).isRequired,
-    onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    checked: PropTypes.bool
+    checked: PropTypes.bool,
+    onChange: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func
 };
 
 export default Radio;

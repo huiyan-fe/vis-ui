@@ -40,7 +40,7 @@ class Checkbox extends React.Component {
 
     render() {
         const {checked} = this.state;
-        const {value, indeterminate, className, style, children} = this.props;
+        const {value, indeterminate, className, style, children, onMouseEnter, onMouseLeave} = this.props;
         const disabled = this.isDisabled();
         const classname = classNames({
             'visui-checkbox': true,
@@ -53,7 +53,12 @@ class Checkbox extends React.Component {
             'visui-checkbox-wrapper': true,
             'visui-checkbox-wrapper-disabled': disabled,
         });
-        return <label className={wrapperClassname} style={style}>
+        return <label 
+            className={wrapperClassname} 
+            style={style} 
+            onMouseEnter={onMouseEnter} 
+            onMouseLeave={onMouseLeave}
+        >
             <span className={classname}>
                 <input
                     type="checkbox"
@@ -82,9 +87,11 @@ Checkbox.defaultProps = {
 };
 Checkbox.propTypes = {
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]).isRequired,
-    onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    checked: PropTypes.bool
+    checked: PropTypes.bool,
+    onChange: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func
 };
 
 export default Checkbox;

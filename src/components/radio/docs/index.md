@@ -8,14 +8,13 @@
 
 `<Radio.Group>`容器具有向下8px的外边距。
 
-## API
+## API 接口
 ### Radio
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | value | `Radio` 的 value，**必需传入** | string, number, boolean | - | `''` |
 | checked | 是否被选中 | boolean | `true` `false` | `false` |
 | disabled | 单选框失效状态 | boolean | `true` `false` | `false` |
-| onChange | `checked` 事件的 handler，当被选中时触发事件 | function | - | - |
 
 ### RadioButton
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
@@ -23,7 +22,6 @@
 | value | `RadioButton` 的 value，**必需传入** | string, number, boolean | - | `''` |
 | checked | 是否被选中 | boolean | `true` `false` | `false` |
 | disabled | 单选按钮失效状态 | boolean | `true` `false` | `false` |
-| onChange | `checked` 事件的 handler，当被选中时触发事件 | function | - | - |
 
 ### RadioGroup
 `RadioGroup`中设置的属性，会继承到`Radio`与`RadioButton`子组件中。
@@ -33,4 +31,23 @@
 | size | 只对 `RadioButton` 生效，设置按钮大小 | string | `large` `small` | - |
 | value | 用于设置当前选中的值，与子元素`value`相同时选中 | string | - | - |
 | disabled | `RadioGroup` 的失效状态 | boolean | `true` `false` | `false` |
-| onChange | 选项变化时的回调函数 | function | - | - |
+
+## Events 事件
+### Radio
+| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| --- | --- | --- | --- | --- |
+| onMouseEnter | `mouseenter` 事件的 handler | undefined | - |
+| onMouseLeave | `mouseleave` 事件的 handler | undefined | - |
+| onChange | `checked` 事件的 handler，当被选中时触发事件 | - | - |
+
+### RadioButton
+| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| --- | --- | --- | --- | --- |
+| onMouseEnter | `mouseenter` 事件的 handler | undefined | - |
+| onMouseLeave | `mouseleave` 事件的 handler | undefined | - |
+| onChange | `checked` 事件的 handler，当被选中时触发事件 | - | - |
+
+### RadioGroup
+| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| --- | --- | --- | --- | --- |
+| onChange | 选项变化时的回调函数 | - | - |

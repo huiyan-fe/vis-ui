@@ -5,6 +5,7 @@ import Menu from './menu';
 import Radio from './radio';
 import Checkbox from './checkbox';
 import Icon from './icon';
+import Dropdown from './dropdown';
 import CheckboxList from './checkbox-list';
 import './index.scss';
 import './style.scss';
@@ -21,6 +22,8 @@ const examples = (
         <Radio />
         <h2>多选框 Checkbox</h2>
         <Checkbox />
+        <h2>下拉多选 Dropdown</h2>
+        <Dropdown />
         <h2>多选框下拉 CheckboxList</h2>
         <CheckboxList />
         <h2>图标 Icon</h2>

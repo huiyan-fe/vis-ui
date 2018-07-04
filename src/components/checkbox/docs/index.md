@@ -8,14 +8,13 @@
 
 `<Checkbox.Group>`容器具有向下8px的外边距。
 
-## API
+## API 接口
 ### Checkbox
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | value | `Checkbox` 的 value，**必需传入** | string, number, boolean | - | `''` |
 | checked | 是否被选中 | boolean | `true` `false` | `false` |
 | disabled | 单选框失效状态 | boolean | `true` `false` | `false` |
-| onChange | `checked` 事件的 handler，当勾选状态时触发事件 | function | - | - |
 
 ### CheckboxGroup
 `CheckboxGroup`中设置的属性，会继承到`Checkbox`子组件中。
@@ -23,4 +22,16 @@
 | --- | --- | --- | --- | --- |
 | value | 用于设置当前被选中项，数组中包含与子元素的`value`属性时，该子元素被选中 | array | - | - |
 | disabled | `CheckboxGroup` 的失效状态 | boolean | `true` `false` | `false` |
-| onChange | 选项变化时的回调函数 | function | - | - |
+
+## Events 事件
+### Checkbox
+| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| --- | --- | --- | --- | --- |
+| onMouseEnter | `mouseenter` 事件的 handler | undefined | - |
+| onMouseLeave | `mouseleave` 事件的 handler | undefined | - |
+| onChange | `checked` 事件的 handler，当勾选状态改变时触发事件 | - | - |
+
+### CheckboxGroup
+| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| --- | --- | --- | --- | --- |
+| onChange | 选项变化时的回调函数 | - | - |

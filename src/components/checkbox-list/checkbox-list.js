@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Checkbox from '../checkbox/index'
+import Checkbox from '../checkbox/index';
 
 class CheckboxList extends React.Component {
 

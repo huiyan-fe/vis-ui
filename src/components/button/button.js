@@ -8,7 +8,7 @@ class Button extends React.Component {
     }
 
     render() {
-        const {disabled, icon, type, size, className, style, children} = this.props;
+        const {disabled, icon, type, size, className, style, children, onMouseEnter, onMouseLeave} = this.props;
         const classname = classNames({
             'visui-btn': true,
             [`visui-btn-${type}`]: type,
@@ -16,7 +16,14 @@ class Button extends React.Component {
             'visui-btn-large': size === 'large',
             [className]: className
         });
-        return <button className={classname} onClick={this.onClick.bind(this)} disabled={disabled} style={style}>
+        return <button 
+            disabled={disabled}
+            className={classname} 
+            style={style}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={this.onClick.bind(this)}
+        >
             {icon && <i>icon</i>}
             <span>{children}</span>
         </button>;
@@ -30,6 +37,8 @@ Button.defaultProps = {
 
 Button.propTypes = {
     onClick: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     type: PropTypes.string,
     size: PropTypes.string,
     icon: PropTypes.string,
