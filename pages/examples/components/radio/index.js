@@ -51,6 +51,12 @@ export default class App extends Component {
                 <Radio value="3">C</Radio>
                 <Radio value="4">D</Radio>
             </RadioGroup>
+            <RadioGroup value={2} name="group">
+                <Radio value="1">A</Radio>
+                <Radio value="2">B</Radio>
+                <Radio value="3">C</Radio>
+                <Radio value="4">D</Radio>
+            </RadioGroup>
 
             <h2>单选按钮 Radio.Button</h2>
             <RadioGroup disabled>

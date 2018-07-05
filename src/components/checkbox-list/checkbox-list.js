@@ -121,7 +121,7 @@ class CheckboxList extends React.Component {
                     <span className="visui-checkboxlist-title-text">
                         {title} 
                         {checkedList.length > 0 ? 
-                        <span className="visui-checkboxlist-num">{' (' + checkedList.length + ')'}</span>
+                        <span className="visui-checkboxlist-num">{'(' + checkedList.length + ')'}</span>
                         : null}
                     </span> <Icon type="down" />
                 </div>

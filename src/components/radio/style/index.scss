@@ -47,6 +47,7 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
     }
 
     &-wrapper {
+        display: inline-block;
         font-size: $radio-font-size-base;
         color: $radio-text-color;
         margin-right: $radio-margin-between;

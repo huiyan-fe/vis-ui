@@ -7,6 +7,8 @@ $checkboxlist-prefix-cls: #{$vis-prefix}-checkboxlist;
     color: $checkboxlist-text-color;
     position: relative;
     display: inline-block;
+    margin-bottom: $checkboxlist-margin-sm;
+    margin-right: $checkboxlist-margin-base;
     & &-title-container {
         cursor: pointer;
         .#{$checkboxlist-prefix-cls}-title-text {
@@ -30,7 +32,7 @@ $checkboxlist-prefix-cls: #{$vis-prefix}-checkboxlist;
         word-break: keep-all;
         white-space: nowrap;
         background: $white;
-        padding: $padding-xs $padding-sm 2px;
+        padding: $checkboxlist-margin-sm $checkboxlist-margin-base 2px;
         .#{$vis-prefix}-checkbox-group-item,
         &-down-line {
             display: block;

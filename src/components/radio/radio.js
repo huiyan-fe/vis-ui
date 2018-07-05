@@ -71,6 +71,7 @@ class Radio extends React.Component {
                     type="radio"
                     className="visui-radio-original"
                     name={name}
+                    value={value}
                     checked={checked}
                     disabled={disabled}
                     onChange={this.onChange.bind(this)}

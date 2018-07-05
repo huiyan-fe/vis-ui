@@ -48,6 +48,7 @@ $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
     }
 
     &-wrapper {
+        display: inline-block;
         font-size: $checkbox-font-size-base;
         color: $checkbox-text-color;
         margin-right: $checkbox-margin-between;

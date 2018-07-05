@@ -3,6 +3,21 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 class RadioGroup extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: this.props.value || null
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.value !== this.props.value) {
+            this.setState({
+                options: nextProps.value
+            });
+        }
+    }
+
     getChildContext() {
         return {
             component: this
@@ -10,13 +25,16 @@ class RadioGroup extends React.Component {
     }
     
     onChange(value) {
-        if (this.props.onChange) {
-            this.props.onChange(value)
+        this.setState({value});
+
+        if (this.props.onChange && value !== this.state.value) {
+            this.props.onChange(value);
         }
     }
 
     render() {
-        const {value, children, className, style} = this.props;
+        const { value } = this.state;
+        const {name, children, className, style} = this.props;
         const classname = classNames({
             'visui-radio-group': true,
             [className]: className

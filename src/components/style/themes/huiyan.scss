@@ -167,9 +167,13 @@ $dropdown-font-size-base: $font-size-sm !default;
 $dropdown-text-color: #999 !default;
 $dropdown-border-color: #E9E9E9 !default;
 $dropdown-number-color: $primary-color !default;
+$dropdown-margin-base: $padding-sm !default;
+$dropdown-margin-sm: $padding-xs !default;
 
 // ---CHECKBOX LIST---
 $checkboxlist-font-size-base: $font-size-sm !default;
 $checkboxlist-text-color: #999 !default;
 $checkboxlist-border-color: #E9E9E9 !default;
 $checkboxlist-number-color: $primary-color !default;
+$checkboxlist-margin-base: $padding-sm !default;
+$checkboxlist-margin-sm: $padding-xs !default;

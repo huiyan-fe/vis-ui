@@ -65,6 +65,7 @@ class Checkbox extends React.Component {
                     type="checkbox"
                     className="visui-checkbox-original"
                     checked={checked}
+                    value={value}
                     disabled={disabled}
                     onChange={this.onChange.bind(this)}
                 />

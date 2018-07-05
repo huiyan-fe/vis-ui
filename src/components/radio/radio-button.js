@@ -79,6 +79,7 @@ class RadioButton extends Radio {
                     type="radio"
                     className="visui-radio-btn-original"
                     name={name}
+                    value={value}
                     checked={checked}
                     disabled={disabled}
                     onChange={this.onChange.bind(this)}

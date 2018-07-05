@@ -7,6 +7,8 @@ $dropdown-prefix-cls: #{$vis-prefix}-dropdown;
     color: $dropdown-text-color;
     position: relative;
     display: inline-block;
+    margin-bottom: $dropdown-margin-sm;
+    margin-right: $dropdown-margin-base;
     & &-title-container {
         cursor: pointer;
         .#{$dropdown-prefix-cls}-title-text {
@@ -27,7 +29,7 @@ $dropdown-prefix-cls: #{$vis-prefix}-dropdown;
         word-break: keep-all;
         white-space: nowrap;
         background: $white;
-        padding: $padding-xs $padding-sm 2px;
+        padding: $dropdown-margin-sm $dropdown-margin-base 2px;
         .#{$vis-prefix}-checkbox-group-item,
         &-down-line {
             display: block;
