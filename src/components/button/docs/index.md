@@ -18,7 +18,7 @@
 
 ## Events 事件
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |
 | onMouseLeave | `mouseleave` 事件的 handler | event | 原生的`event`事件 |
 | onClick | `click` 事件的 handler | event | 原生的`event`事件 |
