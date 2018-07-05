@@ -52,6 +52,9 @@ npm run examples:build
 ├── src                 // UI组件资源文件
 │   ├── components      // 编写组件目录
 │   │   ├── button      // 组件示例（如button）
+│   │   │   ├── docs    // 组件说明文档
+│   │   │   ├── style   // 组件个性样式
+│   │   │   └── index.js// 组件入口
 │   │   └── style
 │   │       ├── color   // 配色
 │   │       ├── core    // 基础样式
