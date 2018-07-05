@@ -26,7 +26,7 @@
 ## Events 事件
 ### Checkbox
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |
 | onMouseLeave | `mouseleave` 事件的 handler | event | 原生的`event`事件 |
 | onChange | `checked` 事件的 handler，当勾选状态改变时触发事件 | bool | 返回该多选框的选中状态，`true`表示选中，`false`表示未选中 |
