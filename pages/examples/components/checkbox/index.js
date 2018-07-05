@@ -29,7 +29,7 @@ export default class App extends Component {
 
     render() {
         return <div>
-            <Checkbox>未选中状态</Checkbox>
+            <Checkbox onMouseEnter={(e)=>{console.log(e)}}>未选中状态</Checkbox>
             <Checkbox checked>选中状态</Checkbox>
             <Checkbox disabled>禁用状态</Checkbox>
             <Checkbox checked disabled>禁用且选中</Checkbox>

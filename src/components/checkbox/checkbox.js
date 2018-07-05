@@ -12,7 +12,8 @@ class Checkbox extends React.Component {
     }
 
     componentWillReceiveProps(props) {
-        this.setState({ checked: props.checked });
+        const checked = Boolean(props.checked);
+        this.setState({ checked });
     }
 
     parent() {
@@ -46,12 +47,12 @@ class Checkbox extends React.Component {
             'visui-checkbox': true,
             'visui-checkbox-indeterminate': indeterminate,
             'visui-checkbox-checked': checked,
-            'visui-checkbox-disabled': disabled,
-            [className]: className
+            'visui-checkbox-disabled': disabled
         });
         const wrapperClassname = classNames({
             'visui-checkbox-wrapper': true,
             'visui-checkbox-wrapper-disabled': disabled,
+            [className]: className
         });
         return <label 
             className={wrapperClassname} 

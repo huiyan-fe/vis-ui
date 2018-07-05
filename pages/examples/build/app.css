@@ -238,6 +238,8 @@ a {
     background: #ffffff;
     -webkit-transition: all .2s ease;
     transition: all .2s ease; }
+    .visui-radio-btn-wrapper:hover {
+      color: #5E87DB; }
     .visui-radio-btn-wrapper-checked {
       z-index: 1;
       color: #5E87DB;
@@ -428,11 +430,6 @@ a {
  * @author: junior2ran
  * @date: 2018-05-17 19:42:28
  */
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 .visui-icon {
   display: inline-block; }
   .visui-icon.visui-icon-down {
@@ -443,6 +440,76 @@ a {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     transition: all .2s linear; }
+
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+.visui-dropdown {
+  font-size: 12px;
+  color: #999;
+  position: relative;
+  display: inline-block; }
+  .visui-dropdown .visui-dropdown-title-container {
+    cursor: pointer; }
+    .visui-dropdown .visui-dropdown-title-container .visui-dropdown-title-text {
+      vertical-align: middle; }
+  .visui-dropdown .visui-dropdown-num {
+    margin: 0 2px;
+    color: #5E87DB; }
+  .visui-dropdown .visui-dropdown-down-container {
+    position: absolute;
+    z-index: 999;
+    top: 20px;
+    left: 0;
+    border: 1px solid #E9E9E9;
+    box-shadow: 0 1px 1px #ccc;
+    word-break: keep-all;
+    white-space: nowrap;
+    background: #ffffff;
+    padding: 8px 12px 2px; }
+    .visui-dropdown .visui-dropdown-down-container .visui-checkbox-group-item, .visui-dropdown .visui-dropdown-down-container-down-line {
+      display: block;
+      height: 18px;
+      line-height: 18px;
+      margin: 5px 0; }
+
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+.visui-checkboxlist {
+  font-size: 12px;
+  color: #999;
+  position: relative;
+  display: inline-block; }
+  .visui-checkboxlist .visui-checkboxlist-title-container {
+    cursor: pointer; }
+    .visui-checkboxlist .visui-checkboxlist-title-container .visui-checkboxlist-title-text {
+      vertical-align: middle; }
+    .visui-checkboxlist .visui-checkboxlist-title-container .visui-checkbox-wrapper {
+      margin-right: 0; }
+  .visui-checkboxlist .visui-checkboxlist-num {
+    margin: 0 2px;
+    color: #5E87DB; }
+  .visui-checkboxlist .visui-checkboxlist-down-container {
+    position: absolute;
+    z-index: 999;
+    top: 20px;
+    left: 0;
+    border: 1px solid #E9E9E9;
+    box-shadow: 0 1px 1px #ccc;
+    word-break: keep-all;
+    white-space: nowrap;
+    background: #ffffff;
+    padding: 8px 12px 2px; }
+    .visui-checkboxlist .visui-checkboxlist-down-container .visui-checkbox-group-item, .visui-checkboxlist .visui-checkboxlist-down-container-down-line {
+      display: block;
+      height: 18px;
+      line-height: 18px;
+      margin: 5px 0; }
 html body {
   padding: 0 10px; }
 

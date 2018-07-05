@@ -29,25 +29,25 @@
 | --- | --- | --- | --- | --- |
 | name | `RadioGroup` 下所有 `input[type="radio"]` 的 name 属性 | string | - | - |
 | size | 只对 `RadioButton` 生效，设置按钮大小 | string | `large` `small` | - |
-| value | 用于设置当前选中的值，与子元素`value`相同时选中 | string | - | - |
+| value | 用于设置当前选中的值，与子元素`value`相同时选中 | string, number, boolean | - | - |
 | disabled | `RadioGroup` 的失效状态 | boolean | `true` `false` | `false` |
 
 ## Events 事件
 ### Radio
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
 | --- | --- | --- | --- | --- |
-| onMouseEnter | `mouseenter` 事件的 handler | undefined | - |
-| onMouseLeave | `mouseleave` 事件的 handler | undefined | - |
-| onChange | `checked` 事件的 handler，当被选中时触发事件 | - | - |
+| onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |
+| onMouseLeave | `mouseleave` 事件的 handler | event | 原生的`event`事件 |
+| onChange | `checked` 事件的 handler，当被选中时触发事件 | string, number, boolean | 返回该选项的`value` |
 
 ### RadioButton
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
 | --- | --- | --- | --- | --- |
-| onMouseEnter | `mouseenter` 事件的 handler | undefined | - |
-| onMouseLeave | `mouseleave` 事件的 handler | undefined | - |
-| onChange | `checked` 事件的 handler，当被选中时触发事件 | - | - |
+| onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |
+| onMouseLeave | `mouseleave` 事件的 handler | event | 原生的`event`事件 |
+| onChange | `checked` 事件的 handler，当被选中时触发事件 | string, number, boolean | 返回该选项的`value` |
 
 ### RadioGroup
-| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| 事件名 | 事件说明 | 返回值类型 | 返回值说明 |
 | --- | --- | --- | --- | --- |
-| onChange | 选项变化时的回调函数 | - | - |
+| onChange | 选项变化时的回调函数 | string, number, boolean | 返回选中项的`value` |

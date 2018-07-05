@@ -53,12 +53,12 @@ class Radio extends React.Component {
         const classname = classNames({
             'visui-radio': true,
             [`visui-radio-checked`]: checked,
-            [`visui-radio-disabled`]: disabled,
-            [className]: className
+            [`visui-radio-disabled`]: disabled
         });
         const wrapperClassname = classNames({
             'visui-radio-wrapper': true,
             [`visui-radio-wrapper-disabled`]: disabled,
+            [className]: className
         });
         return <label 
             className={wrapperClassname} 

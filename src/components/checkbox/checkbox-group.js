@@ -6,7 +6,7 @@ class CheckboxGroup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            options: this.props.options || []
+            options: this.props.value || []
         };
     }
 
@@ -63,6 +63,7 @@ class CheckboxGroup extends React.Component {
 
             return React.cloneElement(element, Object.assign({}, element.props, {
                 key: index,
+                className: 'visui-checkbox-group-item',
                 checked: element.props.checked || options.indexOf(element.props.value) >= 0,
                 onChange: this.onChange.bind(this, element.props.value),
             }));

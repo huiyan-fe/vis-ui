@@ -36,8 +36,8 @@ export default class App extends Component {
             <ButtonGroup>
                 <Button type="primary">按钮1</Button>
                 <Button type="primary">按钮2</Button>
-                <Button type="primary">按钮3</Button>
-                <Button type="primary">按钮4</Button>
+                <Button type="primary" onMouseEnter={(e)=>{console.log(e.target)}}>按钮3</Button>
+                <Button type="primary" onClick={(e)=>{console.log(e)}}>按钮4</Button>
             </ButtonGroup>
         </div>;
     }

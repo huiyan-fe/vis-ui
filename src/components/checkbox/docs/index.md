@@ -27,11 +27,11 @@
 ### Checkbox
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
 | --- | --- | --- | --- | --- |
-| onMouseEnter | `mouseenter` 事件的 handler | undefined | - |
-| onMouseLeave | `mouseleave` 事件的 handler | undefined | - |
-| onChange | `checked` 事件的 handler，当勾选状态改变时触发事件 | - | - |
+| onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |
+| onMouseLeave | `mouseleave` 事件的 handler | event | 原生的`event`事件 |
+| onChange | `checked` 事件的 handler，当勾选状态改变时触发事件 | bool | 返回该多选框的选中状态，`true`表示选中，`false`表示未选中 |
 
 ### CheckboxGroup
-| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| 事件名 | 事件说明 | 返回值类型 | 返回值说明 |
 | --- | --- | --- | --- | --- |
-| onChange | 选项变化时的回调函数 | - | - |
+| onChange | 选项变化时的回调函数 | array | 返回选中项的`value`组成的数组 |

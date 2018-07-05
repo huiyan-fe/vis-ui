@@ -5,6 +5,7 @@ $vis-prefix: visui;
 
 // -------- Colors -----------
 $deep-color: $huiyan-brand-dark-blue !default;
+
 $secondary-color: $huiyan-blue !default;
 
 $primary-color: $huiyan-brand-blue !default;
@@ -53,8 +54,8 @@ $link-active-color: $primary-color-b1 !default;
 $link-decoration: none !default;
 $link-hover-decoration: none !default;
 
-// ---NAV---
-$nav-color: $deep-color !default;
+// ---MENU---
+$menu-color: $deep-color !default;
 
 // ---BORDER---
 $border-width: 1px !default;
@@ -160,3 +161,15 @@ $checkbox-border-color: #E9E9E9 !default;
 $checkbox-select-color: $primary-color !default;
 $checkbox-disabled-color: #E9E9E9 !default;
 $checkbox-disabled-bg: #F5F5F5 !default;
+
+// ---DROPDOWN---
+$dropdown-font-size-base: $font-size-sm !default;
+$dropdown-text-color: #999 !default;
+$dropdown-border-color: #E9E9E9 !default;
+$dropdown-number-color: $primary-color !default;
+
+// ---CHECKBOX LIST---
+$checkboxlist-font-size-base: $font-size-sm !default;
+$checkboxlist-text-color: #999 !default;
+$checkboxlist-border-color: #E9E9E9 !default;
+$checkboxlist-number-color: $primary-color !default;

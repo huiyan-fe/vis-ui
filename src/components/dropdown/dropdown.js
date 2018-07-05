@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Checkbox, Icon } from '../../index';
 const CheckboxGroup = Checkbox.Group;
 
@@ -12,6 +13,7 @@ class Dropdown extends React.Component {
             checkAll: false,
             checkedList: this.props.value || []
         }
+        this.bodyClick = this.bodyClick.bind(this);
         this.onChange = this.onChange.bind(this);
         this.onCheckAllChange = this.onCheckAllChange.bind(this);
         this.onCheckedListChange = this.onCheckedListChange.bind(this);
@@ -29,21 +31,28 @@ class Dropdown extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener('click', (e) => {
-            let dom = e.target;
-            let flag = true;
-            while (dom) {
-                if (dom == this.refs.titleContainer) {
-                    flag = false;
-                }
-                dom = dom.parentNode;
+        window.addEventListener('click', this.bodyClick);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('click', this.bodyClick);
+    }
+
+    bodyClick(e) {
+        let dom = e.target;
+        let flag = true;
+        let showDown = this.state.showDown;
+        while (dom) {
+            if (dom == this.refs.titleContainer) {
+                flag = false;
             }
-            if (flag) {
-                this.setState({
-                    showDown: false
-                });
-            }
-        });
+            dom = dom.parentNode;
+        }
+        if (flag && showDown) {
+            this.setState({
+                showDown: false
+            });
+        }
     }
 
     onChange(checkedList) {
@@ -54,13 +63,13 @@ class Dropdown extends React.Component {
         }, this.onCheckedListChange);
     }
 
-    onCheckAllChange(e) {
+    onCheckAllChange(checked) {
         this.setState({
-            checkedList: e.target.checked ? this.props.options.map((item) => {
+            checkedList: checked ? this.props.options.map((item) => {
                 return item.value;
             }) : [],
             indeterminate: false,
-            checkAll: e.target.checked,
+            checkAll: checked,
         }, this.onCheckedListChange);
     }
 
@@ -69,23 +78,40 @@ class Dropdown extends React.Component {
     }
 
     render() {
-
+        const { checkAll, indeterminate, checkedList, showDown } = this.state;
+        const { className, style, title, options } = this.props;
+        const classname = classNames({
+            'visui-dropdown': true,
+            [className]: className
+        });
         return (
-            <div className="huiyan-dropdown" style={this.props.style}>
-                <div ref="titleContainer" className="title-container" onClick={(e) => {
-                    this.setState({
-                        showDown: !this.state.showDown
-                    });
-                }}>
-                    <span className="title-text">{this.props.title}{this.state.checkedList.length > 0 ? '(' + this.state.checkedList.length + ')' : ''}</span> <Icon type="down" />
+            <div className={classname} style={style}>
+                <div ref="titleContainer" 
+                    className="visui-dropdown-title-container" 
+                    onClick={(e) => {
+                        this.setState({
+                            showDown: !showDown
+                        });
+                    }}
+                >
+                    <span className="visui-dropdown-title-text">
+                        {title}
+                        {checkedList.length > 0 ? 
+                        <span className="visui-dropdown-num">{'(' + checkedList.length + ')'}</span>
+                        : null}
+                    </span> <Icon type="down" />
                 </div>
-                {this.state.showDown && <div className="down-container" onClick={(e) => {
+                {showDown && <div className="visui-dropdown-down-container" onClick={(e) => {
                     e.nativeEvent.stopImmediatePropagation();
                 }}>
-                    <div key={-1} className="down-line">
-                        <Checkbox onChange={this.onCheckAllChange} indeterminate={this.state.indeterminate} checked={this.state.checkAll}>全选</Checkbox>
+                    <div key={-1} className="visui-dropdown-down-line">
+                        <Checkbox onChange={this.onCheckAllChange} indeterminate={indeterminate} checked={checkAll}>全选</Checkbox>
                     </div>
-                    <CheckboxGroup options={this.props.options} onChange={this.onChange} value={this.state.checkedList}/>
+                    <CheckboxGroup onChange={this.onChange} value={checkedList}>
+                        {options && options.map((checkbox, index)=>{
+                            return <Checkbox value={checkbox.value} key={index}>{checkbox.label}</Checkbox>
+                        })}
+                    </CheckboxGroup>
                 </div>}
             </div>
         )
@@ -93,14 +119,8 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.defaultProps = {
-    title: '公共设施',
-    options: [
-        { label: '金融设施', value: 1 },
-        { label: '金融设施1', value: 2 },
-        { label: '金融设施2', value: 3 },
-        { label: '金融设施3', value: 4 },
-        { label: '金融设施4', value: 5 }
-    ]
+    title: '',
+    options: []
 };
 Dropdown.propTypes = {
     title: PropTypes.string.isRequired,

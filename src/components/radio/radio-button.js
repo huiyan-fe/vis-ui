@@ -52,7 +52,7 @@ class RadioButton extends Radio {
 
     render() {
         const {checked} = this.state;
-        const {name, value, className, style, children} = this.props;
+        const {name, value, className, style, children, onMouseEnter, onMouseLeave} = this.props;
         const disabled = this.isDisabled();
         const size = this.getSize();
 
@@ -68,7 +68,12 @@ class RadioButton extends Radio {
             [`visui-radio-btn-wrapper-disabled`]: disabled,
             [className]: className
         });
-        return <label className={wrapperClassname} style={style}>
+        return <label 
+            className={wrapperClassname} 
+            style={style} 
+            onMouseEnter={onMouseEnter} 
+            onMouseLeave={onMouseLeave}
+        >
             <span className={classname}>
                 <input
                     type="radio"

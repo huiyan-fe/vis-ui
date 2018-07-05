@@ -35,6 +35,7 @@ class RadioGroup extends React.Component {
 
                 return React.cloneElement(element, Object.assign({}, element.props, {
                     onChange: this.onChange.bind(this),
+                    className: 'visui-radio-group-item',
                     name: name,
                     model: value
                 }));
