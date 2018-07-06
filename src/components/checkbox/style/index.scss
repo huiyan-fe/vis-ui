@@ -30,6 +30,7 @@ $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
             left: 4px;
             top: 2px;
             display: table;
+            box-sizing: content-box;
             border-right: 3px solid $white;
             border-bottom: 3px solid $white;
             border-radius: $checkbox-border-radius;

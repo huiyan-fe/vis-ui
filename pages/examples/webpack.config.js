@@ -44,6 +44,7 @@ module.exports = {
         ],
     },
     devServer: {
+        publicPath: '/build/',
         contentBase: __dirname,
         port: 8098
     },
