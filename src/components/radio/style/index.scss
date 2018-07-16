@@ -134,6 +134,9 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
             border-color: $radio-disabled-color;
             background: $radio-btn-disabled-bg;
             cursor: not-allowed;
+            &:hover {
+                color: $radio-disabled-color;
+            }
         }
     }
 

@@ -1,27 +1,74 @@
-# vis-ui 使用说明
+# vis-ui 开发者说明
 
-## 样式引入
-- 如果您需要配置自己的主题文件，请参考[使用vis-ui配置自己的主题](https://github.com/huiyan-fe/vis-ui/blob/master/src/components/style/docs/index.md)。但是这要求您的项目也是用`scss`来编写样式。
-- 如果您想使用整套的vis-ui，可以使用`import 'vis-ui/lib/index.css'`，将样式文件在根目录全部导入
-```javascript
-import React from 'react';
-import {render} from 'react-dom';
-import 'vis-ui/lib/index.css';     // 一次性引入
-import App from './index';
+## 开发框架
+开发技术选型：react + sass
 
-render( <App />, document.getElementById('wrapper'));
+打包输出：babel + gulp
+
+## 构建过程
+安装
+```bash
+npm install
 ```
-- 如果您想使用某个单独的vis-ui组件，单独引入组件独立的样式也是一个节约资源的选择。**现在版本的vis-ui单独引入的scss没有被编译成css文件，所以这要求您的项目也是使用的scss，后续会将单独引入的样式也编译成css文件，改进单独引入组件的体验**
-```javascript
-import React, { Component } from 'react';
-import { Button } from 'vis-ui';
-import 'vis-ui/lib/components/button/style/index.js';     // 单独引入
-
-export default class App extends Component {
-    render() {
-        return <div>
-            <Button>按钮default</Button>
-        </div>;
-    }
-}
+本地开发预览
+```bash
+npm run examples
 ```
+组件打包
+```bash
+npm run build:lib
+```
+示例页面打包
+```bash
+npm run examples:build
+```
+## 目录结构
+参考ant-design的文件结构，考虑到可拓展性，在搭建初期就设置了较多入口文件，便于组件持续沉淀。
+
+参考react-bmap的文件结构，分为src、lib、pages三大块，方便组件开发、打包、在线预览等需求分割。
+
+```
+.
+├── lib                 // babel打包生成
+│   ├── components
+│   └── index.js
+├── pages               // 示例页面目录
+│   ├── dist            // 打包后的组件输出
+│   ├── examples        // 示例页面
+│   │   ├── build
+│   │   ├── components  // 编写示例组件
+│   │   ├── index.html  // 示例页面入口
+│   └── index.html
+├── src                 // UI组件资源文件
+│   ├── components      // 编写组件目录
+│   │   ├── button      // 组件示例（如button）
+│   │   │   ├── docs    // 组件说明文档
+│   │   │   ├── style   // 组件个性样式
+│   │   │   └── index.js// 组件入口
+│   │   └── style
+│   │       ├── color   // 配色
+│   │       ├── core    // 基础样式
+│   │       ├── index.js// 样式组件入口
+│   │       └── themes	// 主题变量定义
+│   └── index.js        // 组件总入口
+├── static              // 静态资源
+```
+
+## 开发步骤
+1. `src/index.js`注册组件js入口，`src/components/style/components.scss`注册组件样式入口
+2. 创建`xxx组件`文件夹，编写组件
+3. 编写组件样式，放在`xxx组件/style`目录下
+4. 编写组件说明与API，放在`xxx组件/docs`目录下
+
+## 编码规范
+1. 遵循`eslint`和`stylelint`规范，依赖中已安装，规则见配置文件
+2. 注意提交注释请使用`git cz`
+3. 组件开发时请设置`propTypes`和`defaultProps`规范接口传参
+4. 编写组件样式时，尽量通过`$variable`的方式，将属性的值根据标准设置为变量，整理在`style/theme`里
+
+## 推荐组件
+1. 编写`className`可以使用`classNames`库，对于拼接`className`非常好用。
+2. 编写受控组件可以使用`uncontrollable`库。
+
+## 许可证
+[MIT](./LICENSE)

@@ -14,6 +14,8 @@ vis-ui支持灵活的主题配置。如慧眼的蓝色主题、开放平台的�
 
 如果你只想用`vis-ui`来开发自己的项目，可以自己在项目合适的目录中创建你的主题文件`jazz.scss`
 ```scss
+// jazz.scss
+
 @import "../color/colors";
 
 // The prefix to use on all css classes from vis-ui.
@@ -39,20 +41,24 @@ $btn-font-size-sm: $font-size-sm;
 ```
 
 ### 第二步：创建scss入口
-创建一个入口scss文件`index.scss`，将jazz主题在默认的index主题**之前**引入！
+创建一个入口scss文件`index.scss`，将jazz主题在visui默认的index入口**之前**引入！
 ```scss
-@import '../../../src/components/style/themes/jazz.scss';   // put it ahead
-@import '../../../src/components/style/index';
+// 项目根目录 index.scss 
+
+@import 'myCustomTheme/jazz.scss';   // put it ahead
+@import 'visui/lib/index.scss';
 ```
 
 ### 第三步：在自己的项目中引入入口文件
 在自己的react项目中引入可爱又迷人的`vis-ui`组件们，并把在第二步里创建的入口样式文件也引入吧！
 ```javascript
+// 项目根目录 index.js
+
 import React from 'react';
 import {render} from 'react-dom';
 import Button from './button';
 import Menu from './menu';
-import './index.scss';      // 您好，请引入我~~~！！
+import './index.scss';      // 您好，请引入我~~~上一步新建的项目scss入口！！
 
 const examples = (
     <div>
@@ -67,4 +73,4 @@ render(examples, document.getElementById('app'));
 
 ```
 
-### 结束，这实在是太容易了！
+### 结束，简单吧！
