@@ -251,6 +251,8 @@ a {
       border-color: #E9E9E9;
       background: #F5F5F5;
       cursor: not-allowed; }
+      .visui-radio-btn-wrapper-disabled:hover {
+        color: #E9E9E9; }
   .visui-radio-btn-large {
     font-size: 14px;
     height: 34px;
