@@ -33,7 +33,9 @@ $checkboxlist-prefix-cls: #{$vis-prefix}-checkboxlist;
         white-space: nowrap;
         background: $white;
         padding: $checkboxlist-margin-sm $checkboxlist-margin-base 2px;
+
         .#{$vis-prefix}-checkbox-group-item,
+        .#{$vis-prefix}-radio-group-item,
         &-down-line {
             display: block;
             height: 18px;

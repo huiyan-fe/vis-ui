@@ -13,7 +13,7 @@ class RadioGroup extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.props.value) {
             this.setState({
-                options: nextProps.value
+                value: nextProps.value
             });
         }
     }

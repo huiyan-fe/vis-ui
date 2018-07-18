@@ -1,23 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Checkbox, Icon } from '../../index';
-const CheckboxGroup = Checkbox.Group;
+import { Checkbox, Radio, Icon } from '../../index';
+const RadioGroup = Radio.Group;
 
-class CheckboxList extends React.Component {
+class CheckboxRadioList extends React.Component {
     constructor(args) {
         super(args);
         this.state = {
             showDown: false,
-            indeterminate: false,
             checkTitle: false,
-            checkAll: false,
-            checkedList: this.props.value || []
+            checkedVal: this.props.value || undefined
         }
         this.bodyClick = this.bodyClick.bind(this);
         this.onChange = this.onChange.bind(this);
-        this.onCheckAllChange = this.onCheckAllChange.bind(this);
-        this.onCheckedListChange = this.onCheckedListChange.bind(this);
+        this.onCheckedValChange = this.onCheckedValChange.bind(this);
         this.onCheckedTitle = this.onCheckedTitle.bind(this);
     }
 
@@ -49,51 +46,35 @@ class CheckboxList extends React.Component {
         }
     }
 
-    onChange(checkedList) {
+    onChange(checkedVal) {
         this.setState({
-            checkedList,
-            indeterminate: !!checkedList.length && (checkedList.length < this.props.options.length),
-            checkAll: checkedList.length === this.props.options.length,
-            checkTitle: !!checkedList.length,
-        }, this.onCheckedListChange);
+            checkedVal,
+            checkTitle: !!checkedVal,
+        }, this.onCheckedValChange);
     }
 
-    onCheckAllChange(checked) {
-        this.setState({
-            checkedList: checked ? this.props.options.map((item) => {
-                return item.value;
-            }) : [],
-            indeterminate: false,
-            checkAll: checked,
-            checkTitle: checked
-        }, this.onCheckedListChange);
-    }
-
-    onCheckedListChange() {
-        this.props.onChange && this.props.onChange(this.state.checkedList);
+    onCheckedValChange() {
+        this.props.onChange && this.props.onChange(this.state.checkedVal);
     }
 
     onCheckedTitle(checked) {
         const {options, defaultCheckedKey} = this.props;
-        if (checked && this.state.checkedList.length == 0) {
-            let checkedList = options[defaultCheckedKey] && [options[defaultCheckedKey].value];
+        if (checked && this.state.checkedVal == undefined) {
+            let checkedVal = options[defaultCheckedKey] && options[defaultCheckedKey].value;
             this.setState({
                 checkTitle: checked,
-                indeterminate: true,
-                checkedList: checkedList || []
-            }, this.onCheckedListChange);
+                checkedVal: checkedVal || undefined
+            }, this.onCheckedValChange);
         } else if (!checked) {
             this.setState({
                 checkTitle: checked,
-                indeterminate: false,
-                checkAll: false,
-                checkedList: []
-            }, this.onCheckedListChange);
+                checkedVal: undefined
+            }, this.onCheckedValChange);
         }
     }
 
     render() {
-        const { checkTitle, checkAll, indeterminate, checkedList, showDown } = this.state;
+        const { checkTitle, checkedVal, showDown } = this.state;
         const { className, style, title, options } = this.props;
         const classname = classNames({
             'visui-checkboxlist': true,
@@ -112,38 +93,32 @@ class CheckboxList extends React.Component {
                     <Checkbox checked={checkTitle} onChange={this.onCheckedTitle} />
                     <span className="visui-checkboxlist-title-text">
                         {title} 
-                        {checkedList.length > 0 ? 
-                        <span className="visui-checkboxlist-num">{'(' + checkedList.length + ')'}</span>
-                        : null}
                     </span> <Icon type="down" />
                 </div>
                 {showDown && <div className="visui-checkboxlist-down-container" onClick={(e) => {
                     e.nativeEvent.stopImmediatePropagation();
                 }}>
-                    <div key={-1} className="visui-checkboxlist-down-line">
-                        <Checkbox onChange={this.onCheckAllChange} indeterminate={indeterminate} checked={checkAll}>全选</Checkbox>
-                    </div>
-                    <CheckboxGroup onChange={this.onChange} value={checkedList}>
+                    <RadioGroup onChange={this.onChange} value={checkedVal}>
                         {options && options.map((checkbox, index)=>{
-                            return <Checkbox value={checkbox.value} key={index}>{checkbox.label}</Checkbox>
+                            return <Radio value={checkbox.value} key={index}>{checkbox.label}</Radio>
                         })}
-                    </CheckboxGroup>
+                    </RadioGroup>
                 </div>}
             </div>
         )
     }
 }
 
-CheckboxList.defaultProps = {
+CheckboxRadioList.defaultProps = {
     title: '',
     options: [],
     defaultCheckedKey: 0
 };
-CheckboxList.propTypes = {
+CheckboxRadioList.propTypes = {
     title: PropTypes.string.isRequired,
     defaultCheckedKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     options: PropTypes.array,
     onChange: PropTypes.func
 };
 
-export default CheckboxList;
+export default CheckboxRadioList;

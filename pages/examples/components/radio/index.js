@@ -16,7 +16,7 @@ export default class App extends Component {
 
     onChangeRadioValue(radioValue) {
         console.log(radioValue)
-        this.setState({radioValue});
+        this.setState({radioValue:990});
     }
 
     onChangeButtonValue1(buttonValue1) {

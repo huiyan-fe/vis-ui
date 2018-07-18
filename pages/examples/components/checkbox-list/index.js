@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { CheckboxList } from '../../../../src';
 
+const CheckboxRadioList = CheckboxList.Radio;
+
 export default class App extends Component {
     render() {
         const options = {
@@ -16,6 +18,7 @@ export default class App extends Component {
 
         return <div>
             <CheckboxList {...options}/>
+            <CheckboxRadioList {...options}/>
         </div>
     }
 }

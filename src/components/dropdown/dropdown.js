@@ -20,14 +20,6 @@ class Dropdown extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.value && JSON.stringify(nextProps.value) !== JSON.stringify(this.state.value)) {
-            let checkedList = nextProps.value;
-            this.setState({
-                checkedList: checkedList,
-                indeterminate: !!checkedList.length && (checkedList.length < this.props.options.length),
-                checkAll: checkedList.length === this.props.options.length
-            });
-        }
     }
 
     componentDidMount() {
