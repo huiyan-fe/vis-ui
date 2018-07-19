@@ -18,7 +18,8 @@
 | disabled | 单选框失效状态 | boolean | `true` `false` | `false` |
 
 ### CheckboxGroup
-`CheckboxGroup`中设置的属性，会继承到`Checkbox`子组件中。  
+`CheckboxGroup`中设置的属性，会继承到`Checkbox`子组件中。
+
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | defaultValue | 用于设置初始状态默认被选中项，数组中包含与子元素的`value`属性时，该子元素被选中 | array | - | - |
