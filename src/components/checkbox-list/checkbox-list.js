@@ -9,8 +9,8 @@ class CheckboxList extends React.Component {
         super(args);
         this.state = {
             showDown: false,
-            indeterminate: false,
-            checkAll: false,
+            indeterminate: this.getDefaultIndeterminate(this.props),
+            checkAll: this.getDefaultCheckAll(this.props),
             checkTitle: Boolean(this.props.defaultCheckedValue.length),
             checkedList: this.props.defaultCheckedValue || []
         }
@@ -30,6 +30,14 @@ class CheckboxList extends React.Component {
 
     componentWillUnmount() {
         window.removeEventListener('click', this.bodyClick);
+    }
+
+    getDefaultCheckAll(props) {
+        return props.defaultCheckedValue.length === props.options.length;
+    }
+
+    getDefaultIndeterminate(props) {
+        return !!props.defaultCheckedValue.length && (props.defaultCheckedValue.length < props.options.length);
     }
 
     bodyClick(e) {
