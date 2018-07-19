@@ -5,7 +5,7 @@ const CheckboxRadioList = CheckboxList.Radio;
 
 export default class App extends Component {
     render() {
-        const options = {
+        const checkboxlistOptions = {
             title: '音乐类型',
             options: [
                 {label:'R&B',value:1},
@@ -13,13 +13,25 @@ export default class App extends Component {
                 {label:'Soul',value:3}
             ],
             defaultCheckedKey: 1,
-            defaultCheckedValue: [1,2],
+            defaultCheckedValue: [],
+            onChange: (checked)=>{console.log(checked)}
+        };
+
+        const checkboxradiolistOptions = {
+            title: '舞蹈类型',
+            options: [
+                {label:'Popping',value:4},
+                {label:'Locking',value:5},
+                {label:'Breaking',value:6}
+            ],
+            defaultCheckedKey: 1,
+            defaultCheckedValue: 6,
             onChange: (checked)=>{console.log(checked)}
         };
 
         return <div>
-            <CheckboxList {...options}/>
-            <CheckboxRadioList {...options}/>
+            <CheckboxList {...checkboxlistOptions}/>
+            <CheckboxRadioList {...checkboxradiolistOptions}/>
         </div>
     }
 }

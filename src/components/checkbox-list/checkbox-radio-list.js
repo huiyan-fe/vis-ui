@@ -9,8 +9,8 @@ class CheckboxRadioList extends React.Component {
         super(args);
         this.state = {
             showDown: false,
-            checkTitle: false,
-            checkedVal: this.props.value || undefined
+            checkTitle: Boolean(this.props.defaultCheckedValue),
+            checkedVal: this.props.defaultCheckedValue || undefined
         }
         this.bodyClick = this.bodyClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -112,11 +112,13 @@ class CheckboxRadioList extends React.Component {
 CheckboxRadioList.defaultProps = {
     title: '',
     options: [],
-    defaultCheckedKey: 0
+    defaultCheckedKey: 0,
+    defaultCheckedValue: undefined
 };
 CheckboxRadioList.propTypes = {
     title: PropTypes.string.isRequired,
     defaultCheckedKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    defaultCheckedValue: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]),
     options: PropTypes.array,
     onChange: PropTypes.func
 };

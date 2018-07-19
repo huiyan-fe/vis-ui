@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import uncontrollable from 'uncontrollable';
 import { Checkbox, Icon } from '../../index';
 const CheckboxGroup = Checkbox.Group;
 
@@ -11,9 +10,9 @@ class CheckboxList extends React.Component {
         this.state = {
             showDown: false,
             indeterminate: false,
-            checkTitle: false,
             checkAll: false,
-            checkedList: this.props.value || []
+            checkTitle: Boolean(this.props.defaultCheckedValue.length),
+            checkedList: this.props.defaultCheckedValue || []
         }
         this.bodyClick = this.bodyClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -138,15 +137,15 @@ class CheckboxList extends React.Component {
 CheckboxList.defaultProps = {
     title: '',
     options: [],
-    defaultCheckedKey: 0
+    defaultCheckedKey: 0,
+    defaultCheckedValue: [],
 };
 CheckboxList.propTypes = {
     title: PropTypes.string.isRequired,
     defaultCheckedKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    defaultCheckedValue: PropTypes.array,
     options: PropTypes.array,
     onChange: PropTypes.func
 };
 
-export default uncontrollable(CheckboxList, {
-    value: 'onChange'
-});
+export default CheckboxList;
