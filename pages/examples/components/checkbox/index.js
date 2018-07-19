@@ -30,7 +30,7 @@ export default class App extends Component {
 
     render() {
         return <div>
-            <Checkbox onMouseEnter={(e)=>{console.log(e)}}>未选中状态</Checkbox>
+            <Checkbox defaultChecked={true} onChange={(e)=>{console.log(e)}}>未选中状态</Checkbox>
             <Checkbox checked={this.state.v} onChange={(v)=>{this.setState({v})}}>选中状态</Checkbox>
             <Checkbox disabled>禁用状态</Checkbox>
             <Checkbox checked disabled>禁用且选中</Checkbox>

@@ -16,7 +16,7 @@ export default class App extends Component {
 
     onChangeRadioValue(radioValue) {
         console.log(radioValue)
-        this.setState({radioValue:990});
+        this.setState({radioValue:1});
     }
 
     onChangeButtonValue1(buttonValue1) {
@@ -51,7 +51,7 @@ export default class App extends Component {
                 <Radio value="3">C</Radio>
                 <Radio value="4">D</Radio>
             </RadioGroup>
-            <RadioGroup value={2} name="group">
+            <RadioGroup defaultValue={2} name="group" onChange={(e)=>{console.log(e)}}>
                 <Radio value="1">A</Radio>
                 <Radio value="2">B</Radio>
                 <Radio value="3">C</Radio>

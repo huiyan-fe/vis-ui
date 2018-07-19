@@ -6,14 +6,14 @@ class CheckboxGroup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            options: this.props.value || []
+            options: props.value || props.defaultValue
         };
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.props.value) {
             this.setState({
-                options: nextProps.value
+                options: nextProps.value || nextProps.defaultValue
             });
         }
     }
@@ -36,10 +36,14 @@ class CheckboxGroup extends React.Component {
             options.splice(index, 1);
         }
     
-        this.setState({options});
-    
-        if (this.props.onChange) {
-            this.props.onChange(options);
+        if (!this.props.value) {
+            this.setState({
+                options: options
+            }, () => {
+                this.props.onChange && this.props.onChange(options);
+            });
+        } else {
+            this.props.onChange && this.props.onChange(options);
         }
     }
 
@@ -76,11 +80,13 @@ class CheckboxGroup extends React.Component {
 }
 
 CheckboxGroup.defaultProps = {
+    defaultValue: []
 };
 CheckboxGroup.childContextTypes = {
     component: PropTypes.any
 };
 CheckboxGroup.propTypes = {
+    defaultValue: PropTypes.array,
     value: PropTypes.array,
     disabled: PropTypes.bool,
     onChange: PropTypes.func

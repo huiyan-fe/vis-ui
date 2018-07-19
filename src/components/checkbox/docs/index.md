@@ -13,14 +13,16 @@
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | value | `Checkbox` 的 value，**必需传入** | string, number, boolean | - | `''` |
-| checked | 是否被选中 | boolean | `true` `false` | `false` |
+| defaultChecked | 默认初始状态是否被选中 | boolean | `true` `false` | `false` |
+| checked | 在组件外部控制组件是否被选中，设置该属性后，Checkbox变为受控组件 | boolean | `true` `false` | `false` |
 | disabled | 单选框失效状态 | boolean | `true` `false` | `false` |
 
 ### CheckboxGroup
 `CheckboxGroup`中设置的属性，会继承到`Checkbox`子组件中。
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
-| value | 用于设置当前被选中项，数组中包含与子元素的`value`属性时，该子元素被选中 | array | - | - |
+| defaultValue | 用于设置初始状态默认被选中项，数组中包含与子元素的`value`属性时，该子元素被选中 | array | - | - |
+| value | 从组件外部控制子元素的选中状态，设置概属性后CheckboxGroup变为受控组件 | array | - | - |
 | disabled | `CheckboxGroup` 的失效状态 | boolean | `true` `false` | `false` |
 
 ## Events 事件

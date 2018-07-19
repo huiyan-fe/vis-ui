@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import uncontrollable from 'uncontrollable';
 import { Checkbox, Icon } from '../../index';
 const CheckboxGroup = Checkbox.Group;
 
@@ -146,4 +147,6 @@ CheckboxList.propTypes = {
     onChange: PropTypes.func
 };
 
-export default CheckboxList;
+export default uncontrollable(CheckboxList, {
+    value: 'onChange'
+});

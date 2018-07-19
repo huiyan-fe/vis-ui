@@ -13,6 +13,7 @@ export default class App extends Component {
                 {label:'Soul',value:3}
             ],
             defaultCheckedKey: 1,
+            defaultCheckedValue: [1,2],
             onChange: (checked)=>{console.log(checked)}
         };
 

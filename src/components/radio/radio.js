@@ -13,7 +13,7 @@ class Radio extends React.Component {
 
     componentWillReceiveProps(props) {
         const checked = this.getChecked(props);
-    
+
         if (this.state.checked != checked) {
             this.setState({ checked });
         }
@@ -38,7 +38,12 @@ class Radio extends React.Component {
                 this.props.onChange(this.props.value);
             }
         }
-        this.setState({ checked });
+
+        if (!this.parent()) {
+            this.setState({
+                checked: checked
+            });
+        }
     }
 
     getChecked(props) {

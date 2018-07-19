@@ -6,14 +6,14 @@ class RadioGroup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: this.props.value || null
+            value: this.props.value || props.defaultValue || null
         };
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.props.value) {
             this.setState({
-                value: nextProps.value
+                value: nextProps.value || nextProps.defaultValue
             });
         }
     }
@@ -25,7 +25,11 @@ class RadioGroup extends React.Component {
     }
     
     onChange(value) {
-        this.setState({value});
+        if (!this.props.value) {
+            this.setState({
+                value: value
+            });
+        }
 
         if (this.props.onChange && value !== this.state.value) {
             this.props.onChange(value);
@@ -70,6 +74,7 @@ RadioGroup.childContextTypes = {
 };
 RadioGroup.propTypes = {
     name: PropTypes.string,
+    defaultValue: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]),
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]),
     disabled: PropTypes.bool,
     size: PropTypes.string,     // 只对 RadioButton 有效

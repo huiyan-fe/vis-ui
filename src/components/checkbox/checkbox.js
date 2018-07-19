@@ -7,12 +7,12 @@ class Checkbox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked: props.checked
+            checked: props.checked || props.defaultChecked
         };
     }
 
     componentWillReceiveProps(props) {
-        const checked = Boolean(props.checked);
+        const checked = Boolean(props.checked || props.defaultChecked);
         this.setState({ checked });
     }
 
@@ -27,20 +27,29 @@ class Checkbox extends React.Component {
         return this.props.disabled || this.parent().props.disabled;
     }
 
+    isChecked() {
+        if (!this.parent()) {
+            return this.state.checked;
+        }
+        return this.props.checked;
+    }
+
     onChange(e) {
         const checked = e.target.checked;
 
-        this.setState({
-            checked: checked
-        }, () => {
-            if (this.props.onChange) {
-                this.props.onChange(checked);
-            }
-        });
+        if (!this.parent() && !this.props.checked) {
+            this.setState({
+                checked: checked
+            }, () => {
+                this.props.onChange && this.props.onChange(checked);
+            });
+        } else {
+            this.props.onChange && this.props.onChange(checked);
+        }
     }
 
     render() {
-        const {checked} = this.state;
+        const checked = this.isChecked();
         const {value, indeterminate, className, style, children, onMouseEnter, onMouseLeave} = this.props;
         const disabled = this.isDisabled();
         const classname = classNames({
@@ -84,13 +93,14 @@ Checkbox.contextTypes = {
 };
 Checkbox.defaultProps = {
     value: '',
-    checked: false,
-    disabled: false
+    disabled: false,
+    defaultChecked: false
 };
 Checkbox.propTypes = {
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]).isRequired,
     disabled: PropTypes.bool,
     checked: PropTypes.bool,
+    defaultChecked: PropTypes.bool,
     onChange: PropTypes.func,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func

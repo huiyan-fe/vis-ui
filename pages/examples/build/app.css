@@ -514,7 +514,8 @@ a {
     white-space: nowrap;
     background: #ffffff;
     padding: 8px 12px 2px; }
-    .visui-checkboxlist .visui-checkboxlist-down-container .visui-checkbox-group-item, .visui-checkboxlist .visui-checkboxlist-down-container-down-line {
+    .visui-checkboxlist .visui-checkboxlist-down-container .visui-checkbox-group-item,
+    .visui-checkboxlist .visui-checkboxlist-down-container .visui-radio-group-item, .visui-checkboxlist .visui-checkboxlist-down-container-down-line {
       display: block;
       height: 18px;
       line-height: 18px;

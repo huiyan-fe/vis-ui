@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Radio from './radio';
+
 class RadioButton extends Radio {
 
     constructor(props) {
@@ -42,7 +43,12 @@ class RadioButton extends Radio {
                 this.props.onChange(this.props.value);
             }
         }
-        this.setState({ checked });
+        
+        if (!this.parent()) {
+            this.setState({
+                checked: checked
+            });
+        }
     }
 
     getChecked(props) {
