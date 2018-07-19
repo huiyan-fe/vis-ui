@@ -26,7 +26,7 @@
 | disabled | 单选按钮失效状态 | boolean | `true` `false` | `false` |
 
 ### RadioGroup
-`RadioGroup`中设置的属性，会继承到`Radio`与`RadioButton`子组件中。
+`RadioGroup`中设置的属性，会继承到`Radio`与`RadioButton`子组件中。  
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | name | `RadioGroup` 下所有 `input[type="radio"]` 的 name 属性 | string | - | - |

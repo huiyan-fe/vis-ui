@@ -16,35 +16,35 @@ vis-ui的目标：
 ### Menu 导航菜单
 ![](./static/menu.jpg)  
 [示例代码](./pages/examples/components/menu/index.js)  
-[API](./src/components/menu/docs/index.md)
+[API说明文档](./src/components/menu/docs/index.md)
 
 ### Button 按钮
 ![](./static/button.jpg)  
 [示例代码](./pages/examples/components/button/index.js)  
-[API](./src/components/button/docs/index.md)
+[API说明文档](./src/components/button/docs/index.md)
 
 ### Checkbox 多选框
 ![](./static/checkbox.jpg)  
 [示例代码](./pages/examples/components/checkbox/index.js)  
-[API](./src/components/button/checkbox/index.md)
+[API说明文档](./src/components/checkbox/docs/index.md)
 
 ### Radio 单选框
 ![](./static/radio.jpg)  
 [示例代码](./pages/examples/components/radio/index.js)  
-[API](./src/components/radio/docs/index.md)
+[API说明文档](./src/components/radio/docs/index.md)
 
 ### Dropdown 下拉多选
 [示例代码](./pages/examples/components/dropdown/index.js)  
-[API](./src/components/dropdown/docs/index.md)
+[API说明文档](./src/components/dropdown/docs/index.md)
 
 ### CheckboxList 多选框下拉
 ![](./static/checkboxlist.jpg)  
 [示例代码](./pages/examples/components/checkbox-list/index.js)  
-[API](./src/components/checkbox-list/docs/index.md)
+[API说明文档](./src/components/checkbox-list/docs/index.md)
 
 ### Icon 图标
 [示例代码](./pages/examples/components/icon/index.js)  
-[API](./src/components/icon/docs/index.md)
+[API说明文档](./src/components/icon/docs/index.md)
 
 ## 样式引入
 - 如果您需要配置自己的主题文件，请参考[使用vis-ui配置自己的主题](https://github.com/huiyan-fe/vis-ui/blob/master/src/components/style/docs/index.md)。但是这要求您的项目也是用`scss`来编写样式。

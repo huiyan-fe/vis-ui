@@ -35,6 +35,7 @@ export default class App extends Component {
             <Checkbox disabled>禁用状态</Checkbox>
             <Checkbox checked disabled>禁用且选中</Checkbox>
             <Checkbox indeterminate={true}>indeterminate状态</Checkbox>
+            <Checkbox checked>选中且受控</Checkbox>
 
             <h2>多选框组 CheckboxGroup</h2>
             <CheckboxGroup value={this.state.checkboxValue} onChange={this.onChangeCheckboxValue.bind(this)}>
