@@ -4,6 +4,13 @@ import { CheckboxList } from '../../../../src';
 const CheckboxRadioList = CheckboxList.Radio;
 
 export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            disabled: false
+        };
+    }
+
     render() {
         const checkboxlistOptions = {
             title: '音乐类型',
@@ -30,8 +37,9 @@ export default class App extends Component {
         };
 
         return <div>
-            <CheckboxList {...checkboxlistOptions}/>
-            <CheckboxRadioList {...checkboxradiolistOptions}/>
+            <CheckboxList {...checkboxlistOptions} disabled={this.state.disabled}/>
+            <CheckboxRadioList {...checkboxradiolistOptions} disabled={this.state.disabled}/>
+            <a href="javascript:" onClick={()=>{this.setState({disabled:!this.state.disabled})}}>toggle disabled</a>
         </div>
     }
 }

@@ -95,7 +95,8 @@ $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
     }
 }
 
-.#{$checkbox-prefix-cls}-checked.#{$checkbox-prefix-cls}-disabled {
+.#{$checkbox-prefix-cls}-checked.#{$checkbox-prefix-cls}-disabled,
+.#{$checkbox-prefix-cls}-indeterminate.#{$checkbox-prefix-cls}-disabled {
     .#{$checkbox-prefix-cls}-inner {
         border-color: $checkbox-disabled-color;
         background-color: $checkbox-disabled-color;

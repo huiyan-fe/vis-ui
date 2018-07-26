@@ -75,7 +75,7 @@ class CheckboxRadioList extends React.Component {
 
     render() {
         const { checkTitle, checkedVal, showDown } = this.state;
-        const { className, style, title, options } = this.props;
+        const { className, style, title, options, disabled } = this.props;
         const classname = classNames({
             'visui-checkboxlist': true,
             [className]: className
@@ -90,7 +90,7 @@ class CheckboxRadioList extends React.Component {
                         });
                     }}
                 >
-                    <Checkbox checked={checkTitle} onChange={this.onCheckedTitle} />
+                    <Checkbox checked={checkTitle} onChange={this.onCheckedTitle} disabled={disabled}/>
                     <span className="visui-checkboxlist-title-text">
                         {title} 
                     </span> <Icon type="down" />
@@ -98,7 +98,7 @@ class CheckboxRadioList extends React.Component {
                 {showDown && <div className="visui-checkboxlist-down-container" onClick={(e) => {
                     e.nativeEvent.stopImmediatePropagation();
                 }}>
-                    <RadioGroup onChange={this.onChange} value={checkedVal}>
+                    <RadioGroup onChange={this.onChange} value={checkedVal} disabled={disabled}>
                         {options && options.map((checkbox, index)=>{
                             return <Radio value={checkbox.value} key={index}>{checkbox.label}</Radio>
                         })}

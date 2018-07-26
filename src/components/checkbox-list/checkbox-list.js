@@ -102,7 +102,7 @@ class CheckboxList extends React.Component {
 
     render() {
         const { checkTitle, checkAll, indeterminate, checkedList, showDown } = this.state;
-        const { className, style, title, options } = this.props;
+        const { className, style, title, options, disabled } = this.props;
         const classname = classNames({
             'visui-checkboxlist': true,
             [className]: className
@@ -117,7 +117,7 @@ class CheckboxList extends React.Component {
                         });
                     }}
                 >
-                    <Checkbox checked={checkTitle} onChange={this.onCheckedTitle} />
+                    <Checkbox checked={checkTitle} onChange={this.onCheckedTitle} disabled={disabled}/>
                     <span className="visui-checkboxlist-title-text">
                         {title} 
                         {checkedList.length > 0 ? 
@@ -129,9 +129,9 @@ class CheckboxList extends React.Component {
                     e.nativeEvent.stopImmediatePropagation();
                 }}>
                     <div key={-1} className="visui-checkboxlist-down-line">
-                        <Checkbox onChange={this.onCheckAllChange} indeterminate={indeterminate} checked={checkAll}>全选</Checkbox>
+                        <Checkbox onChange={this.onCheckAllChange} indeterminate={indeterminate} checked={checkAll} disabled={disabled}>全选</Checkbox>
                     </div>
-                    <CheckboxGroup onChange={this.onChange} value={checkedList}>
+                    <CheckboxGroup onChange={this.onChange} value={checkedList} disabled={disabled}>
                         {options && options.map((checkbox, index)=>{
                             return <Checkbox value={checkbox.value} key={index}>{checkbox.label}</Checkbox>
                         })}

@@ -334,7 +334,8 @@ a {
     .visui-checkbox-disabled .visui-checkbox-inner:after {
       background-color: #E9E9E9; }
 
-.visui-checkbox-checked.visui-checkbox-disabled .visui-checkbox-inner {
+.visui-checkbox-checked.visui-checkbox-disabled .visui-checkbox-inner,
+.visui-checkbox-indeterminate.visui-checkbox-disabled .visui-checkbox-inner {
   border-color: #E9E9E9;
   background-color: #E9E9E9; }
 
