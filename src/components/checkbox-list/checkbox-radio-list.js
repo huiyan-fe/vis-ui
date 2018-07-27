@@ -5,12 +5,12 @@ import { Checkbox, Radio, Icon } from '../../index';
 const RadioGroup = Radio.Group;
 
 class CheckboxRadioList extends React.Component {
-    constructor(args) {
-        super(args);
+    constructor(props) {
+        super(props);
         this.state = {
             showDown: false,
-            checkTitle: Boolean(this.props.defaultCheckedValue),
-            checkedVal: this.props.defaultCheckedValue || undefined
+            checkTitle: this.getDefaultCheckTitle(props),
+            checkedVal: this.getDefaultCheckVal(props)
         }
         this.bodyClick = this.bodyClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -19,6 +19,28 @@ class CheckboxRadioList extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        // 外部通过value属性使组件受控
+        if ('value' in nextProps && nextProps.value != this.props.value) {
+            let checkedVal = nextProps.value;
+            this.setState({
+                checkedVal,
+                checkTitle: !!checkedVal,
+            });
+        }
+    }
+
+    getDefaultCheckTitle(props) {
+        if ('value' in props) {
+            return Boolean(props.value);
+        }
+        return Boolean(props.defaultValue);
+    }
+
+    getDefaultCheckVal(props) {
+        if ('value' in props) {
+            return props.value;
+        }
+        return props.defaultValue || undefined;
     }
 
     componentDidMount() {
@@ -59,6 +81,7 @@ class CheckboxRadioList extends React.Component {
 
     onCheckedTitle(checked) {
         const {options, defaultCheckedKey} = this.props;
+        console.log(defaultCheckedKey)
         if (checked && this.state.checkedVal == undefined) {
             let checkedVal = options[defaultCheckedKey] && options[defaultCheckedKey].value;
             this.setState({
@@ -113,12 +136,12 @@ CheckboxRadioList.defaultProps = {
     title: '',
     options: [],
     defaultCheckedKey: 0,
-    defaultCheckedValue: undefined
+    defaultValue: undefined
 };
 CheckboxRadioList.propTypes = {
     title: PropTypes.string.isRequired,
     defaultCheckedKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    defaultCheckedValue: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]),
+    defaultValue: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]),
     options: PropTypes.array,
     onChange: PropTypes.func
 };

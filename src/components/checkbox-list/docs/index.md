@@ -17,7 +17,8 @@
 | title | 下拉菜单外部的显示的文字，**必需传入** | string | - | `''` |
 | options | 点击下拉后，子菜单的内容，[具体参数见下表格][1] | array [object] | - | `[]` |
 | defaultCheckedKey | 选中外部`Checkbox`时默认选中的子选项下标，下标从0开始计算 | string，number | - | `0` |
-| defaultCheckedValue | 初始状态默认选中的值 | array | - | - |
+| defaultValue | 初始状态默认选中的值 | array | - | - |
+| value | 配置该属性使组件受控，defaultValue属性失效，value通过外部组件来控制 | array | - | - |
 
 ### CheckboxRadioList
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
@@ -25,7 +26,8 @@
 | title | 下拉菜单外部的显示的文字，**必需传入** | string | - | `''` |
 | options | 点击下拉后，子菜单的内容，[具体参数见下表格][1] | array [object] | - | `[]` |
 | defaultCheckedKey | 选中外部`Checkbox`时默认选中的子选项下标，下标从0开始计算 | string，number | - | `0` |
-| defaultCheckedValue | 初始状态默认选中的值 | string, number, bool | - | - |
+| defaultValue | 初始状态默认选中的值 | string, number, bool | - | - |
+| value | 配置该属性使组件受控，defaultValue属性失效，value通过外部组件来控制 | string, number, bool | - | - |
 
 ### options 参数
 | 参数名 | 说明 | 取值类型 |

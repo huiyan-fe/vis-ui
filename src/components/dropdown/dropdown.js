@@ -20,6 +20,15 @@ class Dropdown extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        // 外部通过value属性使组件受控
+        if (nextProps.value && JSON.stringify(nextProps.value) !== JSON.stringify(this.props.value)) {
+            let checkedList = nextProps.value;
+            this.setState({
+                checkedList: checkedList,
+                indeterminate: !!checkedList.length && (checkedList.length < this.props.options.length),
+                checkAll: checkedList.length === this.props.options.length
+            });
+        }
     }
 
     componentDidMount() {

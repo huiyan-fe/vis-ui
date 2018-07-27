@@ -5,14 +5,14 @@ import { Checkbox, Icon } from '../../index';
 const CheckboxGroup = Checkbox.Group;
 
 class CheckboxList extends React.Component {
-    constructor(args) {
-        super(args);
+    constructor(props) {
+        super(props);
         this.state = {
             showDown: false,
-            indeterminate: this.getDefaultIndeterminate(this.props),
-            checkAll: this.getDefaultCheckAll(this.props),
-            checkTitle: Boolean(this.props.defaultCheckedValue.length),
-            checkedList: this.props.defaultCheckedValue || []
+            indeterminate: this.getDefaultIndeterminate(props),
+            checkAll: this.getDefaultCheckAll(props),
+            checkTitle: this.getDefaultCheckTitle(props),
+            checkedList: props.value || props.defaultValue || []
         }
         this.bodyClick = this.bodyClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -22,6 +22,37 @@ class CheckboxList extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
+        // 外部通过value属性使组件受控
+        if ('value' in nextProps && JSON.stringify(nextProps.value) !== JSON.stringify(this.props.value)) {
+            let checkedList = nextProps.value;
+            this.setState({
+                checkedList: checkedList,
+                indeterminate: !!checkedList.length && (checkedList.length < this.props.options.length),
+                checkAll: checkedList.length === this.props.options.length,
+                checkTitle: !!checkedList.length,
+            });
+        }
+    }
+
+    getDefaultCheckTitle(props) {
+        if ('value' in props) {
+            return Boolean(props.value.length);
+        }
+        return Boolean(props.defaultValue.length);
+    }
+
+    getDefaultCheckAll(props) {
+        if ('value' in props) {
+            return props.value.length === props.options.length;
+        }
+        return props.defaultValue.length === props.options.length;
+    }
+
+    getDefaultIndeterminate(props) {
+        if ('value' in props) {
+            return !!props.value.length && (props.value.length < props.options.length);
+        }
+        return !!props.defaultValue.length && (props.defaultValue.length < props.options.length);
     }
 
     componentDidMount() {
@@ -30,14 +61,6 @@ class CheckboxList extends React.Component {
 
     componentWillUnmount() {
         window.removeEventListener('click', this.bodyClick);
-    }
-
-    getDefaultCheckAll(props) {
-        return props.defaultCheckedValue.length === props.options.length;
-    }
-
-    getDefaultIndeterminate(props) {
-        return !!props.defaultCheckedValue.length && (props.defaultCheckedValue.length < props.options.length);
     }
 
     bodyClick(e) {
@@ -146,12 +169,12 @@ CheckboxList.defaultProps = {
     title: '',
     options: [],
     defaultCheckedKey: 0,
-    defaultCheckedValue: [],
+    defaultValue: [],
 };
 CheckboxList.propTypes = {
     title: PropTypes.string.isRequired,
     defaultCheckedKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    defaultCheckedValue: PropTypes.array,
+    defaultValue: PropTypes.array,
     options: PropTypes.array,
     onChange: PropTypes.func
 };

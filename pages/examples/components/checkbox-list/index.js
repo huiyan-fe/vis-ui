@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CheckboxList } from '../../../../src';
+import { CheckboxList, Button } from '../../../../src';
 
 const CheckboxRadioList = CheckboxList.Radio;
 
@@ -7,7 +7,9 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            disabled: false
+            disabled: false,
+            checkboxValue: [],
+            radioValue: undefined
         };
     }
 
@@ -20,8 +22,13 @@ export default class App extends Component {
                 {label:'Soul',value:3}
             ],
             defaultCheckedKey: 1,
-            defaultCheckedValue: [],
-            onChange: (checked)=>{console.log(checked)}
+            defaultValue: [],
+            value: this.state.checkboxValue,
+            onChange: (checked)=>{
+               this.setState({
+                   checkboxValue: checked
+               })
+            }
         };
 
         const checkboxradiolistOptions = {
@@ -32,14 +39,21 @@ export default class App extends Component {
                 {label:'Breaking',value:6}
             ],
             defaultCheckedKey: 1,
-            defaultCheckedValue: 6,
-            onChange: (checked)=>{console.log(checked)}
+            defaultValue: 6,
+            value: this.state.radioValue,
+            onChange: (checked)=>{
+               this.setState({
+                    radioValue: checked
+               })
+            }
         };
 
         return <div>
             <CheckboxList {...checkboxlistOptions} disabled={this.state.disabled}/>
             <CheckboxRadioList {...checkboxradiolistOptions} disabled={this.state.disabled}/>
-            <a href="javascript:" onClick={()=>{this.setState({disabled:!this.state.disabled})}}>toggle disabled</a>
+            <br/><br/>
+            <Button size="small" type="primary" onClick={()=>{this.setState({disabled:!this.state.disabled})}}>切换disabled</Button>
+            <Button size="small" type="primary" onClick={()=>{this.setState({checkboxValue:[],radioValue:undefined})}}>清空所选</Button>
         </div>
     }
 }
