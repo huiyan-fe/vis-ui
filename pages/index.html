@@ -20,10 +20,8 @@
             top: 0;
             padding-top: 20px;
             bottom: 0;
-            background-image: linear-gradient(to bottom, rgba(255,255,200,0.8),rgba(200,255,255,0.8) 25%,rgba(255,255,200,0.8) 50%,rgba(200,255,255,0.8) 75%,rgba(255,255,200,0.8));
-            background-size: 100% 200%;
-            -webkit-animation: masked-animation 4s infinite linear;
-            animation: masked-animation 4s infinite linear;
+            transition: all 1.9s linear;
+            background-size: cover;
         }
         h1 {
             font-size: 80px;
@@ -36,8 +34,7 @@
         }
         h2 {
             margin: 10px 0 50px;
-            background-image: linear-gradient(to right, #E6D205, #147B96);
-            background-size: 100% 100%;
+            background-image: linear-gradient(to right, rgb(166, 209, 10), rgb(10, 103, 126));
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
@@ -116,6 +113,87 @@
                 $('.github').remove();
             }, 1000);
         });
+
+        // 生产随机数
+        // rand(10); 10
+        // rand([10, 100]); 10 ~ 100
+        // rand([50]); 0 ~ 50;
+        // rand([10,20,30]); 10|20|30
+        function rand(arr)
+        {
+            if (typeof arr === 'number')
+            {
+                return arr;
+            }
+            
+            var v = 0;
+            if (arr.length == 1)
+            {
+                v = Math.round(Math.random() * arr[0]);
+            }
+            else if (arr.length == 2)
+            {
+                var a = arr[0];
+                var b = arr[1];
+                
+                v = Math.round(a + Math.random() * (b - a));
+            }
+            else if (arr.length > 2)
+            {
+                v = arr[Math.round(Math.random() * (arr.length - 1))];
+            }
+            
+            return v;
+        }
+
+        // h 色调 s 饱和度 l 亮度
+        function randColorHsl(h, s, l)
+        {
+            h = h||[0, 360];
+            s = s||50;
+            l = l||50;
+            
+            return "hsl(" + rand(h) + ", " + rand(s) + "%, " + rand(l) + "%)";
+        }
+
+        function randColorRgb(r, g, b)
+        {
+            r = r||[0, 255];
+            g = g||[0, 255];
+            b = b||[0, 255];
+            return "rgb(" + rand(r) + ", " + rand(g) + ", " + rand(b) + ")";
+        }
+
+        var canvas = document.createElement('canvas');
+
+        // 像素大小控制图形复杂度
+        canvas.width = 7;
+        canvas.height = 3;
+
+        var ctx=canvas.getContext('2d');
+
+        function randBackground()
+        {
+            for (var x=0; x<canvas.width; x++)
+            {
+                for (var y=0; y<canvas.height; y++)
+                {
+                    // 随机颜色
+                    // ctx.fillStyle = randColorHsl();
+                    // ctx.fillStyle = randColorRgb();
+                    ctx.fillStyle = randColorHsl(220, 40, [55, 95]);
+                    // ctx.fillStyle = randColorRgb([100, 255], 255, [200, 255]);
+                    ctx.fillRect(x,y,x+1,y+1);
+                }
+            }
+
+            // 设置背景图
+            document.getElementsByClassName('main')[0].style.backgroundImage = 'url("' + canvas.toDataURL() + '")';
+            interval = window.setTimeout(randBackground, 2000);
+        }
+        
+        randBackground();
+        var interval = window.setTimeout(randBackground, 0);
     </script>
 </body>
 </html>
