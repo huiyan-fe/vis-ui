@@ -11,9 +11,7 @@
             padding: 0;
         }
         body {
-            color: #fff;
             text-align: center;
-            padding-top: 20px;
         }
         .main {
             position: absolute;
@@ -22,28 +20,43 @@
             top: 0;
             padding-top: 20px;
             bottom: 0;
+            background-image: linear-gradient(to bottom, rgba(255,255,200,0.8),rgba(200,255,255,0.8) 25%,rgba(255,255,200,0.8) 50%,rgba(200,255,255,0.8) 75%,rgba(255,255,200,0.8));
+            background-size: 100% 200%;
+            -webkit-animation: masked-animation 4s infinite linear;
+            animation: masked-animation 4s infinite linear;
         }
         h1 {
-            color: rgb(51, 153, 255);
             font-size: 80px;
-            text-shadow: 0px 0px 50px rgba(51, 153, 255, 0.2);
+            text-shadow: 0px 0px 50px rgba(255, 90, 167, 0.2);
+            background:linear-gradient(to right,  red, yellow, violet, orange, green, indigo);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 50px 0 10px;
         }
-        a.btn:hover{
-            background: #333;
+        h2 {
+            margin: 10px 0 50px;
+            background-image: linear-gradient(to right, #E6D205, #147B96);
+            background-size: 100% 100%;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
         }
         a {
             display: block;
-            color: white;
-            background: #5E87DB;
-            border-radius: 4px;
+            color: #999;
+            background: transparent;
+            border-radius: 100px;
+            border: 1px solid #bbb;
+            box-shadow: 0 2px 2px #e9e9e9;
             text-decoration: none;
             margin: 0 auto;
             text-align: center;
-            -webkit-transition: all .5s cubic-bezier(.78,.14,.15,.86);
-            transition: all .5s cubic-bezier(.78,.14,.15,.86);
+            -webkit-transition: all .3s cubic-bezier(.78,.14,.15,.86);
+            transition: all .3s cubic-bezier(.78,.14,.15,.86);
         }
         a:hover {
-            background: rgb(51, 153, 255);
+            border-color: #aaa;
         }
         a.examples {
             height: 40px;
@@ -51,49 +64,57 @@
             width: 160px;
         }
         a.github {
-            opacity: 0;
-            font-size: 50px;
-            height: 140px;
-            line-height: 140px;
-            width: 960px;
+            height: 40px;
+            line-height: 40px;
+            width: 240px;
+        }
+        .fadein {
+            animation: fadeIn .5s;
+            -webkit-animation: fadeIn .5s;
+        }
+
+        @keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+        @-webkit-keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+        @keyframes masked-animation {
+            0%  { background-position: 0 0;}
+            100% { background-position: 0 -100%;}
+        }
+        @-webkit-keyframes masked-animation {
+            0%  { background-position: 0 0;}
+            100% { background-position: 0 -100%;}
         }
     </style>
 </head>
 <body>
     <div class="main">
         <h1>Vis-UI</h1>
+        <h2>👍基于react的前端UI组件化通用库</h2>
         <a class="examples" href="https://huiyan-fe.github.io/vis-ui/pages/examples/">组件库示例</a>
         <br>
-        <a class="github" href="https://github.com/huiyan-fe/vis-ui">等等！先来GitHub点star ★</a>
     </div>
 
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        var timer;
-        // $('.examples').mouseenter(function(){
-        //     $('.github').slideDown(1000);
-        // });
-        // $('.examples').mouseleave(function(){
-        //     timer = setTimeout(() => {
-        //         $('.github').slideUp(1000);
-        //     }, 1000);
-        // });
-        // $('.github').mouseenter(function(){
-        //     console.log(1)
-        //     $('.github').slideDown(1000);
-        //     clearTimeout(timer);
-        // });
+        var timer, hasGithub;
+        var github = document.createElement('a');
+        github.href = 'https://github.com/huiyan-fe/vis-ui';
+        github.innerText = '等等！先来GitHub点star ★';
+        github.className = 'github fadein';
+
         $('.examples').mouseenter(function(){
-            $('.github').css('opacity','1');
+            if (hasGithub) {
+                clearTimeout(timer);
+                timer= null;
+            } else {
+                hasGithub = true;
+                $('.main').append(github);
+            }
         });
         $('.examples').mouseleave(function(){
-            $('.github').css('opacity','0');
-        });
-        $('.github').mouseenter(function(){
-            $('.github').css('opacity','1');
-        });
-        $('.github').mouseleave(function(){
-            $('.github').css('opacity','0');
+            timer = setTimeout(() => {
+                hasGithub = false;
+                $('.github').remove();
+            }, 1000);
         });
     </script>
 </body>

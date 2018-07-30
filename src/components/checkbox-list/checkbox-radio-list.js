@@ -81,7 +81,6 @@ class CheckboxRadioList extends React.Component {
 
     onCheckedTitle(checked) {
         const {options, defaultCheckedKey} = this.props;
-        console.log(defaultCheckedKey)
         if (checked && this.state.checkedVal == undefined) {
             let checkedVal = options[defaultCheckedKey] && options[defaultCheckedKey].value;
             this.setState({
