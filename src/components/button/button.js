@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Icon from '../icon';
 
 class Button extends React.Component {
     onClick(e) {
@@ -24,7 +25,7 @@ class Button extends React.Component {
             onMouseLeave={onMouseLeave}
             onClick={this.onClick.bind(this)}
         >
-            {icon && <i>icon</i>}
+            {icon && <Icon type={icon} />}
             <span>{children}</span>
         </button>;
     }

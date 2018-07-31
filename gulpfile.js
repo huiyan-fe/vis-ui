@@ -1,22 +1,19 @@
 const gulp = require('gulp');
 const path = require('path');
 const sass = require('gulp-sass');
+const base64 = require('gulp-base64');
 
 const cwd = process.cwd();
 const libDir = path.join(cwd, 'lib');
 
-function compile(modules) {
-    const scss = gulp.src(['src/index.scss'])
-        .pipe(sass({includePaths: ['/src/']}))
+gulp.task('dist', () => {
+    return gulp.src(['src/**/*.scss','src/**/*.png','src/**/*.jpg','src/**/*.gif'])
+        .pipe(base64()) 
         .pipe(gulp.dest(libDir));
-}
+});
 
-function build(modules) {
-    const scss = gulp.src(['src/**/*.scss'])
+gulp.task('compile', ['dist'], () => {
+    return gulp.src(['lib/index.scss'])
+        .pipe(sass({includePaths: ['/lib/']}))
         .pipe(gulp.dest(libDir));
-}
-
-gulp.task('compile', () => {
-    build();
-    compile();
 });

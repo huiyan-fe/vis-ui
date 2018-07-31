@@ -20,32 +20,35 @@
             top: 0;
             padding-top: 20px;
             bottom: 0;
-            transition: all 1.9s linear;
+            transition: all 3.9s linear;
             background-size: cover;
         }
         h1 {
             font-size: 80px;
             text-shadow: 0px 0px 50px rgba(255, 90, 167, 0.2);
-            background:linear-gradient(to right,  red, yellow, violet, orange, green, indigo);
+            background:linear-gradient(to right,#D87093,orange 25%,yellow 50%,orange 75%,#D87093);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             margin: 50px 0 10px;
+            background-size: 200%, 100%;
+            animation: masked-animation 4s infinite linear;
         }
         h2 {
             margin: 10px 0 50px;
-            background-image: linear-gradient(to right, rgb(166, 209, 10), rgb(10, 103, 126));
+            background-image: linear-gradient(to right,#147B96, #E6D205, #147B96);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
+            background-size: 200%, 100%;
+            animation: masked-animation 4s infinite linear;
         }
         a {
             display: block;
-            color: #999;
+            color: rgb(16, 86, 126);
             background: transparent;
             border-radius: 100px;
-            border: 1px solid #bbb;
-            box-shadow: 0 2px 2px #e9e9e9;
+            border: 1px solid rgb(10, 103, 126);
             text-decoration: none;
             margin: 0 auto;
             text-align: center;
@@ -53,7 +56,8 @@
             transition: all .3s cubic-bezier(.78,.14,.15,.86);
         }
         a:hover {
-            border-color: #aaa;
+            box-shadow: 0 1px 1px rgba(21, 94, 112, 0.6);
+            border-color: rgb(10, 103, 126);
         }
         a.examples {
             height: 40px;
@@ -74,11 +78,11 @@
         @-webkit-keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
         @keyframes masked-animation {
             0%  { background-position: 0 0;}
-            100% { background-position: 0 -100%;}
+            100% { background-position: -100% 0;}
         }
         @-webkit-keyframes masked-animation {
             0%  { background-position: 0 0;}
-            100% { background-position: 0 -100%;}
+            100% { background-position: -100% 0;}
         }
     </style>
 </head>
@@ -189,7 +193,7 @@
 
             // 设置背景图
             document.getElementsByClassName('main')[0].style.backgroundImage = 'url("' + canvas.toDataURL() + '")';
-            interval = window.setTimeout(randBackground, 2000);
+            interval = window.setTimeout(randBackground, 4000);
         }
         
         randBackground();

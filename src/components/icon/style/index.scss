@@ -4,13 +4,152 @@ $icon-prefix-cls: #{$vis-prefix}-icon;
 
 .#{$icon-prefix-cls} {
     display: inline-block;
-    &.#{$icon-prefix-cls}-down {
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        border-top: 6px solid $icon-color;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        transition: all .2s linear;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    
+    &.#{$icon-prefix-cls}-arrow-left {
+        background: url(../assets/arrow-left.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-arrow-right {
+        background: url(../assets/arrow-right.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-arrow-left-active {
+        background: url(../assets/arrow-left-active.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-arrow-right-active {
+        background: url(../assets/arrow-right-active.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-arrow-down {
+        background: url(../assets/arrow-down.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-draw-circle {
+        background: url(../assets/draw-circle.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-draw-circle-active {
+        background: url(../assets/draw-circle-active.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-draw-rect {
+        background: url(../assets/draw-rect.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-draw-rect-active {
+        background: url(../assets/draw-rect-active.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-draw-polygon {
+        background: url(../assets/draw-polygon.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-draw-polygon-active {
+        background: url(../assets/draw-polygon-active.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-help {
+        background: url(../assets/help.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-setting {
+        background: url(../assets/setting.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-fullscreen {
+        background: url(../assets/fullscreen.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-restorescreen {
+        background: url(../assets/restorescreen.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-zoomin {
+        background: url(../assets/zoomin.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-zoomout {
+        background: url(../assets/zoomout.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-monitor {
+        background: url(../assets/monitor.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-traffic-light {
+        background: url(../assets/traffic-light.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-aim {
+        background: url(../assets/aim.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-clock {
+        background: url(../assets/clock.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-file {
+        background: url(../assets/file.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-console {
+        background: url(../assets/console.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-chat {
+        background: url(../assets/chat.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-offline {
+        background: url(../assets/offline.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-scan {
+        background: url(../assets/scan.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-api {
+        background: url(../assets/api.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-crown {
+        background: url(../assets/crown.png) no-repeat center;
+        background-size: contain;
+    }
+
+    &.#{$icon-prefix-cls}-polyline {
+        background: url(../assets/polyline.png) no-repeat center;
+        background-size: contain;
     }
 }

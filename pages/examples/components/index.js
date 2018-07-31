@@ -1,5 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
+import './index.scss';              // 这样引入可配置主题
+// import '../../../lib/index.css';    // 这样引入编译好的CSS文件
 import Button from './button';
 import Menu from './menu';
 import Radio from './radio';
@@ -7,7 +9,6 @@ import Checkbox from './checkbox';
 import Icon from './icon';
 import Dropdown from './dropdown';
 import CheckboxList from './checkbox-list';
-import './index.scss';
 import './style.scss';
 
 const examples = (

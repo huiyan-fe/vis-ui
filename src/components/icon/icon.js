@@ -11,7 +11,7 @@ class Icon extends React.Component {
             [className]: className
         });
         return (
-            <span className={classname} style={style}></span>
+            <i className={classname} style={style}></i>
         )
     }
 }

@@ -30,3 +30,10 @@ export { default as Dropdown } from './components/dropdown';
 
 // 单选下拉组件
 export { default as CheckboxList } from './components/checkbox-list';
+
+/**
+ * 定制组件
+ */
+
+// 全局提示组件
+export { default as Message } from './components/message';

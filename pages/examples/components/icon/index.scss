@@ -1,0 +1,30 @@
+.iconstyle{
+    margin-bottom: 20px;
+    .listStyle {
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: -1px;
+        width: 10%;
+        height: 80px;
+        cursor: pointer;
+    }
+    .listStyle:hover {
+        background: #eee;
+    }
+    .icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+    }
+    .icontext {
+        text-align: center;
+        font-size: 12px;
+        color: rgb(102, 102, 102);
+        margin-top: 10px;
+    }
+    p {
+        color: red;
+    }
+}

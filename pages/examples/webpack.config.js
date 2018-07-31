@@ -22,12 +22,37 @@ module.exports = {
                     presets: ['env', 'react']
                 }
             }, {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true,
+                            },
+                        },
+                        {
+                            loader: 'resolve-url-loader',
+                            options: {
+                                sourceMap: true,
+                            },
+                        },
+                    ],
+                })
+            }, {
                 test: /\.scss|\.sass$/,
                 loader: ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: [
                         {
                             loader: 'css-loader',
+                            options: {
+                                sourceMap: true,
+                            },
+                        },
+                        {
+                            loader: 'resolve-url-loader',
                             options: {
                                 sourceMap: true,
                             },
@@ -40,6 +65,13 @@ module.exports = {
                         },
                     ],
                 })
+            }, {
+                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: 'images/[name].[hash:8].[ext]',
+                },
             }
         ],
     },
