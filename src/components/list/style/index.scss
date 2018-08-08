@@ -1,0 +1,51 @@
+@import "../../style/themes/huiyan";
+
+$list-prefix-cls: #{$vis-prefix}-list;
+
+.#{$list-prefix-cls} {
+    font-size: $list-font-size-base;
+    width: 230px;
+    max-height: 385px;
+    border: 1px solid #EFEFF0;
+    overflow-y: auto; 
+    & &-item {
+        height: 35px;
+        span {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            float: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .title {
+            width: 10%;
+        }
+        .name {
+            width: 50%;
+            text-align: left;
+        }
+        .value {
+            width: 20%;
+        }
+        .extra {
+            width: 20%;
+        }
+    }
+    & &-item:hover {
+        background: #F4F7FE;
+        cursor: pointer;
+    }
+    .loadmore {
+        width: 100%;
+        line-height: 33px;
+        text-align: center;
+        height: 33px;
+        cursor: pointer;
+    }
+    .hidden {
+        display: none;
+    }
+}

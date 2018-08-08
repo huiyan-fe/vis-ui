@@ -43,8 +43,18 @@ vis-ui的目标：
 [API说明文档](./src/components/checkbox-list/docs/index.md)
 
 ### Icon 图标
+![](./static/icon.jpg)  
 [示例代码](./pages/examples/components/icon/index.js)  
 [API说明文档](./src/components/icon/docs/index.md)
+
+### Message 全局提示
+[示例代码](./pages/examples/components/message/index.js)  
+[API说明文档](./src/components/message/docs/index.md)
+
+### List 列表
+![](./static/list.jpg)  
+[示例代码](./pages/examples/components/list/index.js)  
+[API说明文档](./src/components/list/docs/index.md)
 
 ## 样式引入
 - 如果您需要配置自己的主题文件，请参考[使用vis-ui配置自己的主题](https://github.com/huiyan-fe/vis-ui/blob/master/src/components/style/docs/index.md)。但是这要求您的项目也是用`scss`来编写样式。

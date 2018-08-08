@@ -22,7 +22,7 @@ export { default as Menu } from './components/menu';
 export { default as Icon } from './components/icon';
 
 /**
- * 增强型组件
+ * 业务场景组件
  */
 
 // 下拉多选组件
@@ -30,6 +30,9 @@ export { default as Dropdown } from './components/dropdown';
 
 // 单选下拉组件
 export { default as CheckboxList } from './components/checkbox-list';
+
+// 列表组件
+export { default as List } from './components/list';
 
 /**
  * 定制组件

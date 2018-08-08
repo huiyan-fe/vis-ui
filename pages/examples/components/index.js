@@ -10,6 +10,7 @@ import Icon from './icon';
 import Dropdown from './dropdown';
 import CheckboxList from './checkbox-list';
 import Message from './message';
+import List from './list';
 import './style.scss';
 
 const examples = (
@@ -32,6 +33,8 @@ const examples = (
         <Icon />
         <h2>全局提示 Message</h2>
         <Message />
+        <h2>列表 List</h2>
+        <List />
 
         <hr/>
         <div style={{textAlign:'center',margin:'-18px auto 10px',backgroundColor:'white',width:'120px'}}>已经到底了</div>
