@@ -115,7 +115,7 @@ class CheckboxRadioList extends React.Component {
                     <Checkbox checked={checkTitle} onChange={this.onCheckedTitle} disabled={disabled}/>
                     <span className="visui-checkboxlist-title-text">
                         {title} 
-                    </span> <Icon type="down" />
+                    </span><Icon type="arrow-down" />
                 </div>
                 {showDown && <div className="visui-checkboxlist-down-container" onClick={(e) => {
                     e.nativeEvent.stopImmediatePropagation();

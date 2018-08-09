@@ -38,4 +38,8 @@ $dropdown-prefix-cls: #{$vis-prefix}-dropdown;
             margin: 5px 0;
         }
     }
+    .#{$vis-prefix}-icon {
+        width: 16px;
+        height: 16px;
+    }
 }

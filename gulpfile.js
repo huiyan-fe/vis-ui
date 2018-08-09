@@ -13,7 +13,7 @@ gulp.task('dist', () => {
 });
 
 gulp.task('compile', ['dist'], () => {
-    return gulp.src(['lib/index.scss'])
+    return gulp.src(['lib/index.scss','lib/**/style/*.scss'])
         .pipe(sass({includePaths: ['/lib/']}))
         .pipe(gulp.dest(libDir));
 });

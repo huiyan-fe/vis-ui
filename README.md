@@ -11,50 +11,32 @@ vis-ui的目标：
 如果您是vis-ui的贡献开发者，可以阅读 [vis-ui 开发者说明](https://github.com/huiyan-fe/vis-ui/blob/master/README2.md)。
 
 ## 组件示例与API
-演示地址：[单击此处](https://huiyan-fe.github.io/vis-ui/pages/examples/)
+官网地址：[https://huiyan-fe.github.io/vis-ui/pages/](https://huiyan-fe.github.io/vis-ui/pages/)
 
-### Menu 导航菜单
+### Menu 导航菜单 [示例代码](./pages/examples/components/menu/index.js)  [API说明文档](./src/components/menu/docs/index.md)  
 ![](./static/menu.jpg)  
-[示例代码](./pages/examples/components/menu/index.js)  
-[API说明文档](./src/components/menu/docs/index.md)
 
-### Button 按钮
+### Button 按钮 [示例代码](./pages/examples/components/button/index.js)  [API说明文档](./src/components/button/docs/index.md)
 ![](./static/button.jpg)  
-[示例代码](./pages/examples/components/button/index.js)  
-[API说明文档](./src/components/button/docs/index.md)
 
-### Checkbox 多选框
+### Checkbox 多选框 [示例代码](./pages/examples/components/checkbox/index.js)  [API说明文档](./src/components/checkbox/docs/index.md)
 ![](./static/checkbox.jpg)  
-[示例代码](./pages/examples/components/checkbox/index.js)  
-[API说明文档](./src/components/checkbox/docs/index.md)
 
-### Radio 单选框
+### Radio 单选框 [示例代码](./pages/examples/components/radio/index.js)  [API说明文档](./src/components/radio/docs/index.md)
 ![](./static/radio.jpg)  
-[示例代码](./pages/examples/components/radio/index.js)  
-[API说明文档](./src/components/radio/docs/index.md)
 
-### Dropdown 下拉多选
-[示例代码](./pages/examples/components/dropdown/index.js)  
-[API说明文档](./src/components/dropdown/docs/index.md)
+### Dropdown 下拉多选 [示例代码](./pages/examples/components/dropdown/index.js)  [API说明文档](./src/components/dropdown/docs/index.md)
 
-### CheckboxList 多选框下拉
+### CheckboxList 多选框下拉 [示例代码](./pages/examples/components/checkbox-list/index.js)  [API说明文档](./src/components/checkbox-list/docs/index.md)
 ![](./static/checkboxlist.jpg)  
-[示例代码](./pages/examples/components/checkbox-list/index.js)  
-[API说明文档](./src/components/checkbox-list/docs/index.md)
 
-### Icon 图标
+### Icon 图标 [示例代码](./pages/examples/components/icon/index.js)  [API说明文档](./src/components/icon/docs/index.md)
 ![](./static/icon.jpg)  
-[示例代码](./pages/examples/components/icon/index.js)  
-[API说明文档](./src/components/icon/docs/index.md)
 
-### Message 全局提示
-[示例代码](./pages/examples/components/message/index.js)  
-[API说明文档](./src/components/message/docs/index.md)
+### Message 全局提示 [示例代码](./pages/examples/components/message/index.js)  [API说明文档](./src/components/message/docs/index.md)
 
-### List 列表
+### List 列表 [示例代码](./pages/examples/components/list/index.js)  [API说明文档](./src/components/list/docs/index.md)
 ![](./static/list.jpg)  
-[示例代码](./pages/examples/components/list/index.js)  
-[API说明文档](./src/components/list/docs/index.md)
 
 ## 样式引入
 - 如果您需要配置自己的主题文件，请参考[使用vis-ui配置自己的主题](https://github.com/huiyan-fe/vis-ui/blob/master/src/components/style/docs/index.md)。但是这要求您的项目也是用`scss`来编写样式。
@@ -67,11 +49,12 @@ import App from './index';
 
 render( <App />, document.getElementById('wrapper'));
 ```
-- 如果您想使用某个单独的vis-ui组件，单独引入组件独立的样式也是一个节约资源的选择。**现在版本的vis-ui单独引入的scss没有被编译成css文件，所以这要求您的项目也是使用的scss，后续会将单独引入的样式也编译成css文件，改进单独引入组件的体验**
+- 如果您想使用某个单独的vis-ui组件，单独引入组件独立的样式也是一个节约资源的选择。
+> 需要注意的是，以这种方式引入的只有组件的样式，并不包含全局样式。如果你需要全局样式，可以`import 'vis-ui/lib/components/style/index.css'`手动引入。
 ```javascript
 import React, { Component } from 'react';
 import { Button } from 'vis-ui';
-import 'vis-ui/lib/components/button/style/index.js';     // 单独引入
+import 'vis-ui/lib/components/button/style/index.css';     // 单独引入
 
 export default class App extends Component {
     render() {

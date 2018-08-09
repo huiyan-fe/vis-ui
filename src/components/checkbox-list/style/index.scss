@@ -43,4 +43,8 @@ $checkboxlist-prefix-cls: #{$vis-prefix}-checkboxlist;
             margin: 5px 0;
         }
     }
+    .#{$vis-prefix}-icon {
+        width: 16px;
+        height: 16px;
+    }
 }

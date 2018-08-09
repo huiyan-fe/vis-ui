@@ -836,6 +836,11 @@ a:focus {
   margin: 5px 0;
 }
 
+.visui-dropdown .visui-icon {
+  width: 16px;
+  height: 16px;
+}
+
 /**
  * @file: 调色板
  * @author: junior2ran
@@ -888,6 +893,11 @@ a:focus {
   height: 18px;
   line-height: 18px;
   margin: 5px 0;
+}
+
+.visui-checkboxlist .visui-icon {
+  width: 16px;
+  height: 16px;
 }
 
 /**
