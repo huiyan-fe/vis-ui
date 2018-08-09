@@ -4,7 +4,7 @@ import { List } from '../../../../src';
 export default class App extends Component {
 
     render() {
-        let data = [
+        let data1 = [
             {name: 'aaa', value: 123, extra: 0.23},
             {name: 'aaa', value: 123, extra: 0.23},
             {name: 'aaa', value: 123, extra: 0.23},
@@ -16,18 +16,30 @@ export default class App extends Component {
             {name: 'aaa', value: 123, extra: 0.23},
             {name: 'aaa', value: 123, extra: 0.23},
         ];
+        let data2 = [
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
+        ];
 
         return <div className="liststyle">
-            <List data={data} 
+            <List data={data1} 
                 loadMore={true}
                 loadSize={10}
                 formatValue={(value) => value + '个'}
                 formatExtra={(extra) => parseFloat(extra * 100).toFixed(1) + '%'}
-                style={{display:'inline-block',marginRight:'10px'}}
+                style={{display:'inline-block',marginRight:'20px'}}
             />
-            <List data={data} 
+            <List data={data2} 
                 autoTitle={false}
-                style={{display:'inline-block',marginRight:'10px',verticalAlign:'top'}}
+                style={{display:'inline-block',verticalAlign:'top'}}
             />
         </div>;
     }

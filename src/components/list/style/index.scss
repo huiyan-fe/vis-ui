@@ -19,16 +19,37 @@ $list-prefix-cls: #{$vis-prefix}-list;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            box-sizing: border-box;
         }
         .title {
             width: 10%;
+            &.noextra {
+                width: 15%;
+            }
         }
         .name {
             width: 50%;
             text-align: left;
+            &.notitle {
+                width: 60%;
+                padding-left: 15px;
+            }
+            &.noextra {
+                width: 60%;
+            }
+            &.neither {
+                width: 70%;
+                padding-left: 15px;
+            }
         }
         .value {
             width: 20%;
+            &.noextra {
+                width: 25%;
+            }
+            &.neither {
+                width: 30%;
+            }
         }
         .extra {
             width: 20%;

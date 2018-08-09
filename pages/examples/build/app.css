@@ -917,10 +917,15 @@ a:focus {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 
 .visui-list .visui-list-item .title {
   width: 10%;
+}
+
+.visui-list .visui-list-item .title.noextra {
+  width: 15%;
 }
 
 .visui-list .visui-list-item .name {
@@ -928,8 +933,30 @@ a:focus {
   text-align: left;
 }
 
+.visui-list .visui-list-item .name.notitle {
+  width: 60%;
+  padding-left: 15px;
+}
+
+.visui-list .visui-list-item .name.noextra {
+  width: 60%;
+}
+
+.visui-list .visui-list-item .name.neither {
+  width: 70%;
+  padding-left: 15px;
+}
+
 .visui-list .visui-list-item .value {
   width: 20%;
+}
+
+.visui-list .visui-list-item .value.noextra {
+  width: 25%;
+}
+
+.visui-list .visui-list-item .value.neither {
+  width: 30%;
 }
 
 .visui-list .visui-list-item .extra {
