@@ -42,6 +42,7 @@ $padding-xs: 8px !default;
 
 // ---TEXT---
 $font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei" !default;
+$font-size-lg: 18px !default;
 $font-size-base: 14px !default;
 $font-size-sm: 12px !default;
 $text-color: $gray !default;
@@ -180,3 +181,22 @@ $checkboxlist-margin-sm: $padding-xs !default;
 
 // ---LIST---
 $list-font-size-base: $font-size-sm !default;
+
+// ---MODAL---
+$modal-width-base: 560px !default;
+$modal-height-base: 260px !default;
+$modal-header-height-base: 50px !default;
+$modal-content-height-base: 150px !default;
+$modal-padding-base: $padding-sm !default;
+$modal-header-font-size: $font-size-lg !default;
+$modal-border-radius: $border-radius-base !default;
+$modal-border-color: #E9E9E9 !default;
+
+$modal-mini-width-base: 560px !default;
+$modal-mini-height-base: 260px !default;
+$modal-mini-header-height-base: 50px !default;
+$modal-mini-content-height-base: 150px !default;
+$modal-mini-padding-base: $padding-sm !default;
+$modal-mini-header-font-size: $font-size-lg !default;
+$modal-mini-border-radius: $border-radius-base !default;
+$modal-mini-border-color: #E9E9E9 !default;

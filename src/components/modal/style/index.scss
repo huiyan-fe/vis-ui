@@ -1,0 +1,100 @@
+@import "../../style/themes/huiyan";
+
+$modal-prefix-cls: #{$vis-prefix}-modal;
+
+.#{$modal-prefix-cls} {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .6);
+    .modal-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+        width: $modal-width-base;
+        height: $modal-height-base;
+        margin-top: -($modal-height-base/2);
+        margin-left: -($modal-width-base/2);
+        border-radius: $modal-border-radius;
+    }
+    .modal-header {
+        background: #fff;
+        font-size: $modal-header-font-size;
+        height: $modal-header-height-base;
+        line-height: $modal-header-height-base;
+        border-bottom: 1px solid $modal-border-color;
+        padding: 0 $modal-padding-base;
+        .modal-close {
+            font-size: 20px;
+            margin-top: ($modal-header-height-base - 20) / 2;
+            float: right;
+            cursor: pointer;
+        }
+    }
+    .modal-content {
+        overflow-y: auto;
+        height: $modal-content-height-base;
+        border-bottom: 1px solid $modal-border-color;
+        padding: $modal-padding-base 0;
+        margin: 0 $modal-padding-base;
+    }
+    .modal-footer {
+        position: absolute;
+        bottom: ($modal-height-base - $modal-content-height-base - $modal-header-height-base - $btn-height-base) / 2;
+        right: 30px;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.#{$modal-prefix-cls}.mini {
+    .modal-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+        width: $modal-mini-width-base;
+        height: $modal-mini-height-base;
+        margin-top: -($modal-mini-height-base/2);
+        margin-left: -($modal-mini-width-base/2);
+        border-radius: $modal-mini-border-radius;
+    }
+    .modal-header {
+        background: #fff;
+        font-size: $modal-mini-header-font-size;
+        height: $modal-mini-header-height-base;
+        line-height: $modal-mini-header-height-base;
+        border-bottom: 1px solid $modal-mini-border-color;
+        padding: 0 $modal-mini-padding-base;
+        .modal-close {
+            font-size: 20px;
+            margin-top: ($modal-mini-header-height-base - 20) / 2;
+            float: right;
+            cursor: pointer;
+        }
+    }
+    .modal-content {
+        overflow-y: auto;
+        height: $modal-mini-content-height-base;
+        border-bottom: 1px solid $modal-mini-border-color;
+        padding: $modal-mini-padding-base 0;
+        margin: 0 $modal-mini-padding-base;
+    }
+    .modal-footer {
+        position: absolute;
+        bottom: ($modal-mini-height-base - $modal-mini-content-height-base - $modal-mini-header-height-base - $btn-height-base) / 2;
+        right: 30px;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}

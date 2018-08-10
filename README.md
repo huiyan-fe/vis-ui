@@ -38,6 +38,9 @@ vis-ui的目标：
 ### List 列表 [示例代码](./pages/examples/components/list/index.js)  [API说明文档](./src/components/list/docs/index.md)
 ![](./static/list.jpg)  
 
+### Modal 模态框 [示例代码](./pages/examples/components/modal/index.js)  [API说明文档](./src/components/modal/docs/index.md)
+![](./static/modal.jpg)  
+
 ## 样式引入
 - 如果您需要配置自己的主题文件，请参考[使用vis-ui配置自己的主题](https://github.com/huiyan-fe/vis-ui/blob/master/src/components/style/docs/index.md)。但是这要求您的项目也是用`scss`来编写样式。
 - 如果您想使用整套的vis-ui，可以使用`import 'vis-ui/lib/index.css'`，将样式文件在根目录全部导入

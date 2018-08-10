@@ -11,6 +11,7 @@ import Dropdown from './dropdown';
 import CheckboxList from './checkbox-list';
 import Message from './message';
 import List from './list';
+import Modal from './modal';
 import './style.scss';
 
 const examples = (
@@ -35,6 +36,8 @@ const examples = (
         <Message />
         <h2>列表 List</h2>
         <List />
+        <h2>模态框 Modal</h2>
+        <Modal />
 
         <hr/>
         <div style={{textAlign:'center',margin:'-18px auto 10px',backgroundColor:'white',width:'120px'}}>已经到底了</div>

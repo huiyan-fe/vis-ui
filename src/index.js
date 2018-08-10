@@ -34,6 +34,9 @@ export { default as CheckboxList } from './components/checkbox-list';
 // 列表组件
 export { default as List } from './components/list';
 
+// 模态框组件
+export { default as Modal } from './components/modal';
+
 /**
  * 定制组件
  */
