@@ -193,10 +193,10 @@ $modal-border-radius: $border-radius-base !default;
 $modal-border-color: #E9E9E9 !default;
 
 $modal-mini-width-base: 400px !default;
-$modal-mini-height-base: 260px !default;
+$modal-mini-height-base: 500px !default;
 $modal-mini-header-height-base: 50px !default;
 $modal-mini-content-height-base: 150px !default;
 $modal-mini-padding-base: $padding-sm !default;
 $modal-mini-header-font-size: $font-size-lg !default;
-$modal-mini-border-radius: $border-radius-base !default;
+$modal-mini-border-radius: $border-radius-base*5 !default;
 $modal-mini-border-color: #E9E9E9 !default;

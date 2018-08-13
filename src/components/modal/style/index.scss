@@ -18,7 +18,7 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
         width: $modal-width-base;
         height: $modal-height-base;
-        margin-top: -($modal-height-base/2);
+        margin-top: -($modal-height-base/2 + 100);
         margin-left: -($modal-width-base/2);
         border-radius: $modal-border-radius;
     }
@@ -28,6 +28,7 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         line-height: $modal-header-height-base;
         border-bottom: 1px solid $modal-border-color;
         padding: 0 $modal-padding-base;
+        text-align: center;
         .modal-close {
             font-size: 20px;
             margin-top: ($modal-header-height-base - 20) / 2;
@@ -88,11 +89,7 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
     }
     .modal-footer {
         position: static;
-        padding: 10px 20px;
-        text-align: right;
-    }
-
-    &.hidden {
-        display: none;
+        padding: 10px 20px 20px;
+        text-align: center;
     }
 }

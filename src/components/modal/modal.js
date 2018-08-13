@@ -45,7 +45,7 @@ class Modal extends React.Component {
                 </div>
                 <div className="modal-footer">
                     {showCancel && <Button type="default" onClick={this.onCancel}>取消</Button>}
-                    <Button type="primary" onClick={this.onSubmit}>确定</Button>
+                    <Button type="primary" size={mini ? 'large' : ''} onClick={this.onSubmit}>确定</Button>
                 </div>
             </div>
         </div>
