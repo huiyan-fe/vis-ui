@@ -23,7 +23,6 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         border-radius: $modal-border-radius;
     }
     .modal-header {
-        background: #fff;
         font-size: $modal-header-font-size;
         height: $modal-header-height-base;
         line-height: $modal-header-height-base;
@@ -62,17 +61,16 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         background: #fff;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
         width: $modal-mini-width-base;
-        height: $modal-mini-height-base;
+        height: auto;
         margin-top: -($modal-mini-height-base/2);
         margin-left: -($modal-mini-width-base/2);
         border-radius: $modal-mini-border-radius;
     }
     .modal-header {
-        background: #fff;
         font-size: $modal-mini-header-font-size;
-        height: $modal-mini-header-height-base;
+        height: auto;
         line-height: $modal-mini-header-height-base;
-        border-bottom: 1px solid $modal-mini-border-color;
+        border-bottom: 0;
         padding: 0 $modal-mini-padding-base;
         .modal-close {
             font-size: 20px;
@@ -83,15 +81,15 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
     }
     .modal-content {
         overflow-y: auto;
-        height: $modal-mini-content-height-base;
-        border-bottom: 1px solid $modal-mini-border-color;
+        height: auto;
+        border-bottom: 0;
         padding: $modal-mini-padding-base 0;
         margin: 0 $modal-mini-padding-base;
     }
     .modal-footer {
-        position: absolute;
-        bottom: ($modal-mini-height-base - $modal-mini-content-height-base - $modal-mini-header-height-base - $btn-height-base) / 2;
-        right: 30px;
+        position: static;
+        padding: 10px 20px;
+        text-align: right;
     }
 
     &.hidden {
