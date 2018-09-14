@@ -10,6 +10,26 @@ vis-ui的目标：
 
 如果您是vis-ui的贡献开发者，可以阅读 [vis-ui 开发者说明](https://github.com/huiyan-fe/vis-ui/blob/master/README4DEV.md)。
 
+## 开始使用
+### 安装
+```
+npm install vis-ui --save
+```
+
+### 使用
+首先，直接引入组件
+```
+import {Button} from 'vis-ui';
+ReactDOM.render(<Button />,mountNode);
+```
+然后，手动全量引入样式
+```
+import 'vis-ui/lib/components/index.css';
+```
+你就可以使用一个样式优美的按钮了！
+
+或者你也看这里阅读[按需加载组件][1]的方式。
+
 ## 组件示例与API
 官网地址：[https://huiyan-fe.github.io/vis-ui/pages/](https://huiyan-fe.github.io/vis-ui/pages/)
 
@@ -75,6 +95,11 @@ import {Button} from 'vis-ui'
 插件会帮你转换成`vis-ui/lib/components/xxx`的写法。另外此插件配合`style`属性可以做到模块样式的按需自动加载。我们也提供了手把手教你[配置插件的教程](https://github.com/huiyan-fe/vis-ui/blob/master/README4IMPORT.md)。
 
 
-> 需要注意的是，以按需加载方式引入会同时包含一些全局样式。如果这会影响到你项目端其他样式，建议你使用上面[全局加载][1]的方式来加载样式，然后用你自己的全局样式来覆盖它。
+> 需要注意的是，以按需加载方式引入会同时包含一些全局样式。如果这会影响到你项目端其他样式，建议你使用上面[全局加载][2]的方式来加载样式，然后用你自己的全局样式来覆盖它。
 
-[1]:#全局加载
+##### 3. 最佳实践
+根据个人做的项目经验来看，自认为的最佳实践还是**按需加载组件，全量引入样式**。
+各位看官仅供参考，欢迎讨论~
+
+[1]:#按需加载
+[2]:#全局加载
