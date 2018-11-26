@@ -15,11 +15,11 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         top: 50%;
         left: 50%;
         background: #fff;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
         width: $modal-width-base;
         height: $modal-height-base;
-        margin-top: -($modal-height-base/2 + 100);
-        margin-left: -($modal-width-base/2);
+        margin-top: -($modal-height-base / 2 + 100);
+        margin-left: -($modal-width-base / 2);
         border-radius: $modal-border-radius;
     }
     .modal-header {
@@ -60,11 +60,11 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         top: 50%;
         left: 50%;
         background: #fff;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
         width: $modal-mini-width-base;
         height: auto;
-        margin-top: -($modal-mini-height-base/2);
-        margin-left: -($modal-mini-width-base/2);
+        margin-top: -($modal-mini-height-base / 2);
+        margin-left: -($modal-mini-width-base / 2);
         border-radius: $modal-mini-border-radius;
     }
     .modal-header {

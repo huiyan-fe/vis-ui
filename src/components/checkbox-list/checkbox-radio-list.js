@@ -55,8 +55,11 @@ class CheckboxRadioList extends React.Component {
     getDefaultCheckVal(props) {
         if ('value' in props) {
             return props.value;
+        } else if ('defaultValue' in props) {
+            return props.defaultValue;
+        } else {
+            return undefined;
         }
-        return props.defaultValue || undefined;
     }
 
     componentDidMount() {
@@ -79,6 +82,7 @@ class CheckboxRadioList extends React.Component {
         while (dom) {
             if (dom === this.refs.titleContainer) {
                 flag = false;
+                break;
             }
             dom = dom.parentNode;
         }

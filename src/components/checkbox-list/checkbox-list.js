@@ -5,6 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import shallowequal from 'shallowequal';
 import {Checkbox, Icon} from '../../index';
 const CheckboxGroup = Checkbox.Group;
 
@@ -27,7 +28,7 @@ class CheckboxList extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         // 外部通过value属性使组件受控
-        if ('value' in nextProps && JSON.stringify(nextProps.value) !== JSON.stringify(this.props.value)) {
+        if ('value' in nextProps && !shallowequal(nextProps.value, this.props.value)) {
             let checkedList = nextProps.value;
             this.setState({
                 checkedList: checkedList,
@@ -97,6 +98,7 @@ class CheckboxList extends React.Component {
         while (dom) {
             if (dom === this.refs.titleContainer) {
                 flag = false;
+                break;
             }
             dom = dom.parentNode;
         }
@@ -189,7 +191,7 @@ class CheckboxList extends React.Component {
                     <span className="visui-checkboxlist-title-text">
                         {title}
                         {checkedList.length > 0
-                        && <span className="visui-checkboxlist-num">{'(' + checkedList.length + ')'}</span>}
+                        && <span className="visui-checkboxlist-num">({checkedList.length})</span>}
                     </span><Icon type="arrow-down" />
                 </div>
                 {showDown && <div className="visui-checkboxlist-down-container" onClick={e => {
