@@ -56,7 +56,7 @@ class List extends React.Component {
         });
         const loadmoreclassname = classNames({
             'loadmore': true,
-            'hidden': data.length > parseInt(loadSize)
+            'hidden': data.length !== parseInt(loadSize)
         });
 
         let listStr = data.map((item, index) => {
