@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from "classnames";
 
 class Menu extends React.Component {
 
@@ -18,7 +19,13 @@ class Menu extends React.Component {
     }
 
     render() {
-        return <div className="visui-menu">
+        const {className, mode, style} = this.props;
+        const classname = classNames(
+            'visui-menu', 
+            className, {
+            'visui-menu-vertical': mode === 'vertical'
+        });
+        return <div className={classname} style={style}>
             {this.props.children}
         </div>;
     }
@@ -27,6 +34,14 @@ class Menu extends React.Component {
 
 Menu.childContextTypes = {
     menu: PropTypes.any
+};
+Menu.propTypes = {
+    mode: PropTypes.string,
+    defaultSelectedIndexs: PropTypes.array
+};
+Menu.defaultProps = {
+    mode: 'horizontal',
+    defaultSelectedIndexs: []
 };
 
 export default Menu;

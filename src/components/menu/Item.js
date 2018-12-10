@@ -25,5 +25,8 @@ class MenuItem extends React.Component {
 MenuItem.contextTypes = {
     menu: PropTypes.any
 };
+MenuItem.propTypes = {
+    index: PropTypes.string.isRequired,
+};
 
 export default MenuItem;

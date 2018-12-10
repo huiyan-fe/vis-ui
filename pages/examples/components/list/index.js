@@ -27,6 +27,7 @@ export default class App extends Component {
             {name: 'aaa', value: 123},
             {name: 'aaa', value: 123},
             {name: 'aaa', value: 123},
+            {name: 'aaa', value: 123},
         ];
 
         return <div className="liststyle">

@@ -26,7 +26,6 @@ class List extends React.Component {
     }
 
     render() {
-        const self = this;
         const { className, style, data, loadMore, loadSize, autoTitle, formatValue, formatExtra } = this.props;
         const notitle = data.length && !('title' in data[0]) && !autoTitle && ('extra' in data[0]);
         const noextra = data.length && !('extra' in data[0]) && (('title' in data[0]) || autoTitle);

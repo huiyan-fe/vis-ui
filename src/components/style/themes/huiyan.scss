@@ -56,7 +56,12 @@ $link-decoration: none !default;
 $link-hover-decoration: none !default;
 
 // ---MENU---
-$menu-color: $deep-color !default;
+$menu-text-color: #8690A6 !default;
+$menu-active-color: $primary-color !default;
+$menu-bg-color: $deep-color !default;
+$menu-active-bg-color: #20305D !default;
+$menu-vertical-bg-color: #f9f9f9 !default;
+$menu-vertical-active-bg-color: $primary-color-w9 !default;
 
 // ---BORDER---
 $border-width: 1px !default;

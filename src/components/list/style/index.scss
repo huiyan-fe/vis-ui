@@ -5,7 +5,7 @@ $list-prefix-cls: #{$vis-prefix}-list;
 .#{$list-prefix-cls} {
     font-size: $list-font-size-base;
     width: 230px;
-    max-height: 385px;
+    max-height: 387px;
     border: 1px solid #EFEFF0;
     overflow-y: auto; 
     & &-item {
@@ -61,9 +61,9 @@ $list-prefix-cls: #{$vis-prefix}-list;
     }
     .loadmore {
         width: 100%;
-        line-height: 33px;
+        line-height: 35px;
         text-align: center;
-        height: 33px;
+        height: 35px;
         cursor: pointer;
     }
     .hidden {

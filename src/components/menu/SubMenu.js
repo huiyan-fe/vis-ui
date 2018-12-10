@@ -26,5 +26,7 @@ class SubMenu extends React.Component {
 SubMenu.contextTypes = {
     menu: PropTypes.any
 };
-
+SubMenu.propTypes = {
+    index: PropTypes.string.isRequired,
+};
 export default SubMenu;

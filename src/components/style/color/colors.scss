@@ -53,7 +53,12 @@ $huiyan-brand-blue-b90: colorPalette($huiyan-brand-blue, $black, 90);   // #090D
 
 // brand dark blue
 $huiyan-brand-dark-blue: #1A284D;
-$huiyan-brand-dark-blue-w10: colorPalette($huiyan-brand-dark-blue, $white, 10);
+$huiyan-brand-dark-blue-w5: colorPalette($huiyan-brand-dark-blue, $white, 5);     // #253356
+$huiyan-brand-dark-blue-w10: colorPalette($huiyan-brand-dark-blue, $white, 10);     // #313E5F
+$huiyan-brand-dark-blue-w20: colorPalette($huiyan-brand-dark-blue, $white, 20);     // #485371
+$huiyan-brand-dark-blue-w30: colorPalette($huiyan-brand-dark-blue, $white, 30);     // #5F6982
+$huiyan-brand-dark-blue-w40: colorPalette($huiyan-brand-dark-blue, $white, 40);     // #767E94
+$huiyan-brand-dark-blue-w50: colorPalette($huiyan-brand-dark-blue, $white, 50);     // #8D94A6
 
 // blue
 $huiyan-blue: #4E6DF1;
