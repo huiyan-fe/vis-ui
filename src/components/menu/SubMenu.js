@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 class SubMenu extends React.Component {
 
-    constructor(props: Object) {
+    constructor(props) {
         super(props);
 
         this.state = {

@@ -45,7 +45,7 @@ class JDate extends React.Component {
 
     render() {
         return (
-            <input placeholder="请选择日期" className="huiyan-jDate" name={this.props.name} type="text" ref="input"/>
+            <input placeholder="请选择日期" className="visui-jDate" name={this.props.name} type="text" ref="input"/>
         )
     }
 }

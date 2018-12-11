@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 class Menu extends React.Component {
 
-    constructor(props: Object) {
+    constructor(props) {
         super(props);
         this.instanceType = 'Menu';
 

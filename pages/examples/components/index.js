@@ -12,6 +12,7 @@ import CheckboxList from './checkbox-list';
 import Message from './message';
 import List from './list';
 import Modal from './modal';
+import Expand from './expand';
 import './style.scss';
 
 const examples = (
@@ -38,6 +39,8 @@ const examples = (
         <List />
         <h2>模态框 Modal</h2>
         <Modal />
+        <h2>展开内容 Expand</h2>
+        <Expand />
 
         <hr/>
         <div style={{textAlign:'center',margin:'-18px auto 10px',backgroundColor:'white',width:'120px'}}>已经到底了</div>

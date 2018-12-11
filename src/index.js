@@ -21,6 +21,9 @@ export { default as Menu } from './components/menu';
 // Icon组件
 export { default as Icon } from './components/icon';
 
+// 日期选择框组件
+export { default as DatePicker } from './components/date-picker';
+
 /**
  * 业务场景组件
  */
@@ -36,6 +39,9 @@ export { default as List } from './components/list';
 
 // 模态框组件
 export { default as Modal } from './components/modal';
+
+// 展开内容组件
+export { default as Expand } from './components/expand';
 
 /**
  * 定制组件

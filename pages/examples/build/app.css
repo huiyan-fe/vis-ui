@@ -536,10 +536,6 @@ a:focus {
   font-size: 14px;
 }
 
-.visui-menu-item {
-  position: relative;
-}
-
 .visui-menu a {
   text-decoration: none;
   color: #8690A6;
@@ -582,10 +578,10 @@ a:focus {
   border-bottom: 4px solid #5E87DB;
 }
 
-.visui-menu-item:hover a,
-.visui-menu-item.active a,
-.visui-menu-submenu:hover a,
-.visui-menu-submenu.active a {
+.visui-menu-item:hover > a,
+.visui-menu-item.active > a,
+.visui-menu-submenu:hover > a,
+.visui-menu-submenu.active > a {
   color: #fff;
 }
 
@@ -596,41 +592,78 @@ a:focus {
 
 .visui-menu .subNav {
   display: none;
-  background: blue;
   width: 150px;
   background: #1A284D;
   text-align: center;
   position: absolute;
   top: 60px;
   left: 0;
+  z-index: 1;
 }
 
 .visui-menu .subNav .visui-menu-item {
-  cursor: pointer;
   display: block;
   height: 40px;
   line-height: 40px;
-  color: #8690A6;
   text-align: left;
   padding: 0 0 0 20px;
 }
 
-.visui-menu .subNav .visui-menu-item a {
-  color: #8690A6;
-}
-
 .visui-menu .subNav .visui-menu-item.active,
-.visui-menu .subNav .visui-menu-item.active a,
 .visui-menu .subNav .visui-menu-item:hover {
   border-bottom: none;
   background: #20305D;
-  color: #fff;
 }
 
-.visui-menu .subNav .visui-menu-item.active a,
-.visui-menu .subNav .visui-menu-item.active a a,
-.visui-menu .subNav .visui-menu-item:hover a {
-  color: #fff;
+.visui-menu.visui-menu-vertical {
+  width: 200px;
+  min-height: 400px;
+  background: #f9f9f9;
+}
+
+.visui-menu.visui-menu-vertical .visui-menu-item,
+.visui-menu.visui-menu-vertical .visui-menu-submenu {
+  display: block;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.visui-menu.visui-menu-vertical .visui-menu-item:hover,
+.visui-menu.visui-menu-vertical .visui-menu-item.active,
+.visui-menu.visui-menu-vertical .visui-menu-submenu:hover,
+.visui-menu.visui-menu-vertical .visui-menu-submenu.active {
+  background: #eff3fb;
+  color: #5E87DB;
+  border-bottom: none;
+  border-right: 4px solid #5E87DB;
+}
+
+.visui-menu.visui-menu-vertical .visui-menu-item:hover > a,
+.visui-menu.visui-menu-vertical .visui-menu-item.active > a,
+.visui-menu.visui-menu-vertical .visui-menu-submenu:hover > a,
+.visui-menu.visui-menu-vertical .visui-menu-submenu.active > a {
+  color: #5E87DB;
+}
+
+.visui-menu.visui-menu-vertical .subNav {
+  top: 0;
+  left: 200px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 4px #e9e9e9;
+}
+
+.visui-menu.visui-menu-vertical .subNav .visui-menu-item {
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  padding: 0 0 0 20px;
+}
+
+.visui-menu.visui-menu-vertical .subNav .visui-menu-item.active,
+.visui-menu.visui-menu-vertical .subNav .visui-menu-item:hover {
+  border-right: none;
+  background: #eff3fb;
 }
 
 /**
@@ -913,7 +946,7 @@ a:focus {
 .visui-list {
   font-size: 12px;
   width: 230px;
-  max-height: 385px;
+  max-height: 387px;
   border: 1px solid #EFEFF0;
   overflow-y: auto;
 }
@@ -984,9 +1017,9 @@ a:focus {
 
 .visui-list .loadmore {
   width: 100%;
-  line-height: 33px;
+  line-height: 35px;
   text-align: center;
-  height: 33px;
+  height: 35px;
   cursor: pointer;
 }
 
@@ -1012,14 +1045,13 @@ a:focus {
 
 .visui-modal .modal-container {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  width: 560px;
-  height: 260px;
-  margin-top: -230px;
-  margin-left: -280px;
+  min-width: 560px;
+  min-height: 260px;
+  transform: translate(-50%, -50%);
   border-radius: 2px;
 }
 
@@ -1041,16 +1073,16 @@ a:focus {
 
 .visui-modal .modal-content {
   overflow-y: auto;
-  height: 150px;
-  border-bottom: 1px solid #E9E9E9;
+  min-height: 150px;
   padding: 12px 0;
   margin: 0 12px;
 }
 
 .visui-modal .modal-footer {
-  position: absolute;
-  bottom: 15px;
-  right: 30px;
+  padding: 15px 0;
+  margin: 0 12px;
+  border-top: 1px solid #E9E9E9;
+  text-align: right;
 }
 
 .visui-modal.hidden {
@@ -1058,15 +1090,9 @@ a:focus {
 }
 
 .visui-modal.mini .modal-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  min-width: 400px;
   width: 400px;
   height: auto;
-  margin-top: -250px;
-  margin-left: -200px;
   border-radius: 10px;
 }
 
@@ -1094,9 +1120,46 @@ a:focus {
 }
 
 .visui-modal.mini .modal-footer {
-  position: static;
+  margin: 0;
   padding: 10px 20px 20px;
+  border: none;
   text-align: center;
+}
+
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+
+.visui-expand-wrapper {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #e9e9e9;
+  border-radius: 2px;
+}
+
+.visui-expand-wrapper .visui-expand {
+  padding: 10px;
+  width: 600px;
+}
+
+.visui-expand-wrapper .visui-expand .expand-open {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.visui-expand-modal .modal-container {
+  top: 50%;
+}
+
+.visui-expand-modal .visui-expand {
+  padding: 0;
+  width: max-content;
 }
 
 /**

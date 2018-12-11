@@ -12,14 +12,13 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
     background: rgba(0, 0, 0, .6);
     .modal-container {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         background: #fff;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
-        width: $modal-width-base;
-        height: $modal-height-base;
-        margin-top: -($modal-height-base / 2 + 100);
-        margin-left: -($modal-width-base / 2);
+        min-width: $modal-width-base;
+        min-height: $modal-height-base;
+        transform: translate(-50%, -50%);
         border-radius: $modal-border-radius;
     }
     .modal-header {
@@ -38,15 +37,15 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
     }
     .modal-content {
         overflow-y: auto;
-        height: $modal-content-height-base;
-        border-bottom: 1px solid $modal-border-color;
+        min-height: $modal-content-height-base;
         padding: $modal-padding-base 0;
         margin: 0 $modal-padding-base;
     }
     .modal-footer {
-        position: absolute;
-        bottom: ($modal-height-base - $modal-content-height-base - $modal-header-height-base - $btn-height-base) / 2;
-        right: 30px;
+        padding: ($modal-height-base - $modal-content-height-base - $modal-header-height-base - $btn-height-base) / 2 0;
+        margin: 0 $modal-padding-base;
+        border-top: 1px solid $modal-border-color;
+        text-align: right;
     }
 
     &.hidden {
@@ -56,15 +55,9 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
 
 .#{$modal-prefix-cls}.mini {
     .modal-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background: #fff;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+        min-width: $modal-mini-width-base;
         width: $modal-mini-width-base;
         height: auto;
-        margin-top: -($modal-mini-height-base / 2);
-        margin-left: -($modal-mini-width-base / 2);
         border-radius: $modal-mini-border-radius;
     }
     .modal-header {
@@ -88,8 +81,9 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         margin: 0 $modal-mini-padding-base;
     }
     .modal-footer {
-        position: static;
+        margin: 0;
         padding: 10px 20px 20px;
+        border: none;
         text-align: center;
     }
 }

@@ -15,6 +15,7 @@ class Modal extends React.Component {
         };
         this.onCancel = this.onCancel.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onClickMask = this.onClickMask.bind(this);
     }
     /**
      * 点击取消的回调函数
@@ -30,8 +31,22 @@ class Modal extends React.Component {
         this.props.onSubmit && this.props.onSubmit();
     }
 
+    /**
+     * 点击蒙层的触发事件
+     */
+    onClickMask(event) {
+        const e = event.nativeEvent;
+        const target = e.target;
+        e.preventDefault();
+        e.stopPropagation();
+        if (this.props.maskClosable && target === this.mask) {
+            this.onCancel();
+        }
+        return false;
+    }
+
     render() {
-        const {className, style, mini, title, visible, hideCancel, children} = this.props;
+        const {className, style, mini, title, visible, hideCancel, children, footer} = this.props;
         const showCancel = !hideCancel && !mini;
         const classname = classNames({
             'visui-modal': true,
@@ -40,7 +55,7 @@ class Modal extends React.Component {
             [className]: className
         });
         return (
-            <div className={classname} style={style}>
+            <div className={classname} style={style} onClick={this.onClickMask} ref={mask => this.mask = mask}>
                 <div className="modal-container">
                     <div className="modal-header">
                         <span className="modal-header-text">{title}</span>
@@ -49,10 +64,16 @@ class Modal extends React.Component {
                     <div className="modal-content">
                         {children}
                     </div>
+                    {footer !== null &&
                     <div className="modal-footer">
-                        {showCancel && <Button type="default" onClick={this.onCancel}>取消</Button>}
-                        <Button type="primary" size={mini ? 'large' : ''} onClick={this.onSubmit}>确定</Button>
+                        {footer ? footer : 
+                        <div>
+                            {showCancel && <Button type="default" onClick={this.onCancel}>取消</Button>}
+                            <Button type="primary" size={mini ? 'large' : ''} onClick={this.onSubmit}>确定</Button>
+                        </div>
+                        }
                     </div>
+                    }
                 </div>
             </div>
         );
@@ -63,14 +84,17 @@ Modal.defaultProps = {
     title: '',
     mini: false,
     visible: false,
-    hideCancel: false
+    hideCancel: false,
+    maskClosable: true
 };
 
 Modal.propTypes = {
     title: PropTypes.string,
     mini: PropTypes.bool,
     visible: PropTypes.bool,
+    footer: PropTypes.any,
     hideCancel: PropTypes.bool,
+    maskClosable: PropTypes.bool,
     onCancel: PropTypes.func,
     onSubmit: PropTypes.func
 };
