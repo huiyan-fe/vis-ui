@@ -557,6 +557,14 @@ a:focus {
   content: '';
 }
 
+.visui-menu-item-group-title {
+  text-align: left;
+  padding-left: 10px;
+  color: #c9c9c9;
+  cursor: default;
+  line-height: 30px;
+}
+
 .visui-menu-item,
 .visui-menu-submenu {
   cursor: pointer;
@@ -618,6 +626,8 @@ a:focus {
 .visui-menu.visui-menu-vertical {
   width: 200px;
   min-height: 400px;
+  height: auto;
+  padding-bottom: 20px;
   background: #f9f9f9;
 }
 
@@ -626,7 +636,7 @@ a:focus {
   display: block;
   height: 40px;
   line-height: 20px;
-  padding: 10px;
+  padding: 10px 0 10px 20px;
 }
 
 .visui-menu.visui-menu-vertical .visui-menu-item:hover,

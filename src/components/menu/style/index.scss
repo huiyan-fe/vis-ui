@@ -25,6 +25,15 @@ $menu-vertical-prefix-cls: #{$vis-prefix}-menu-vertical;
             content: '';
         }
     }
+    &-item-group {
+        &-title {
+            text-align: left;
+            padding-left: 10px;
+            color: #c9c9c9;
+            cursor: default;
+            line-height: 30px;
+        }
+    }
     &-item,
     &-submenu{
         cursor: pointer;
@@ -77,13 +86,15 @@ $menu-vertical-prefix-cls: #{$vis-prefix}-menu-vertical;
 .#{$menu-prefix-cls}.#{$menu-vertical-prefix-cls} {
     width: 200px;
     min-height: 400px;
+    height: auto;
+    padding-bottom: 20px;
     background: $menu-vertical-bg-color;
     .#{$menu-prefix-cls}-item,
     .#{$menu-prefix-cls}-submenu {
         display: block;
         height: 40px;
         line-height: 20px;
-        padding: 10px;
+        padding: 10px 0 10px 20px;
         &:hover,
         &.active {
             background: $menu-vertical-active-bg-color;
