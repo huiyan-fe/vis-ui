@@ -11,6 +11,7 @@
 | visible | 控制模态框是否显示 | bool | `true` `false` | `false` |
 | footer | 底部内容，当不需要默认底部按钮时，可以设为`footer={null}` | string|ReactNode | - | - |
 | maskClosable | 点击蒙层是否允许关闭 | bool | `true` `false` | `true` |
+| keyClosable | 是否支持键盘esc关闭 | bool | `true` `false` | `true` |
 | mini | 通过添加`mini`属性来展示迷你样式的模态框，在迷你模式下，模态框没有取消按钮 | bool | `true` `false` | `false` |
 | hideCancel | 当添加`hideCancel`属性后，模态框的取消按钮被隐藏 | bool | `true` `false` | `false` |
 

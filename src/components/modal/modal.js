@@ -16,7 +16,23 @@ class Modal extends React.Component {
         this.onCancel = this.onCancel.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.onClickMask = this.onClickMask.bind(this);
+        this.bindKeyEvent = this.bindKeyEvent.bind(this);
     }
+
+    componentDidMount() {
+        window.addEventListener('keydown', this.bindKeyEvent);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('keydown', this.bindKeyEvent);
+    }
+
+    bindKeyEvent(e) {
+        if (this.props.visible && e.keyCode == 27) {
+            this.onCancel();
+        }
+    }
+
     /**
      * 点击取消的回调函数
      */
@@ -85,7 +101,8 @@ Modal.defaultProps = {
     mini: false,
     visible: false,
     hideCancel: false,
-    maskClosable: true
+    maskClosable: true,
+    keyClosable: true
 };
 
 Modal.propTypes = {
@@ -95,6 +112,7 @@ Modal.propTypes = {
     footer: PropTypes.any,
     hideCancel: PropTypes.bool,
     maskClosable: PropTypes.bool,
+    keyClosable: PropTypes.bool,
     onCancel: PropTypes.func,
     onSubmit: PropTypes.func
 };
