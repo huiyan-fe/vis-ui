@@ -1,8 +1,9 @@
 /**
  * jDate
  * @author Mofei<13761509829@163.com> 
+ * @author Junior2ran
  */
-// import "babel-polyfill";
+import "babel-polyfill";
 import Tools from './tools';
 import I18N from './i18n';
 import shiftKey from './plugin/shiftkey.js';
@@ -55,10 +56,7 @@ class jDate {
         var todayTime = Tools.getTime(new Date());
         this.datas = {
             date: (config.date && config.date.value) || [],
-            time: (config.time && config.time.value) || [
-                [todayTime[0], todayTime[1]],
-                [24, 0]
-            ]
+            time: (config.time && config.time.value) || [[0,0],[24,0]]
         }
         // fix time fit for config.time.step
         this.datas.time = this.datas.time.map((time) => {
@@ -73,7 +71,7 @@ class jDate {
         const isDateData = config.date && config.date.value && config.date.value.length > 0;
         const isTimeData = config.time && config.time.value && config.time.value.length > 0;
         if (isDateData || isTimeData) {
-            this.updateText();
+            this.updateText(true);
         }
     }
 
@@ -81,7 +79,7 @@ class jDate {
         // create calendar
         var calendar = this.calendar = document.createElement('div');
         calendar.style.display = 'none';
-        calendar.className = 'jDate-calendar';
+        calendar.className = 'jDate-calendar visui-jDate-calendar';
         var tarOffset = Tools.getOffset(this.doms.target);
         var tarHeight = this.doms.target.offsetHeight;
         calendar.style.top = tarOffset.top + tarHeight + 'px';
@@ -148,6 +146,7 @@ class jDate {
         // init the monthtable to selected dates
         var dataDates = this.datas.date;
         if (dataDates.length) {
+            this.setFullYear(dataDates[0].getFullYear());
             this.setMonth(dataDates[0].getMonth());
         }
     }
@@ -236,7 +235,7 @@ class jDate {
 
         // init time
         setTimeout(function () {
-            self.updateTime(self.datas.time);
+            self.updateTime(self.datas.time, true);
         }, 100);
         //
         calendar.appendChild(calendarTimeDom);
@@ -286,6 +285,7 @@ class jDate {
                 if (this.datas.date.length >= 1) {
                     choosedDate.push(this.datas.date[0]);
                 }
+                break;
         }
 
 
@@ -496,7 +496,6 @@ class jDate {
                 }
 
                 let domStyle = getComputedStyle(handle);
-                // console.log(handle);
                 startDom = {
                     x: parseInt(domStyle.left)
                 }
@@ -510,14 +509,14 @@ class jDate {
                 };
                 let left = startDom.x + delta.x;
                 left = Math.max(0, left);
-                left = Math.min(270, left);
+                left = Math.min(220, left);     // 220 is timer-bar width
                 handle.style.left = left + 'px';
                 e.preventDefault();
                 e.stopPropagation();
                 let step = self.config.time.step || 1;
 
 
-                let timeMin = parseInt(left / 270 * (24 * 60));
+                let timeMin = parseInt(left / 220 * (24 * 60));     // 220 is timer-bar width
                 tempTime = Tools.fixTimeByStep(timeMin, step);
 
                 if (self.config.time.type === jDate.Period) {
@@ -601,7 +600,7 @@ class jDate {
                 dom = dom.parentElement;
             }
             if (!isFit && this.calendar.style.display == 'block') {
-                this.updateText();
+                // this.updateText();
                 this.calendar.style.display = 'none';
             }
         });
@@ -645,6 +644,7 @@ class jDate {
                 has: false,
                 val: e.target.value
             };
+
         });
 
         this.doms.target.addEventListener('input', (e) => {
@@ -718,6 +718,11 @@ class jDate {
         this.createMonthTable();
     }
 
+    setFullYear(year) {
+        this.date.setFullYear(year);
+        this.createMonthTable();
+    }
+
     chooseDate(date, e) {
         var fitIndex = null;
 
@@ -739,8 +744,8 @@ class jDate {
                     && this.config.date.max <= this.datas.date.length) {
                         var tips = document.createElement('span');
                         tips.innerText = '选中日期不可超过' + this.config.date.max + '个';
-                        tips.className = tips.className == '' ? 'jDate-tips' : tips.className + ' jDate-tips';
-                        if (this.doms.target.parentNode.getElementsByTagName('*').length == 1) {
+                        tips.className = tips.className == '' ? 'visui-jDate-tips' : tips.className + ' visui-jDate-tips';
+                        if (this.doms.target.parentNode.getElementsByTagName('*').length === 1) {
                             this.doms.target.parentNode.appendChild(tips);
                             tips.style.opacity = 1;
                             var timer1 = setTimeout(() => {
@@ -781,7 +786,10 @@ class jDate {
         e.stopPropagation();
     }
 
-    updateTime(times) {
+    updateTime(times, isInit) {
+        if (!this.doms.timerHandles) {
+            return;
+        }
         var type = this.config.time.type;
         var theTime = this.datas.time;
         times.forEach((time, index) => {
@@ -807,9 +815,13 @@ class jDate {
             }
         });
         this.datas.time = theTime;
+
+        if (!isInit) {
+            this.updateText();
+        }
     }
 
-    updateText() {
+    updateText(isInit) {
         var timeStr = '';
         var datas = this.datas.date || [];
         var retData = {};
@@ -847,13 +859,13 @@ class jDate {
                         secondTime[1] = ('0' + secondTime[1]).slice(-2);
                         if (datas[0] <= datas[datas.length - 1]) {
                             timeStr += firstTime.join('-');
-                            timeStr += ' - ';
+                            timeStr += ' ~ ';
                             timeStr += secondTime.join('-');
                             start = datas[0];
                             end = datas[datas.length - 1];
                         } else {
                             timeStr += secondTime.join('-');
-                            timeStr += ' - ';
+                            timeStr += ' ~ ';
                             timeStr += firstTime.join('-');
                             start = datas[datas.length - 1];
                             end = datas[0];
@@ -875,36 +887,39 @@ class jDate {
         }
 
         var times = this.datas.time || [];
-        timeStr += timeStr === '' ? '' : this.config.time.type === jDate.Null ? '' : ' ';
-        switch (this.config.time.type) {
-            case jDate.Single:
-                timeStr += Tools.getTime(times[0]).join(':');
-                retTime = times[0];
-                break;
-            case jDate.Multi:
-                timeStr += Tools.getTime(times[0]).join(':') + ' (' + times.length + ')';
-                retTime = times;
-                break;
-            case jDate.Period:
-                var isSameTime = (times[0][0] * 100 + times[0][1]) === (times[1][0] * 100 + times[1][1]);
-                if (times.length >= 2 && !isSameTime) {
+        if (times.length >= 1) {
+            timeStr += timeStr === '' ? '' : this.config.time.type === jDate.Null ? '' : ' ';
+            switch (this.config.time.type) {
+                case jDate.Single:
                     timeStr += Tools.getTime(times[0]).join(':');
-                    timeStr += ' - ';
-                    timeStr += Tools.getTime(times[times.length - 1]).join(':');
-                    retTime = {
-                        start: times[0],
-                        end: times[1]
+                    retTime = times[0];
+                    break;
+                case jDate.Multi:
+                    timeStr += Tools.getTime(times[0]).join(':') + ' (' + times.length + ')';
+                    retTime = times;
+                    break;
+                case jDate.Period:
+                    var isSameTime = (times[0][0] * 100 + times[0][1]) === (times[1][0] * 100 + times[1][1]);
+                    if (times.length >= 2 && !isSameTime) {
+                        timeStr += Tools.getTime(times[0]).join(':');
+                        timeStr += ' ~ ';
+                        timeStr += Tools.getTime(times[times.length - 1]).join(':');
+                        retTime = {
+                            start: times[0],
+                            end: times[1]
+                        }
+                    } else {
+                        timeStr += Tools.getTime(times[0]).join(':');
+                        retTime = {
+                            start: times[0],
+                            end: times[0]
+                        }
                     }
-                } else {
-                    timeStr += Tools.getTime(times[0]).join(':');
-                    retTime = {
-                        start: times[0],
-                        end: times[0]
-                    }
-                }
-                break;
-            default:
+                    break;
+                default:
+            }
         }
+        
 
 
         var target = this.doms.target;
@@ -915,7 +930,7 @@ class jDate {
         }
 
 
-        if (this.config.change) {
+        if (this.config.change && !isInit) {
             // console.warn(retData)
             this.config.change({
                 text: timeStr,

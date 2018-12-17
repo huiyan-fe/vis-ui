@@ -152,4 +152,9 @@ $icon-prefix-cls: #{$vis-prefix}-icon;
         background: url(../assets/polyline.png) no-repeat center;
         background-size: contain;
     }
+
+    &.#{$icon-prefix-cls}-calendar {
+        background: url(../assets/calendar.png) no-repeat center;
+        background-size: contain;
+    }
 }

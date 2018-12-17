@@ -5,7 +5,7 @@ import './index.scss';
 
 let iconlist = [
     'arrow-down','arrow-left','arrow-left-active','arrow-right','arrow-right-active','draw-circle','draw-circle-active','draw-rect','draw-rect-active','draw-polygon','draw-polygon-active',
-    'help','setting','fullscreen','restorescreen','zoomin','zoomout','monitor','traffic-light','aim','clock','file','console','chat','offline','scan','api','crown','polyline'
+    'help','setting','fullscreen','restorescreen','zoomin','zoomout','monitor','traffic-light','aim','clock','file','console','chat','offline','scan','api','crown','polyline','calendar'
 ];
 
 export default class App extends Component {

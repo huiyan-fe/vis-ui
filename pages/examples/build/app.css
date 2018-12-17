@@ -834,6 +834,557 @@ a:focus {
   background-size: contain;
 }
 
+.visui-icon.visui-icon-calendar {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACzElEQVRYR+2WTWgTURSF751gUwQRtUoXgiKCIErBn60g1mVF6UpEsAtzL6F0IS4UXYkgWvEni2TuJLGIWLULqVZEsLhzoSgoggsXRWh1USgBwR+aTo9MyEgbYzKDhVYwu/DOnPvNvee9N0yL/ONFrk//BoDruluZ+aiInI7SMdd1zxLRE1V91UwfqQNmJgAuqOrqZobBupmNATBVvdhMv3QAzKwNwCgzd9SjBkDMkXgrj9fTA5hi5ttEdFJEyoHul6OZXQIgjuMc832/NBeCmbuI6DiAA81aGqw7jjMIYATAnRqfVmbOE1G/iGRqAZ4T0QsROVFbZCEzYGZXAexU1T21AK8BPFXVU7UAnud1zs7OnlHVvVE6YGaPANxQ1ft1XiYI5j4R2RUZIErRqBozW7oAHwBMMvNoo7cB8D2ZTF7v6en5YWbniWhcRGxgYKB1enq6j4iWN3qemTsBrBWRLbUjmCKiKAfNt0Qi0TExMfGxvb39CzOPici2QqGw2ff9d0TU2mwcwXZU1ba/zkA+n19fLpe/ptPpedu2EcCSzsAft2GzlsZZj9wB13X7mXl31fyTiBwJCw0NDSVKpdI9IqrMEcAzVT0XrhcKhQ2+73tElKzMmdlNpVJ3qxdVtG1oZpeJqHJYAPgcADAzqibLiCg4ZusC5HK5jUFRZq4EEkBOVQPg4KaMBhCnrXG0/wEid8DzvG4A26szHFfV4txWm1nvnAy8VNXH4XqxWFxRLpd7mTkM4XAqlXoTKwNmdoWIdlQBZkRkfxjCTCaTbGlpGWTmNdWi70UkHQJks9lNjuNkwxAS0bCIXIsFECdYcbSRRxDHNI62EcADADOq2h3HMK7Wdd2bRLRSVQ/Ou4xc1+1i5ofBvIjobVzjiPpVRNQXfFuq6sg8gOCP53mHABwmonURDePKJgHcCov/BhDXbSH00T/0F6JaHY9FB/gJmMrtMKVWguYAAAAASUVORK5CYII=) no-repeat center;
+  background-size: contain;
+}
+
+/**
+ * @file: 调色板
+ * @author: junior2ran
+ * @date: 2018-05-17 19:42:28
+ */
+
+.visui-jDate {
+  color: #333333;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #E9E9E9;
+  border-radius: 2px;
+  height: 30px;
+  width: 185px;
+  line-height: 30px;
+  padding: 0 10px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACzElEQVRYR+2WTWgTURSF751gUwQRtUoXgiKCIErBn60g1mVF6UpEsAtzL6F0IS4UXYkgWvEni2TuJLGIWLULqVZEsLhzoSgoggsXRWh1USgBwR+aTo9MyEgbYzKDhVYwu/DOnPvNvee9N0yL/ONFrk//BoDruluZ+aiInI7SMdd1zxLRE1V91UwfqQNmJgAuqOrqZobBupmNATBVvdhMv3QAzKwNwCgzd9SjBkDMkXgrj9fTA5hi5ttEdFJEyoHul6OZXQIgjuMc832/NBeCmbuI6DiAA81aGqw7jjMIYATAnRqfVmbOE1G/iGRqAZ4T0QsROVFbZCEzYGZXAexU1T21AK8BPFXVU7UAnud1zs7OnlHVvVE6YGaPANxQ1ft1XiYI5j4R2RUZIErRqBozW7oAHwBMMvNoo7cB8D2ZTF7v6en5YWbniWhcRGxgYKB1enq6j4iWN3qemTsBrBWRLbUjmCKiKAfNt0Qi0TExMfGxvb39CzOPici2QqGw2ff9d0TU2mwcwXZU1ba/zkA+n19fLpe/ptPpedu2EcCSzsAft2GzlsZZj9wB13X7mXl31fyTiBwJCw0NDSVKpdI9IqrMEcAzVT0XrhcKhQ2+73tElKzMmdlNpVJ3qxdVtG1oZpeJqHJYAPgcADAzqibLiCg4ZusC5HK5jUFRZq4EEkBOVQPg4KaMBhCnrXG0/wEid8DzvG4A26szHFfV4txWm1nvnAy8VNXH4XqxWFxRLpd7mTkM4XAqlXoTKwNmdoWIdlQBZkRkfxjCTCaTbGlpGWTmNdWi70UkHQJks9lNjuNkwxAS0bCIXIsFECdYcbSRRxDHNI62EcADADOq2h3HMK7Wdd2bRLRSVQ/Ou4xc1+1i5ofBvIjobVzjiPpVRNQXfFuq6sg8gOCP53mHABwmonURDePKJgHcCov/BhDXbSH00T/0F6JaHY9FB/gJmMrtMKVWguYAAAAASUVORK5CYII=) no-repeat center;
+  background-size: 16px 18px;
+  background-position-x: 95%;
+}
+
+.visui-jDate[disabled] {
+  cursor: not-allowed;
+  background-color: #f4f4f4;
+  color: #999;
+}
+
+.visui-timepicker .visui-jDate {
+  width: 125px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNGMzVGRERDN0QyODExRThCQzY0QzExMDJEQzU3RkE1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNGMzVGREREN0QyODExRThCQzY0QzExMDJEQzU3RkE1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0YzNUZEREE3RDI4MTFFOEJDNjRDMTEwMkRDNTdGQTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0YzNUZEREI3RDI4MTFFOEJDNjRDMTEwMkRDNTdGQTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7mRkU6AAAHV0lEQVR42uxda2wV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) no-repeat center;
+  background-size: 18px;
+  background-position-x: 95%;
+}
+
+.jDate-none {
+  display: none;
+}
+
+.visui-jDate-calendar.jDate-calendar {
+  font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  box-sizing: border-box;
+  width: 270px;
+  padding: 5px 10px 10px 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.visui-jDate-calendar .jDate-target {
+  outline: none;
+  cursor: pointer;
+}
+
+.visui-jDate-calendar .jDate-calendar-target {
+  display: none;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.visui-jDate-calendar .jDate-calendar-table {
+  padding-bottom: 10px;
+}
+
+.visui-jDate-calendar .jDate-calendar-table,
+.visui-jDate-calendar .jDate-calendar-table table {
+  width: 250px;
+  text-align: center;
+  font-size: 12px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table th {
+  font-family: Roboto, sans-serif;
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+  margin: 3px 0;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td span {
+  color: #151515;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transition: all 0.18s cubic-bezier(0.69, 0, 0.55, 1);
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  margin: 3px 0;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td span:hover {
+  color: #5E87DB;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td span div {
+  transition: all 0.18s cubic-bezier(0.69, 0, 0.55, 1);
+  background: #5E87DB;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: 50%;
+  top: 50%;
+  border-radius: 2px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td span:hover div {
+  width: 26px;
+  height: 26px;
+  margin: -13px;
+  opacity: 0.2;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td.active span {
+  font-size: 12px;
+  font-weight: 100;
+  color: white;
+  background-color: #5E87DB;
+  border-radius: 2px;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td.disable span {
+  cursor: not-allowed;
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td.disable span:hover div {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td.during span {
+  font-size: 12px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td.during span:hover div {
+  background: #5E87DB;
+  opacity: 0.8;
+}
+
+.visui-jDate-calendar .jDate-calendar-table table td.during span div {
+  background: #5E87DB;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  width: 26px;
+  height: 26px;
+  margin: -13px;
+  opacity: 0.2;
+}
+
+.visui-jDate-calendar .jDate-calendar-title {
+  padding: 0;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #E9E9E9;
+  margin-bottom: 10px;
+}
+
+.visui-jDate-calendar .jDate-calendar-curr-box {
+  overflow: hidden;
+}
+
+.visui-jDate-calendar .jDate-calendar-curr-box,
+.visui-jDate-calendar .jDate-calendar-curr,
+.visui-jDate-calendar .jDate-calendar-curr-pre,
+.visui-jDate-calendar .jDate-calendar-curr-next {
+  display: inline-block;
+  height: 35px;
+  width: 160px;
+  position: relative;
+}
+
+.visui-jDate-calendar .jDate-calendar-curr,
+.visui-jDate-calendar .jDate-calendar-curr-pre,
+.visui-jDate-calendar .jDate-calendar-curr-next {
+  position: absolute;
+  left: 200px;
+  top: -2px;
+}
+
+.visui-jDate-calendar .jDate-calendar-curr-pre {
+  left: 0;
+}
+
+.visui-jDate-calendar .jDate-calendar-curr-next {
+  left: 400px;
+}
+
+.visui-jDate-calendar .jDate-calendar-curr-box-inner {
+  position: absolute;
+  left: -200px;
+  height: 50px;
+  width: 600px;
+}
+
+.visui-jDate-calendar .jDate-calendar-curr-box-inner.animate {
+  transition: all 0.1s cubic-bezier(0.69, 0, 0.55, 1);
+}
+
+.visui-jDate-calendar .jDate-calendar-pre,
+.visui-jDate-calendar .jDate-calendar-next {
+  cursor: pointer;
+  position: relative;
+  color: #999;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  line-height: 35px;
+}
+
+.visui-jDate-calendar .jDate-calendar-pre {
+  float: left;
+  margin-left: 0px;
+}
+
+.visui-jDate-calendar .jDate-calendar-next {
+  float: right;
+  margin-right: 0px;
+}
+
+.visui-jDate-calendar .jDate-calendar-pre svg,
+.visui-jDate-calendar .jDate-calendar-next svg {
+  display: inline-block;
+  color: #999;
+  fill: currentcolor;
+  height: 24px;
+  width: 24px;
+  margin-top: 4px;
+  -webkit-user-select: none;
+}
+
+.visui-jDate-calendar .jDate-calendar-action {
+  padding: 10px 15px 0 0;
+  text-align: right;
+}
+
+.visui-jDate-calendar .jDate-calendar-cancel,
+.visui-jDate-calendar .jDate-calendar-ok {
+  cursor: pointer;
+  -webkit-transition: all 0.18s cubic-bezier(0.69, 0, 0.55, 1);
+  -moz-transition: all 0.18s cubic-bezier(0.69, 0, 0.55, 1);
+  transition: all 0.18s cubic-bezier(0.69, 0, 0.55, 1);
+  color: #5E87DB;
+  border: none;
+  background: none;
+  font-size: 14px;
+  /*width: 100px;*/
+  /*margin: 0 10px;*/
+  border-radius: 4px;
+  padding: 5px 20px;
+  outline: none;
+}
+
+.visui-jDate-calendar .jDate-calendar-cancel:hover,
+.visui-jDate-calendar .jDate-calendar-ok:hover {
+  background: #f4f4f4;
+}
+
+.visui-jDate-calendar .material-ani {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.visui-jDate-calendar .material-box {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-user-select: none;
+}
+
+.visui-jDate-calendar .material {
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10000px;
+  /*z-index: -1;*/
+  -webkit-user-select: none;
+  left: 50%;
+  top: 50%;
+  opacity: 1;
+}
+
+.visui-jDate-calendar .material.active {
+  width: 100%;
+  height: 100%;
+  margin: -50%;
+  left: 50%;
+  top: 50%;
+  opacity: 0.2;
+}
+
+.visui-jDate-calendar .material.finished {
+  width: 100%;
+  height: 100%;
+  margin: -50%;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+}
+
+.visui-jDate-calendar .jDate-timer-title {
+  box-sizing: content-box;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 15px;
+  height: 20px;
+  /*transition: all 450ms ease-in-out;*/
+}
+
+.visui-jDate-calendar .jDate-timer-title:hover {
+  color: #5E87DB;
+}
+
+.visui-jDate-calendar .jDate-timer-title span {
+  vertical-align: middle;
+  display: inline-block;
+  height: 20px;
+}
+
+.visui-jDate-calendar .jDate-timer-hour,
+.visui-jDate-calendar .jDate-timer-minute {
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+  overflow: hidden;
+}
+
+.visui-jDate-calendar .jDate-timer-hour-in,
+.visui-jDate-calendar .jDate-timer-minute-in {
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.visui-jDate-calendar .jDate-timer-barbox {
+  margin: 10px 15px;
+  position: relative;
+  height: 30px;
+}
+
+.visui-jDate-calendar .jDate-timer-bar {
+  position: absolute;
+  height: 2px;
+  /*margin-top: -1px;*/
+  background: #bdbdbd;
+  left: 0;
+  right: 0;
+}
+
+.visui-jDate-calendar .jDate-timer-bar-handle {
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  z-index: 10;
+}
+
+.visui-jDate-calendar .jDate-timer-bar-handle-slot {
+  left: 100%;
+}
+
+.visui-jDate-calendar .jDate-timer-bar-handle.animate {
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.visui-jDate-calendar .jDate-timer-bar-handle-color {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin: -6px;
+  left: 0;
+  top: 0;
+  border-radius: 120px;
+  background: #5E87DB;
+  z-index: 10;
+}
+
+.visui-jDate-calendar .jDate-timer-bar-handle-ani {
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -0px;
+  left: 0;
+  top: 0;
+  background: #5E87DB;
+  opacity: 0;
+  border-radius: 100px;
+}
+
+.visui-jDate-calendar .jDate-timer-bar-handle.active .jDate-timer-bar-handle-ani,
+.visui-jDate-calendar .jDate-timer-bar-handle:hover .jDate-timer-bar-handle-ani {
+  width: 24px;
+  height: 24px;
+  margin: -12px;
+  opacity: 0.2;
+}
+
+.visui-jDate-calendar .jDate-timer-text {
+  font-size: 12px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.visui-jDate-calendar .jDate-timer-text span {
+  position: absolute;
+  top: 5px;
+  color: #999;
+  width: 40px;
+  margin-left: -20px;
+  text-align: center;
+}
+
+.visui-jDate-calendar .jDate-timer-text span:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 5px;
+  border-left: 1px solid #ccc;
+  top: -5px;
+}
+
+.visui-jDate-calendar .jDate-timer-input {
+  display: none;
+}
+
+.visui-jDate-calendar .jDate-timer-input input {
+  font-size: 14px;
+  outline: none;
+  padding: 0 0 5px 0;
+  text-align: center;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.visui-jDate-calendar .jDate-timer-title-slot {
+  width: 49%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.visui-jDate-calendar .jDate-timer-title-slot.jDate-timer-input {
+  display: none;
+}
+
+.visui-jDate-calendar .jDate-timer-title-slot.jDate-timer-input input {
+  width: 110px;
+}
+
+.visui-jDate-calendar .jDate-timer-hide {
+  display: none;
+}
+
+.visui-jDate-calendar .jDate-timer-period-line {
+  position: absolute;
+}
+
+.visui-jDate-calendar .jDate-timer-period-line {
+  position: absolute;
+  z-index: 10;
+  top: -2px;
+  left: 0;
+  /*width: 100%;*/
+  background: #5E87DB;
+  border-radius: 10px;
+  pointer-events: none;
+  height: 4px;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.visui-jDate-tips {
+  font-size: 12px;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  color: red;
+  margin-left: 12px;
+  animation: fadeIn .5s;
+  -moz-animation: fadeIn .5s;
+  /*Firefox*/
+  -webkit-animation: fadeIn .5s;
+  /*Safari and Chrome*/
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /*Firefox*/
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  /*Safari and Chrome*/
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /**
  * @file: 调色板
  * @author: junior2ran

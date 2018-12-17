@@ -13,6 +13,7 @@ import Message from './message';
 import List from './list';
 import Modal from './modal';
 import Expand from './expand';
+import DatePicker from './date-picker';
 import './style.scss';
 
 const examples = (
@@ -41,6 +42,8 @@ const examples = (
         <Modal />
         <h2>展开内容 Expand <a href="//github.com/huiyan-fe/vis-ui/blob/master/pages/examples/components/expand/index.js">示例代码</a> | <a href="//github.com/huiyan-fe/vis-ui/blob/master/src/components/expand/docs/index.md">API文档</a></h2>
         <Expand />
+        <h2>日期选择框 DatePicker <a href="//github.com/huiyan-fe/vis-ui/blob/master/pages/examples/components/date-picker/index.js">示例代码</a> | <a href="//github.com/huiyan-fe/vis-ui/blob/master/src/components/date-picker/docs/index.md">API文档</a></h2>
+        <DatePicker />
 
         <hr/>
         <div style={{textAlign:'center',margin:'-18px auto 10px',backgroundColor:'white',width:'120px'}}>已经到底了</div>
