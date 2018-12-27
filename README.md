@@ -1,4 +1,8 @@
-# Vis-UI [![npm version](https://img.shields.io/npm/v/vis-ui.svg)](https://www.npmjs.com/package/vis-ui)
+# Vis-UI 
+[![npm version](https://img.shields.io/npm/v/vis-ui.svg)](https://www.npmjs.com/package/vis-ui)
+[![License](https://img.shields.io/npm/l/vis-ui.svg)](LICENSE)
+![No Easter Eggs](https://img.shields.io/badge/Easter%20eggs-None-lightgray.svg)
+
 👍基于react的前端UI组件化通用库
 
 vis-ui的目标：
