@@ -412,6 +412,13 @@ class jDate {
                     self.doms.calendarCurrBoxInnder.style.left = '-200px';
                 }, 10);
             }, 0);
+            if (self.config.changeMonth) {
+                self.config.changeMonth({
+                    eventType: 'prev',
+                    month: self.getCurrentCalendarMonth(),
+                    year: self.getCurrentCalendarYear()
+                });
+            }
         });
 
         next.addEventListener('mouseup', function () {
@@ -424,6 +431,13 @@ class jDate {
                     self.doms.calendarCurrBoxInnder.style.left = '-200px';
                 }, 10)
             }, 0);
+            if (self.config.changeMonth) {
+                self.config.changeMonth({
+                    eventType: 'next',
+                    month: self.getCurrentCalendarMonth(),
+                    year: self.getCurrentCalendarYear()
+                });
+            }
         });
     }
 
@@ -942,6 +956,14 @@ class jDate {
 
     remove() {
         this.calendar.remove();
+    }
+
+    getCurrentCalendarMonth() {
+        return this.date.getMonth();
+    }
+
+    getCurrentCalendarYear() {
+        return this.date.getFullYear();
     }
 }
 

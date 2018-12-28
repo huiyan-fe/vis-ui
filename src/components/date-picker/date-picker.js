@@ -10,7 +10,7 @@ class DatePicker extends React.Component {
     }
 
     componentDidMount() {
-        const {locale, type, defaultValue, start, end, enableDate, disabledDate, max, onChange} = this.props;
+        const {locale, type, defaultValue, start, end, enableDate, disabledDate, max, onChange, onMonthChange} = this.props;
         this._jdate = new jDate(this.input, {
             lan: jDate.lan[locale],
             date: {
@@ -25,6 +25,9 @@ class DatePicker extends React.Component {
             change: function (value) {
                 delete value.time;
                 onChange && onChange(value);
+            },
+            changeMonth: function(value) {
+                onMonthChange && onMonthChange(value);
             }
         });
     }

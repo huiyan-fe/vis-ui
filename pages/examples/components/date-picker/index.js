@@ -8,7 +8,13 @@ export default class App extends Component {
         return <div>
             <DatePicker locale="en" placeholder="普通日期选择框" onChange={value => {console.log(value)}} />
             <br/>
-            <DatePicker placeholder="Multi多选日期，最多选4天" type="Multi" max={4} onChange={value => {console.log(value)}} />
+            <DatePicker defaultValue={[new Date('2018-10-22'),new Date('2018-09-22')]} 
+                placeholder="Multi多选日期，最多选4天" 
+                type="Multi" 
+                max={4} 
+                onChange={value => {console.log(value)}} 
+                onMonthChange={(value) => {console.log(value)}}
+            />
             <br/>
             <DatePicker placeholder="Period日期选择框" type="Period" onChange={value => {console.log(value)}} />
             <br/>

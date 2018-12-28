@@ -42,6 +42,7 @@
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
 | --- | --- | --- | --- |
 | onChange | 选项变化时的回调函数 | object | {date: 返回Date格式的日期或数组, text: 返回日期的字符串} |
+| onMonthChange | 切换月份时的回调函数 | object | {eventType: 切换的方向为`prev`或`next`, month: 当前月份，注意返回值为`0-11`, year: 当前年份} |
 
 ### TimerPicker 时间选择框
 | 事件名 | 事件说明 | 返回值类型 | 返回值说明 |
