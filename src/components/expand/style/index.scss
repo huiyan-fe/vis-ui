@@ -25,6 +25,10 @@ $expand-prefix-cls: #{$vis-prefix}-expand;
 .#{$expand-prefix-cls}-modal {
     .modal-container {
         top: 50%;
+        
+        .modal-header {
+            text-align: center;
+        }
     }
     .#{$expand-prefix-cls} {
         padding: 0;

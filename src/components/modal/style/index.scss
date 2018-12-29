@@ -27,7 +27,6 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         line-height: $modal-header-height-base;
         border-bottom: 1px solid $modal-border-color;
         padding: 0 $modal-padding-base;
-        text-align: center;
         .modal-close {
             font-size: 20px;
             margin-top: ($modal-header-height-base - 20) / 2;
@@ -66,6 +65,7 @@ $modal-prefix-cls: #{$vis-prefix}-modal;
         line-height: $modal-mini-header-height-base;
         border-bottom: 0;
         padding: 0 $modal-mini-padding-base;
+        text-align: center;
         .modal-close {
             font-size: 20px;
             margin-top: ($modal-mini-header-height-base - 20) / 2;
