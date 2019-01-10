@@ -3,10 +3,14 @@
 ## 说明
 选择日期和选择时间的控件。
 
-`DatePicker`中包含日期与时间的选择控件。当使用`TimerPicker`时，可以通过`const TimerPicker = DatePicker.TimerPicker`的方式获取。
+`DatePicker`中包含日期与时间的选择控件。当使用`TimerPicker`时，可以通过  
+`const TimerPicker = DatePicker.TimerPicker`  
+的方式获取。
 
 `DatePicker`控件是基于[jDate](https://github.com/zmofei/jDate)的二次开发，封装成React组件，并对其中的一些功能以及API进行了扩展。
+
 `DatePicker`与`jDate`一样，日期的value都是以原生的`Date`格式组成的数组，如果你使用了`moment`库，可以使用`moment().toDate()`方法将value从`moment`对象格式转为原生`Date`格式。
+
 `TimerPicker`与`jDate`一样，时间的value是`[hour, minute]`格式组成的数组，如果你使用了`moment`库，可以使用`[moment().hour(), moment().minute()]`方法将value从`moment`对象格式转为`[hour, minute]`格式。
 
 **PS.该组件选择`vis-ui`而非`antd`的最大原因是因为`vis-ui`的日期选择框有Multi模式，能进行跨日期多选！**

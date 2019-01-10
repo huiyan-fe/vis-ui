@@ -1622,7 +1622,6 @@ a:focus {
   line-height: 50px;
   border-bottom: 1px solid #E9E9E9;
   padding: 0 12px;
-  text-align: center;
 }
 
 .visui-modal .modal-header .modal-close {
@@ -1663,6 +1662,7 @@ a:focus {
   line-height: 50px;
   border-bottom: 0;
   padding: 0 12px;
+  text-align: center;
 }
 
 .visui-modal.mini .modal-header .modal-close {
@@ -1718,6 +1718,10 @@ a:focus {
   top: 50%;
 }
 
+.visui-expand-modal .modal-container .modal-header {
+  text-align: center;
+}
+
 .visui-expand-modal .visui-expand {
   padding: 0;
   width: max-content;
@@ -1731,9 +1735,10 @@ a:focus {
 
 .visui-message {
   position: fixed;
-  top: 20px;
+  z-index: 9999;
+  top: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
   min-width: 170px;
   height: 40px;
   line-height: 40px;
@@ -1744,18 +1749,18 @@ a:focus {
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 0 10px;
-  animation: slideDown .2s linear;
+  animation: slideDown .3s ease-in-out;
 }
 
 @keyframes slideDown {
   from {
     opacity: 0;
-    top: 0;
+    transform: translate(-50%, -50px);
   }
 
   to {
     opacity: 1;
-    top: 20px;
+    transform: translate(-50%, 0);
   }
 }
 
