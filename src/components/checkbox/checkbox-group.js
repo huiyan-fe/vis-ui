@@ -61,7 +61,7 @@ class CheckboxGroup extends React.Component {
             }
 
             const {elementType} = element.type;
-            if (elementType !== 'Checkbox') {
+            if (elementType !== 'Checkbox' && elementType !== 'CheckboxText') {
                 return null;
             }
 

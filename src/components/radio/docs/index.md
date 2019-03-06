@@ -25,6 +25,13 @@
 | checked | 是否被选中 | boolean | `true` `false` | `false` |
 | disabled | 单选按钮失效状态 | boolean | `true` `false` | `false` |
 
+### RadioText
+| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| --- | --- | --- | --- | --- |
+| value | `RadioText` 的 value，**必需传入** | string, number, boolean | - | `''` |
+| checked | 是否被选中 | boolean | `true` `false` | `false` |
+| disabled | 文字失效状态 | boolean | `true` `false` | `false` |
+
 ### RadioGroup
 `RadioGroup`中设置的属性，会继承到`Radio`与`RadioButton`子组件中。
 
@@ -45,6 +52,13 @@
 | onChange | `checked` 事件的 handler，当被选中时触发事件 | string, number, boolean | 返回该选项的`value` |
 
 ### RadioButton
+| 事件名 | 事件说明 | 返回值 | 返回值说明 |
+| --- | --- | --- | --- |
+| onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |
+| onMouseLeave | `mouseleave` 事件的 handler | event | 原生的`event`事件 |
+| onChange | `checked` 事件的 handler，当被选中时触发事件 | string, number, boolean | 返回该选项的`value` |
+
+### RadioText
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
 | --- | --- | --- | --- |
 | onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |

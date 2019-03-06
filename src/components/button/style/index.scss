@@ -55,6 +55,7 @@ $btn-prefix-cls: #{$vis-prefix}-btn;
     &-ghost {
         color: $btn-ghost-color-default;
         background-color: $btn-ghost-bg;
+        border: $border-width $border-style $btn-ghost-border;
         &:hover {
             color: $btn-ghost-color;
             border-color: transparent;

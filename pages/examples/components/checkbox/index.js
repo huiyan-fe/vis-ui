@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Checkbox } from '../../../../src';
 const CheckboxGroup = Checkbox.Group;
+const CheckboxText = Checkbox.Text;
 
 export default class App extends Component {
     constructor(props) {
@@ -65,6 +66,14 @@ export default class App extends Component {
                 {this.state.optionsList.map((item, index)=>{
                     return <Checkbox key={index} value={item} />;
                 })}
+            </CheckboxGroup>
+
+            <h2>多选文字 CheckboxText</h2>
+            <CheckboxGroup>
+                <CheckboxText value="1">工作日</CheckboxText>
+                <CheckboxText value="2">周末</CheckboxText>
+                <CheckboxText value="3">节假日</CheckboxText>
+                <CheckboxText value="4" disabled>黄飞虎</CheckboxText>
             </CheckboxGroup>
         </div>;
     }

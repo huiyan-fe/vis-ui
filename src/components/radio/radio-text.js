@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Radio from './radio';
 
-class Radio extends React.Component {
+class RadioText extends Radio {
 
     constructor(props) {
         super(props);
@@ -13,7 +14,7 @@ class Radio extends React.Component {
 
     componentWillReceiveProps(props) {
         const checked = this.getChecked(props);
-
+    
         if (this.state.checked != checked) {
             this.setState({ checked });
         }
@@ -38,7 +39,7 @@ class Radio extends React.Component {
                 this.props.onChange(this.props.value);
             }
         }
-
+        
         if (!this.parent()) {
             this.setState({
                 checked: checked
@@ -55,14 +56,16 @@ class Radio extends React.Component {
         const {checked} = this.state;
         const {name, value, className, style, children, onMouseEnter, onMouseLeave} = this.props;
         const disabled = this.isDisabled();
+
         const classname = classNames({
-            'visui-radio': true,
-            'visui-radio-checked': checked,
-            'visui-radio-disabled': disabled
+            'visui-radio-text': true,
+            'visui-radio-text-checked': checked,
+            'visui-radio-text-disabled': disabled
         });
         const wrapperClassname = classNames({
-            'visui-radio-wrapper': true,
-            'visui-radio-wrapper-disabled': disabled,
+            'visui-radio-text-wrapper': true,
+            'visui-radio-text-wrapper-checked': checked,
+            'visui-radio-text-wrapper-disabled': disabled,
             [className]: className
         });
         return <label 
@@ -74,38 +77,36 @@ class Radio extends React.Component {
             <span className={classname}>
                 <input
                     type="radio"
-                    className="visui-radio-original"
+                    className="visui-radio-text-original"
                     name={name}
                     value={value}
                     checked={checked}
                     disabled={disabled}
                     onChange={this.onChange.bind(this)}
                 />
-                <span className="visui-radio-inner"></span>
+                <span className="visui-radio-text-inner"></span>
             </span>
-            <span className="visui-radio-label">
+            <span className="visui-radio-text-label">
                 {children || value}
             </span>
         </label>;
     }
 }
 
-Radio.elementType = 'Radio';
-Radio.contextTypes = {
+RadioText.elementType = 'RadioText';
+RadioText.contextTypes = {
     component: PropTypes.any
 };
-Radio.defaultProps = {
+RadioText.defaultProps = {
     value: '',
     checked: false,
     disabled: false
 };
-Radio.propTypes = {
+RadioText.propTypes = {
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string, PropTypes.number]).isRequired,
-    disabled: PropTypes.bool,
-    checked: PropTypes.bool,
     onChange: PropTypes.func,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func
+    disabled: PropTypes.bool,
+    checked: PropTypes.bool
 };
 
-export default Radio;
+export default RadioText;

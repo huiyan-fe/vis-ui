@@ -44,25 +44,25 @@ class RadioGroup extends React.Component {
             [className]: className
         });
         return <div ref="RadioGroup" className={classname} style={style}>
-        {
-            React.Children.map(children, element => {
-                if (!element || !element.type) {
-                    return null;
-                }
+            {
+                React.Children.map(children, element => {
+                    if (!element || !element.type) {
+                        return null;
+                    }
 
-                const {elementType} = element.type;
-                if (elementType !== 'Radio' && elementType !== 'RadioButton') {
-                    return null;
-                }
+                    const {elementType} = element.type;
+                    if (elementType !== 'Radio' && elementType !== 'RadioButton' && elementType !== 'RadioText') {
+                        return null;
+                    }
 
-                return React.cloneElement(element, Object.assign({}, element.props, {
-                    onChange: this.onChange.bind(this),
-                    className: 'visui-radio-group-item',
-                    name: name,
-                    model: value
-                }));
-            })
-        }
+                    return React.cloneElement(element, Object.assign({}, element.props, {
+                        onChange: this.onChange.bind(this),
+                        className: 'visui-radio-group-item',
+                        name: name,
+                        model: value
+                    }));
+                })
+            }
         </div>;
     }
 }

@@ -151,6 +151,7 @@ a:focus {
 .visui-btn-ghost {
   color: #666;
   background-color: transparent;
+  border: 1px solid #999;
 }
 
 .visui-btn-ghost:hover {
@@ -253,6 +254,7 @@ a:focus {
 }
 
 .visui-radio-inner {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 16px;
@@ -266,10 +268,10 @@ a:focus {
 .visui-radio-inner:after {
   position: absolute;
   content: " ";
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   left: 3px;
-  top: 5px;
+  top: 3px;
   display: table;
   border: none;
   border-radius: 50%;
@@ -312,9 +314,9 @@ a:focus {
 }
 
 .visui-radio-checked .visui-radio-inner:after {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
   opacity: 1;
   -webkit-transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   transition: all 0.2s cubic-bezier(0.78, 0.14, 0.15, 0.86);
@@ -336,6 +338,7 @@ a:focus {
 .visui-radio-btn {
   width: 0;
   height: 0;
+  display: none;
 }
 
 .visui-radio-btn-original {
@@ -394,6 +397,48 @@ a:focus {
   height: 26px;
   line-height: 26px;
   padding: 0 8px;
+}
+
+.visui-radio-text {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.visui-radio-text-original {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.visui-radio-text-wrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+  margin: 0 8px;
+  cursor: pointer;
+  padding: 0 8px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.visui-radio-text-wrapper:hover {
+  color: #5E87DB;
+}
+
+.visui-radio-text-wrapper-checked {
+  z-index: 1;
+  color: #5E87DB;
+}
+
+.visui-radio-text-wrapper-disabled {
+  color: #E9E9E9;
+  cursor: not-allowed;
+}
+
+.visui-radio-text-wrapper-disabled:hover {
+  color: #E9E9E9;
 }
 
 /**
@@ -491,6 +536,46 @@ a:focus {
 
 .visui-checkbox-disabled .visui-checkbox-inner:after {
   background-color: #E9E9E9;
+}
+
+.visui-checkbox-text {
+  position: relative;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.visui-checkbox-text-original {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.visui-checkbox-text-wrapper {
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+  margin-right: 12px;
+  cursor: pointer;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.visui-checkbox-text-wrapper:hover {
+  color: #5E87DB;
+}
+
+.visui-checkbox-text-wrapper-checked {
+  color: #5E87DB;
+}
+
+.visui-checkbox-text-wrapper-disabled {
+  color: #E9E9E9;
+  cursor: not-allowed;
+}
+
+.visui-checkbox-text-wrapper-disabled:hover {
+  color: #E9E9E9;
 }
 
 .visui-checkbox-checked.visui-checkbox-disabled .visui-checkbox-inner,

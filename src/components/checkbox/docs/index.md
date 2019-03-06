@@ -9,7 +9,7 @@
 `<Checkbox.Group>`容器具有向下8px的外边距。
 
 ## API 接口
-### Checkbox
+### Checkbox / CheckboxText
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | value | `Checkbox` 的 value，**必需传入** | string, number, boolean | - | `''` |
@@ -27,7 +27,7 @@
 | disabled | `CheckboxGroup` 的失效状态 | boolean | `true` `false` | `false` |
 
 ## Events 事件
-### Checkbox
+### Checkbox / CheckboxText
 | 事件名 | 事件说明 | 返回值 | 返回值说明 |
 | --- | --- | --- | --- |
 | onMouseEnter | `mouseenter` 事件的 handler | event | 原生的`event`事件 |

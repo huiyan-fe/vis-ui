@@ -1,6 +1,7 @@
 @import "../../style/themes/huiyan";
 
 $checkboxgrp-prefix-cls: #{$vis-prefix}-checkbox-group;
+$checkboxtext-prefix-cls: #{$vis-prefix}-checkbox-text;
 $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
 
 .#{$checkbox-prefix-cls} {
@@ -90,6 +91,41 @@ $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
             background-color: $checkbox-disabled-bg;
             &:after {
                 background-color: $checkbox-disabled-color;
+            }
+        }
+    }
+}
+
+.#{$checkboxtext-prefix-cls} {
+    position: relative;
+    width: 0;
+    height: 0;
+    display: none;
+    &-original {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    &-wrapper {
+        display: inline-block;
+        font-size: $checkbox-font-size-base;
+        color: $checkbox-text-color;
+        margin-right: $checkbox-margin-between;
+        cursor: pointer;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        &:hover {
+            color: $checkbox-select-color;
+        }
+        &-checked {
+            color: $checkbox-select-color;
+        }
+        &-disabled {
+            color: $checkbox-disabled-color;
+            cursor: not-allowed;
+            &:hover {
+                color: $checkbox-disabled-color;
             }
         }
     }

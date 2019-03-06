@@ -2,6 +2,7 @@
 
 $radiogrp-prefix-cls: #{$vis-prefix}-radio-group;
 $radiobtn-prefix-cls: #{$vis-prefix}-radio-btn;
+$radiotext-prefix-cls: #{$vis-prefix}-radio-text;
 $radio-prefix-cls: #{$vis-prefix}-radio;
 
 .#{$radio-prefix-cls} {
@@ -13,21 +14,22 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
     }
 
     &-inner {
+        position: relative;
         display: inline-block;
         vertical-align: middle;
         width: $radio-width-base;
         height: $radio-height-base;
         box-sizing: border-box;
-        margin-right: $radio-margin-sapce;
+        margin-right: $radio-margin-space;
         border-radius: $radio-border-radius;
         border: 1px solid $radio-border-color;
         &:after {
             position: absolute;
             content: " ";
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             left: 3px;
-            top: 5px;
+            top: 3px;
             display: table;
             border:none;
             border-radius: $radio-border-radius;
@@ -71,9 +73,9 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
         .#{$radio-prefix-cls}-inner {
             border-color: $radio-select-color;
             &:after {
-                -webkit-transform: scale(.8);
-                -ms-transform: scale(.8);
-                transform: scale(.8);
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                transform: scale(1);
                 opacity: 1;
                 -webkit-transition: all .2s cubic-bezier(.78,.14,.15,.86);
                 transition: all .2s cubic-bezier(.78,.14,.15,.86);
@@ -93,12 +95,13 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
 }
 
 .#{$radiogrp-prefix-cls} {
-    margin: 0 0 $radio-margin-sapce;
+    margin: 0 0 $radio-margin-space;
 }
 
 .#{$radiobtn-prefix-cls} {
     width: 0;
     height: 0;
+    display: none;
     &-original {
         width: 0;
         height: 0;
@@ -150,6 +153,43 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
     &-small {
         height: $radio-btn-height-sm;
         line-height: $radio-btn-height-sm;
-        padding: 0 $radio-margin-sapce;
+        padding: 0 $radio-margin-space;
+    }
+}
+
+.#{$radiotext-prefix-cls} {
+    width: 0;
+    height: 0;
+    display: none;
+    &-original {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    &-wrapper {
+        position: relative;
+        display: inline-block;
+        font-size: $radio-font-size-base;
+        color: $radio-text-color;
+        margin: 0 $radio-margin-space;
+        cursor: pointer;
+        padding: 0 $radio-margin-space;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        &:hover {
+            color: $radio-select-color;
+        }
+        &-checked {
+            z-index: 1;
+            color: $radio-select-color;
+        }
+        &-disabled {
+            color: $radio-disabled-color;
+            cursor: not-allowed;
+            &:hover {
+                color: $radio-disabled-color;
+            }
+        }
     }
 }
