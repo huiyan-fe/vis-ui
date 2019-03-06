@@ -39,7 +39,7 @@ export default class App extends Component {
             <Checkbox indeterminate={true} disabled>indeterminate disabled状态</Checkbox>
             <Checkbox checked>选中且受控</Checkbox>
 
-            <h2>多选框组 CheckboxGroup</h2>
+            <h2>多选框组 Checkbox.Group</h2>
             <CheckboxGroup value={this.state.checkboxValue} onChange={this.onChangeCheckboxValue.bind(this)}>
                 <Checkbox value="1">A</Checkbox>
                 <Checkbox value="2">B</Checkbox>
@@ -68,7 +68,7 @@ export default class App extends Component {
                 })}
             </CheckboxGroup>
 
-            <h2>多选文字 CheckboxText</h2>
+            <h2>多选文字 Checkbox.Text</h2>
             <CheckboxGroup>
                 <CheckboxText value="1">工作日</CheckboxText>
                 <CheckboxText value="2">周末</CheckboxText>
