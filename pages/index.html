@@ -2,89 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vis-UI - 您的顶呱呱UI组件库</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <style>
-        html,body {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            text-align: center;
-        }
-        .main {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            padding-top: 20px;
-            bottom: 0;
-            transition: all 3s linear;
-            background-size: cover;
-            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQYVwFXAKj/AeLo8//29/sAiqHOAHJcMQDk6fMAztjrAAoIBQABdI7D/xIPCAAyKBUACgkFALzJ4wBBNBsADgwHAAFlg73/KyITAOfs9QDr7/cAJB0PADUrFwDk6fQAYQghun3/hecAAAAASUVORK5CYII=");
-        }
-        h1 {
-            font-size: 80px;
-            text-shadow: 0px 0px 50px rgba(255, 90, 167, 0.2);
-            background:linear-gradient(to right,#D87093,orange 25%,yellow 50%,orange 75%,#D87093);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin: 50px 0 10px;
-            background-size: 200%, 100%;
-            animation: masked-animation 4s infinite linear;
-        }
-        h2 {
-            margin: 10px 0 50px;
-            background-image: linear-gradient(to right,#147B96, #E6D205, #147B96);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            background-size: 200%, 100%;
-            animation: masked-animation 4s infinite linear;
-        }
-        a {
-            display: block;
-            color: rgb(16, 86, 126);
-            background: transparent;
-            border-radius: 100px;
-            border: 1px solid rgb(10, 103, 126);
-            text-decoration: none;
-            margin: 0 auto;
-            text-align: center;
-            -webkit-transition: all .3s cubic-bezier(.78,.14,.15,.86);
-            transition: all .3s cubic-bezier(.78,.14,.15,.86);
-        }
-        a:hover {
-            box-shadow: 0 1px 1px rgba(21, 94, 112, 0.6);
-            border-color: rgb(10, 103, 126);
-        }
-        a.examples {
-            height: 40px;
-            line-height: 40px;
-            width: 160px;
-        }
-        a.github {
-            height: 40px;
-            line-height: 40px;
-            width: 240px;
-        }
-        .fadein {
-            animation: fadeIn .5s;
-            -webkit-animation: fadeIn .5s;
-        }
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        text-align: center;
+    }
+    .main {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-top: 20px;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQYVwFXAKj/AeLo8//29/sAiqHOAHJcMQDk6fMAztjrAAoIBQABdI7D/xIPCAAyKBUACgkFALzJ4wBBNBsADgwHAAFlg73/KyITAOfs9QDr7/cAJB0PADUrFwDk6fQAYQghun3/hecAAAAASUVORK5CYII=");
+        background-size: cover;
+        transition: all 3s linear;
+    }
+    h1 {
+        margin: 50px 0 10px;
+        font-size: 80px;
+        color: transparent;
+        background: linear-gradient(to right,#d87093,orange 25%,yellow 50%,orange 75%,#d87093);
+        -webkit-background-clip: text;
+                background-clip: text;
+        background-size: 200%, 100%;
+        text-shadow: 0 0 50px rgba(255, 90, 167, .2);
+        animation: masked-animation 4s infinite linear;
+    }
+    h2 {
+        margin: 10px 0 50px;
+        background-image: linear-gradient(to right,#147b96, #e6d205, #147b96);
+        -webkit-background-clip: text;
+                background-clip: text;
+        background-size: 200%, 100%;
+        animation: masked-animation 4s infinite linear;
 
-        @keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
-        @-webkit-keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
-        @keyframes masked-animation {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
+        -webkit-text-fill-color: transparent;
+    }
+    a {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid rgb(10, 103, 126);
+        text-align: center;
+        text-decoration: none;
+        color: rgb(16, 86, 126);
+        border-radius: 100px;
+        background: transparent;
+        -webkit-transition: all .3s cubic-bezier(.78,.14,.15,.86);
+                transition: all .3s cubic-bezier(.78,.14,.15,.86);
+    }
+    a:hover {
+        border-color: rgb(10, 103, 126);
+        box-shadow: 0 1px 1px rgba(21, 94, 112, .6);
+    }
+    a.examples {
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+    }
+    a.github {
+        width: 240px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .fadein {
+        -webkit-animation: fadeIn .5s;
+                animation: fadeIn .5s;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        } to {
+            opacity: 1;
         }
-        @-webkit-keyframes masked-animation {
-            0%  { background-position: 0 0;}
-            100% { background-position: -100% 0;}
+    }
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        } to {
+            opacity: 1;
         }
+    }
+    @keyframes masked-animation {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
+    @-webkit-keyframes masked-animation {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
     </style>
 </head>
 <body>
@@ -94,110 +116,101 @@
         <a class="examples" href="https://huiyan-fe.github.io/vis-ui/pages/examples/">组件库示例</a>
         <br>
     </div>
-
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        var timer, hasGithub;
-        var github = document.createElement('a');
-        github.href = 'https://github.com/huiyan-fe/vis-ui';
-        github.innerText = '等等！先来GitHub点star ★';
-        github.className = 'github fadein';
+    var timer,
+        hasGithub;
+    var github = document.createElement('a');
+    github.href = 'https://github.com/huiyan-fe/vis-ui';
+    github.innerText = '等等！先来GitHub点star ★';
+    github.className = 'github fadein';
 
-        $('.examples').mouseenter(function(){
-            if (hasGithub) {
-                clearTimeout(timer);
-                timer= null;
-            } else {
-                hasGithub = true;
-                $('.main').append(github);
-            }
-        });
-        $('.examples').mouseleave(function(){
-            timer = setTimeout(() => {
-                hasGithub = false;
-                $('.github').remove();
-            }, 1000);
-        });
+    $('.examples').mouseenter(function () {
+        if (hasGithub) {
+            clearTimeout(timer);
+            timer = null;
+        }
+        else {
+            hasGithub = true;
+            $('.main').append(github);
+        }
+    });
+    $('.examples').mouseleave(function () {
+        timer = setTimeout(() => {
+            hasGithub = false;
+            $('.github').remove();
+        }, 1000);
+    });
 
-        // 生产随机数
-        // rand(10); 10
-        // rand([10, 100]); 10 ~ 100
-        // rand([50]); 0 ~ 50;
-        // rand([10,20,30]); 10|20|30
-        function rand(arr)
-        {
-            if (typeof arr === 'number')
-            {
-                return arr;
-            }
-            
-            var v = 0;
-            if (arr.length == 1)
-            {
-                v = Math.round(Math.random() * arr[0]);
-            }
-            else if (arr.length == 2)
-            {
-                var a = arr[0];
-                var b = arr[1];
-                
-                v = Math.round(a + Math.random() * (b - a));
-            }
-            else if (arr.length > 2)
-            {
-                v = arr[Math.round(Math.random() * (arr.length - 1))];
-            }
-            
-            return v;
+    // 生产随机数
+    // rand(10); 10
+    // rand([10, 100]); 10 ~ 100
+    // rand([50]); 0 ~ 50;
+    // rand([10,20,30]); 10|20|30
+    function rand(arr) {
+        if (typeof arr === 'number') {
+            return arr;
         }
 
-        // h 色调 s 饱和度 l 亮度
-        function randColorHsl(h, s, l)
-        {
-            h = h||[0, 360];
-            s = s||50;
-            l = l||50;
-            
-            return "hsl(" + rand(h) + ", " + rand(s) + "%, " + rand(l) + "%)";
+        var v = 0;
+        if (arr.length == 1) {
+            v = Math.round(Math.random() * arr[0]);
+        }
+        else if (arr.length == 2) {
+            var a = arr[0];
+            var b = arr[1];
+
+            v = Math.round(a + Math.random() * (b - a));
+        }
+        else if (arr.length > 2) {
+            v = arr[Math.round(Math.random() * (arr.length - 1))];
         }
 
-        function randColorRgb(r, g, b)
-        {
-            r = r||[0, 255];
-            g = g||[0, 255];
-            b = b||[0, 255];
-            return "rgb(" + rand(r) + ", " + rand(g) + ", " + rand(b) + ")";
-        }
+        return v;
+    }
 
-        var canvas = document.createElement('canvas');
+    // h 色调 s 饱和度 l 亮度
+    function randColorHsl(h, s, l) {
+        h = h || [0, 360];
+        s = s || 50;
+        l = l || 50;
 
-        // 像素大小控制图形复杂度
-        canvas.width = 7;
-        canvas.height = 3;
+        return 'hsl(' + rand(h) + ', ' + rand(s) + '%, ' + rand(l) + '%)';
+    }
 
-        var ctx=canvas.getContext('2d');
+    function randColorRgb(r, g, b) {
+        r = r || [0, 255];
+        g = g || [0, 255];
+        b = b || [0, 255];
+        return 'rgb(' + rand(r) + ', ' + rand(g) + ', ' + rand(b) + ')';
+    }
 
-        function randBackground()
-        {
-            for (var x=0; x<canvas.width; x++)
-            {
-                for (var y=0; y<canvas.height; y++)
-                {
-                    // 随机颜色
-                    // ctx.fillStyle = randColorHsl();
-                    // ctx.fillStyle = randColorRgb();
-                    ctx.fillStyle = randColorHsl(220, 40, [55, 95]);
-                    // ctx.fillStyle = randColorRgb([100, 255], 255, [200, 255]);
-                    ctx.fillRect(x,y,x+1,y+1);
-                }
+    var canvas = document.createElement('canvas');
+
+    // 像素大小控制图形复杂度
+    canvas.width = 7;
+    canvas.height = 3;
+
+    var ctx = canvas.getContext('2d');
+
+    function randBackground() {
+        for (var x = 0; x < canvas.width; x++) {
+            for (var y = 0; y < canvas.height; y++) {
+                // 随机颜色
+                // ctx.fillStyle = randColorHsl();
+                // ctx.fillStyle = randColorRgb();
+                ctx.fillStyle = randColorHsl(220, 40, [55, 95]);
+                // ctx.fillStyle = randColorRgb([100, 255], 255, [200, 255]);
+                ctx.fillRect(x, y, x + 1, y + 1);
             }
-
-            // 设置背景图
-            document.getElementsByClassName('main')[0].style.backgroundImage = 'url("' + canvas.toDataURL() + '")';
-            interval = window.setTimeout(randBackground, 4000);
         }
-        
-        var interval = window.setTimeout(randBackground, 0);
+
+        // 设置背景图
+        document.getElementsByClassName('main')[0].style.backgroundImage = 'url("' + canvas.toDataURL() + '")';
+        interval = window.setTimeout(randBackground, 4000);
+    }
+
+    var interval = window.setTimeout(randBackground, 0);
     </script>
 </body>
 </html>
