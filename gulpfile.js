@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const path = require('path');
 const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const rimraf = require('gulp-rimraf');
 const base64 = require('gulp-base64');
 
 const cwd = process.cwd();
@@ -14,6 +16,18 @@ gulp.task('dist', () => {
 
 gulp.task('compile', ['dist'], () => {
     return gulp.src(['lib/index.scss','lib/**/style/*.scss'])
-        .pipe(sass({includePaths: ['/lib/']}))
+        .pipe(sass({
+            includePaths: ['/lib/'],
+            outputStyle: 'compressed'
+        }))
+        .pipe(gulp.dest(libDir));
+});
+
+gulp.task('rename', ['compile'], () => {
+    return gulp.src(['lib/index.scss','lib/index.css'])
+        .pipe(rimraf())
+        .pipe(rename({
+            basename: 'vis-ui'
+        }))
         .pipe(gulp.dest(libDir));
 });
