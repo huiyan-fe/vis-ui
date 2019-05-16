@@ -29,7 +29,7 @@ ReactDOM.render(<Button />,mountNode);
 ```
 然后，手动全量引入样式
 ```
-import 'vis-ui/lib/components/index.css';
+import 'vis-ui/lib/vis-ui.css';
 ```
 你就可以使用一个样式优美的按钮了！
 
@@ -73,11 +73,11 @@ import 'vis-ui/lib/components/index.css';
 ### 按需加载
 #### 全局加载
 - 对于引入组件时，使用`import { Button } from 'vis-ui'`的写法其实是引入了`vis-ui`下的所有组件模块，可能会影响网络性能。
-- 对于组件样式，如果您想使用整套的vis-ui，可以使用`import 'vis-ui/lib/index.css'`，将样式文件在根目录全部导入。
+- 对于组件样式，如果您想使用整套的vis-ui，可以使用`import 'vis-ui/lib/vis-ui.css'`，将样式文件在根目录全部导入。
 ```javascript
 import React from 'react';
 import {render} from 'react-dom';
-import 'vis-ui/lib/index.css';     // 一次性引入
+import 'vis-ui/lib/vis-ui.css';     // 一次性引入
 import App from './index';
 
 render( <App />, document.getElementById('wrapper'));
