@@ -23,11 +23,11 @@ class RadioGroup extends React.Component {
             component: this
         };
     }
-    
+
     onChange(value) {
         if (!this.props.value) {
             this.setState({
-                value: value
+                value
             });
         }
 
@@ -37,7 +37,7 @@ class RadioGroup extends React.Component {
     }
 
     render() {
-        const { value } = this.state;
+        const {value} = this.state;
         const {name, children, className, style} = this.props;
         const classname = classNames({
             'visui-radio-group': true,

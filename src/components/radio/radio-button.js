@@ -29,12 +29,12 @@ class RadioButton extends Radio {
 
     componentWillReceiveProps(props) {
         const checked = this.getChecked(props);
-    
-        if (this.state.checked != checked) {
-            this.setState({ checked });
+
+        if (this.state.checked !== checked) {
+            this.setState({checked});
         }
     }
-    
+
     onChange(e) {
         const checked = e.target.checked;
 
@@ -43,17 +43,17 @@ class RadioButton extends Radio {
                 this.props.onChange(this.props.value);
             }
         }
-        
+
         if (!this.parent()) {
             this.setState({
-                checked: checked
+                checked
             });
         }
     }
 
     getChecked(props) {
         // model 适配 RadioGroup 的情况
-        return props.model == props.value || Boolean(props.checked);
+        return props.model === props.value || Boolean(props.checked);
     }
 
     render() {
@@ -64,20 +64,20 @@ class RadioButton extends Radio {
 
         const classname = classNames({
             'visui-radio-btn': true,
-            [`visui-radio-btn-checked`]: checked,
-            [`visui-radio-btn-disabled`]: disabled
+            'visui-radio-btn-checked': checked,
+            'visui-radio-btn-disabled': disabled
         });
         const wrapperClassname = classNames({
             'visui-radio-btn-wrapper': true,
             [`visui-radio-btn-${size}`]: size,
-            [`visui-radio-btn-wrapper-checked`]: checked,
-            [`visui-radio-btn-wrapper-disabled`]: disabled,
+            'visui-radio-btn-wrapper-checked': checked,
+            'visui-radio-btn-wrapper-disabled': disabled,
             [className]: className
         });
-        return <label 
-            className={wrapperClassname} 
-            style={style} 
-            onMouseEnter={onMouseEnter} 
+        return <label
+            className={wrapperClassname}
+            style={style}
+            onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
             <span className={classname}>

@@ -14,7 +14,7 @@ class CheckboxText extends Checkbox {
 
     componentWillReceiveProps(props) {
         const checked = Boolean(props.checked || props.defaultChecked);
-        this.setState({ checked });
+        this.setState({checked});
     }
 
     parent() {
@@ -64,10 +64,10 @@ class CheckboxText extends Checkbox {
             'visui-checkbox-text-wrapper-disabled': disabled,
             [className]: className
         });
-        return <label 
-            className={wrapperClassname} 
-            style={style} 
-            onMouseEnter={onMouseEnter} 
+        return <label
+            className={wrapperClassname}
+            style={style}
+            onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
             <span className={classname}>

@@ -14,8 +14,8 @@ class Radio extends React.Component {
     componentWillReceiveProps(props) {
         const checked = this.getChecked(props);
 
-        if (this.state.checked != checked) {
-            this.setState({ checked });
+        if (this.state.checked !== checked) {
+            this.setState({checked});
         }
     }
 
@@ -29,7 +29,7 @@ class Radio extends React.Component {
         }
         return this.props.disabled || this.parent().props.disabled;
     }
-    
+
     onChange(e) {
         const checked = e.target.checked;
 
@@ -41,14 +41,14 @@ class Radio extends React.Component {
 
         if (!this.parent()) {
             this.setState({
-                checked: checked
+                checked
             });
         }
     }
 
     getChecked(props) {
         // model 适配 RadioGroup 的情况
-        return props.model == props.value || Boolean(props.checked);
+        return props.model === props.value || Boolean(props.checked);
     }
 
     render() {
@@ -65,10 +65,10 @@ class Radio extends React.Component {
             'visui-radio-wrapper-disabled': disabled,
             [className]: className
         });
-        return <label 
-            className={wrapperClassname} 
-            style={style} 
-            onMouseEnter={onMouseEnter} 
+        return <label
+            className={wrapperClassname}
+            style={style}
+            onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
             <span className={classname}>

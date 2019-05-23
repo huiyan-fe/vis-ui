@@ -13,7 +13,7 @@ class Checkbox extends React.Component {
 
     componentWillReceiveProps(props) {
         const checked = Boolean(props.checked || props.defaultChecked);
-        this.setState({ checked });
+        this.setState({checked});
     }
 
     parent() {
@@ -63,10 +63,10 @@ class Checkbox extends React.Component {
             'visui-checkbox-wrapper-disabled': disabled,
             [className]: className
         });
-        return <label 
-            className={wrapperClassname} 
-            style={style} 
-            onMouseEnter={onMouseEnter} 
+        return <label
+            className={wrapperClassname}
+            style={style}
+            onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
             <span className={classname}>

@@ -23,11 +23,11 @@ class CheckboxGroup extends React.Component {
             component: this
         };
     }
-    
+
     onChange(value, checked) {
         let options = [...this.state.options];      // 数组深拷贝
         const index = options.indexOf(value);
-    
+
         if (checked) {
             if (index === -1) {
                 options.push(value);
@@ -35,7 +35,7 @@ class CheckboxGroup extends React.Component {
         } else {
             options.splice(index, 1);
         }
-    
+
         if (!this.props.value) {
             this.setState({
                 options: options
@@ -48,8 +48,8 @@ class CheckboxGroup extends React.Component {
     }
 
     render() {
-        const { options } = this.state;
-        const { value, children, className, style } = this.props;
+        const {options} = this.state;
+        const {value, children, className, style} = this.props;
         const classname = classNames({
             'visui-checkbox-group': true,
             [className]: className
@@ -69,7 +69,7 @@ class CheckboxGroup extends React.Component {
                 key: index,
                 className: 'visui-checkbox-group-item',
                 checked: element.props.checked || options.indexOf(element.props.value) >= 0,
-                onChange: this.onChange.bind(this, element.props.value),
+                onChange: this.onChange.bind(this, element.props.value)
             }));
         });
 
