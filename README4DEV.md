@@ -68,7 +68,7 @@ npm run examples:build
 
 ## 推荐组件
 1. 编写`className`可以使用`classNames`库，对于拼接`className`非常好用。
-2. 编写受控组件可以使用`uncontrollable`库。
+2. 比较对象可以使用`shallowequal`库，避免深浅拷贝的问题，以及JSON.Stringify的粗暴。
 
 ## 许可证
 [MIT](./LICENSE)
