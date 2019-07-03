@@ -192,4 +192,8 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
             }
         }
     }
+
+    &-large {
+        font-size: $radio-font-size-lg;
+    }
 }

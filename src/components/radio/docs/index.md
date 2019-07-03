@@ -38,7 +38,7 @@
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | --- | --- | --- | --- | --- |
 | name | `RadioGroup` 下所有 `input[type="radio"]` 的 name 属性 | string | - | - |
-| size | 只对 `RadioButton` 生效，设置按钮大小 | string | `large` `small` | - |
+| size | 对 `RadioButton` 生效，设置按钮大小；对 `RadioText` 只有 `large` 属性生效 | string | `large` `small` | - |
 | defaultValue | 用于设置初始状态默认选中的值，与子元素`value`相同时选中 | string, number, boolean | - | - |
 | value | 将RadioGroup变为受控组件，选中状态由外部value指定值控制 | string, number, boolean | - | - |
 | disabled | `RadioGroup` 的失效状态 | boolean | `true` `false` | `false` |

@@ -31,6 +31,10 @@ class RadioText extends Radio {
         return this.props.disabled || this.parent().props.disabled;
     }
 
+    getSize() {
+        return this.parent().props.size;
+    }
+
     onChange(e) {
         const checked = e.target.checked;
 
@@ -56,6 +60,7 @@ class RadioText extends Radio {
         const {checked} = this.state;
         const {name, value, className, style, children, onMouseEnter, onMouseLeave} = this.props;
         const disabled = this.isDisabled();
+        const size = this.getSize();
 
         const classname = classNames({
             'visui-radio-text': true,
@@ -64,6 +69,7 @@ class RadioText extends Radio {
         });
         const wrapperClassname = classNames({
             'visui-radio-text-wrapper': true,
+            [`visui-radio-text-${size}`]: size,
             'visui-radio-text-wrapper-checked': checked,
             'visui-radio-text-wrapper-disabled': disabled,
             [className]: className
