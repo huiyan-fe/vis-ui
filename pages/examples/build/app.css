@@ -441,6 +441,10 @@ a:focus {
   color: #E9E9E9;
 }
 
+.visui-radio-text-large {
+  font-size: 14px;
+}
+
 /**
  * @file: 调色板
  * @author: junior2ran
