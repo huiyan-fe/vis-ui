@@ -4,7 +4,7 @@
   "description": "A library of UI components for React",
   "main": "lib/index.js",
   "scripts": {
-    "babel": "babel src -d lib && webpack --mode production",
+    "babel": "babel src -d lib",
     "build:lib": "rm -rf lib && npm run babel && npm run build:sass",
     "build:sass": "gulp rename",
     "build:base64": "gulp base64",
