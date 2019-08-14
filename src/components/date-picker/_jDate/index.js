@@ -3,7 +3,7 @@
  * @author Mofei<13761509829@163.com> 
  * @author Junior2ran
  */
-import "babel-polyfill";
+// import "babel-polyfill";
 import Tools from './tools';
 import I18N from './i18n';
 import shiftKey from './plugin/shiftkey.js';
