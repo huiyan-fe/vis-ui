@@ -1,24 +1,10 @@
-@charset "UTF-8";
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
-
-/**
- * @file: 基础core样式
- * @author: junior2ran
- * @date: 2018-05-17 19:53:23
- */
-
 body {
   padding: 0;
   margin: 0;
-  font-family: "PingFangSC-Regular", "PingFang SC", "Microsoft YaHei";
+  font-family: "PingFangSC-Regular","PingFang SC","Microsoft YaHei";
   font-size: 14px;
-  color: #333333;
-  background-color: #ffffff;
+  color: #333;
+  background-color: #fff;
 }
 
 * {
@@ -83,14 +69,8 @@ a:focus {
   min-height: 28px;
   max-height: 100px;
   padding: 10px 0 0;
-  box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0px 0px 2px rgba(255,255,255,0.25);
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-btn {
   display: inline-block;
@@ -119,7 +99,7 @@ a:focus {
 
 .visui-btn-default[disabled] {
   cursor: not-allowed;
-  color: #ffffff;
+  color: #fff;
   background-color: #eff3fb;
   border-color: #dfe7f8;
 }
@@ -144,13 +124,13 @@ a:focus {
   cursor: not-allowed;
   border-style: solid;
   border-color: #eff3fb;
-  color: #ffffff;
+  color: #fff;
   background-color: #eff3fb;
 }
 
 .visui-btn-ghost {
   color: #666;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0);
   border: 1px solid #999;
 }
 
@@ -229,19 +209,13 @@ a:focus {
   padding: 0 48px;
 }
 
-.visui-btn + .visui-btn {
+.visui-btn+.visui-btn {
   margin-left: 8px;
 }
 
 .visui-btn-group {
   margin: 0 0 8px;
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-radio {
   position: relative;
@@ -287,6 +261,7 @@ a:focus {
 .visui-radio-label {
   display: inline-block;
   vertical-align: middle;
+  user-select: none;
 }
 
 .visui-radio-wrapper {
@@ -324,7 +299,7 @@ a:focus {
 
 .visui-radio-disabled .visui-radio-inner {
   border-color: #E9E9E9;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .visui-radio-disabled .visui-radio-inner:after {
@@ -359,7 +334,7 @@ a:focus {
   cursor: pointer;
   border: 1px solid #E9E9E9;
   border-radius: 2px;
-  background: #ffffff;
+  background: #fff;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
@@ -378,7 +353,7 @@ a:focus {
 .visui-radio-btn-wrapper-disabled {
   color: #E9E9E9;
   border-color: #E9E9E9;
-  background: #F5F5F5;
+  background: #f5f5f5;
   cursor: not-allowed;
 }
 
@@ -441,15 +416,13 @@ a:focus {
   color: #E9E9E9;
 }
 
+.visui-radio-text-label {
+  user-select: none;
+}
+
 .visui-radio-text-large {
   font-size: 14px;
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-checkbox {
   position: relative;
@@ -483,8 +456,8 @@ a:focus {
   top: 2px;
   display: table;
   box-sizing: content-box;
-  border-right: 3px solid #ffffff;
-  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
   border-radius: 2px;
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0);
@@ -497,6 +470,7 @@ a:focus {
 .visui-checkbox-label {
   display: inline-block;
   vertical-align: middle;
+  user-select: none;
 }
 
 .visui-checkbox-wrapper {
@@ -535,7 +509,7 @@ a:focus {
 
 .visui-checkbox-disabled .visui-checkbox-inner {
   border-color: #E9E9E9;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .visui-checkbox-disabled .visui-checkbox-inner:after {
@@ -582,6 +556,10 @@ a:focus {
   color: #E9E9E9;
 }
 
+.visui-checkbox-text-label {
+  user-select: none;
+}
+
 .visui-checkbox-checked.visui-checkbox-disabled .visui-checkbox-inner,
 .visui-checkbox-indeterminate.visui-checkbox-disabled .visui-checkbox-inner {
   border-color: #E9E9E9;
@@ -599,7 +577,7 @@ a:focus {
   left: 2px;
   top: 3px;
   border-right: 0;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid #fff;
   border-radius: 0;
   opacity: 1;
   -webkit-transform: rotate(0deg) scale(0.8);
@@ -612,12 +590,6 @@ a:focus {
 .visui-checkbox-group {
   margin: 0 0 8px;
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-menu {
   height: 60px;
@@ -675,10 +647,10 @@ a:focus {
   border-bottom: 4px solid #5E87DB;
 }
 
-.visui-menu-item:hover > a,
-.visui-menu-item.active > a,
-.visui-menu-submenu:hover > a,
-.visui-menu-submenu.active > a {
+.visui-menu-item:hover>a,
+.visui-menu-item.active>a,
+.visui-menu-submenu:hover>a,
+.visui-menu-submenu.active>a {
   color: #fff;
 }
 
@@ -738,10 +710,10 @@ a:focus {
   border-right: 4px solid #5E87DB;
 }
 
-.visui-menu.visui-menu-vertical .visui-menu-item:hover > a,
-.visui-menu.visui-menu-vertical .visui-menu-item.active > a,
-.visui-menu.visui-menu-vertical .visui-menu-submenu:hover > a,
-.visui-menu.visui-menu-vertical .visui-menu-submenu.active > a {
+.visui-menu.visui-menu-vertical .visui-menu-item:hover>a,
+.visui-menu.visui-menu-vertical .visui-menu-item.active>a,
+.visui-menu.visui-menu-vertical .visui-menu-submenu:hover>a,
+.visui-menu.visui-menu-vertical .visui-menu-submenu.active>a {
   color: #5E87DB;
 }
 
@@ -764,12 +736,6 @@ a:focus {
   border-right: none;
   background: #eff3fb;
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-icon {
   display: inline-block;
@@ -928,14 +894,8 @@ a:focus {
   background-size: contain;
 }
 
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
-
 .visui-jDate {
-  color: #333333;
+  color: #333;
   outline: none;
   cursor: pointer;
   border: 1px solid #E9E9E9;
@@ -976,7 +936,7 @@ a:focus {
   top: 0;
   z-index: 999;
   background: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 .visui-jDate-calendar .jDate-target {
@@ -1057,7 +1017,7 @@ a:focus {
 .visui-jDate-calendar .jDate-calendar-table table td.active span {
   font-size: 12px;
   font-weight: 100;
-  color: white;
+  color: #fff;
   background-color: #5E87DB;
   border-radius: 2px;
 }
@@ -1088,7 +1048,7 @@ a:focus {
 
 .visui-jDate-calendar .jDate-calendar-table table td.during span div {
   background: #5E87DB;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
   width: 26px;
   height: 26px;
   margin: -13px;
@@ -1192,8 +1152,6 @@ a:focus {
   border: none;
   background: none;
   font-size: 14px;
-  /*width: 100px;*/
-  /*margin: 0 10px;*/
   border-radius: 4px;
   padding: 5px 20px;
   outline: none;
@@ -1225,9 +1183,8 @@ a:focus {
   position: absolute;
   width: 0;
   height: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0,0,0,0.1);
   border-radius: 10000px;
-  /*z-index: -1;*/
   -webkit-user-select: none;
   left: 50%;
   top: 50%;
@@ -1259,7 +1216,6 @@ a:focus {
   padding: 5px 0;
   margin-top: 15px;
   height: 20px;
-  /*transition: all 450ms ease-in-out;*/
 }
 
 .visui-jDate-calendar .jDate-timer-title:hover {
@@ -1297,7 +1253,6 @@ a:focus {
 .visui-jDate-calendar .jDate-timer-bar {
   position: absolute;
   height: 2px;
-  /*margin-top: -1px;*/
   background: #bdbdbd;
   left: 0;
   right: 0;
@@ -1422,7 +1377,6 @@ a:focus {
   z-index: 10;
   top: -2px;
   left: 0;
-  /*width: 100%;*/
   background: #5E87DB;
   border-radius: 10px;
   pointer-events: none;
@@ -1437,9 +1391,7 @@ a:focus {
   margin-left: 12px;
   animation: fadeIn .5s;
   -moz-animation: fadeIn .5s;
-  /*Firefox*/
   -webkit-animation: fadeIn .5s;
-  /*Safari and Chrome*/
 }
 
 @keyframes fadeIn {
@@ -1453,7 +1405,6 @@ a:focus {
 }
 
 @-moz-keyframes fadeIn {
-  /*Firefox*/
   from {
     opacity: 0;
   }
@@ -1464,7 +1415,6 @@ a:focus {
 }
 
 @-webkit-keyframes fadeIn {
-  /*Safari and Chrome*/
   from {
     opacity: 0;
   }
@@ -1473,12 +1423,6 @@ a:focus {
     opacity: 1;
   }
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-dropdown {
   font-size: 12px;
@@ -1511,7 +1455,7 @@ a:focus {
   box-shadow: 0 1px 1px #ccc;
   word-break: keep-all;
   white-space: nowrap;
-  background: #ffffff;
+  background: #fff;
   padding: 8px 12px 2px;
 }
 
@@ -1527,12 +1471,6 @@ a:focus {
   width: 16px;
   height: 16px;
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-checkboxlist {
   font-size: 12px;
@@ -1569,7 +1507,7 @@ a:focus {
   box-shadow: 0 1px 1px #ccc;
   word-break: keep-all;
   white-space: nowrap;
-  background: #ffffff;
+  background: #fff;
   padding: 8px 12px 2px;
 }
 
@@ -1586,12 +1524,6 @@ a:focus {
   width: 16px;
   height: 16px;
 }
-
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
 
 .visui-list {
   font-size: 12px;
@@ -1677,12 +1609,6 @@ a:focus {
   display: none;
 }
 
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
-
 .visui-modal {
   position: fixed;
   z-index: 9999;
@@ -1690,7 +1616,7 @@ a:focus {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
 }
 
 .visui-modal .modal-container {
@@ -1698,7 +1624,7 @@ a:focus {
   top: 40%;
   left: 50%;
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
   min-width: 560px;
   min-height: 260px;
   transform: translate(-50%, -50%);
@@ -1776,12 +1702,6 @@ a:focus {
   text-align: center;
 }
 
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
-
 .visui-expand-wrapper {
   position: relative;
   display: inline-block;
@@ -1816,12 +1736,6 @@ a:focus {
   width: max-content;
 }
 
-/**
- * @file: 调色板
- * @author: junior2ran
- * @date: 2018-05-17 19:42:28
- */
-
 .visui-message {
   position: fixed;
   z-index: 9999;
@@ -1831,12 +1745,12 @@ a:focus {
   min-width: 170px;
   height: 40px;
   line-height: 40px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0,0,0,0.7);
   color: #fff;
   font-size: 12px;
   text-align: center;
   border-radius: 2px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   padding: 0 10px;
   animation: slideDown .3s ease-in-out;
 }
@@ -1881,7 +1795,7 @@ a:focus {
 .iconstyle .icontext {
   text-align: center;
   font-size: 12px;
-  color: #666666;
+  color: #666;
   margin-top: 10px;
 }
 
