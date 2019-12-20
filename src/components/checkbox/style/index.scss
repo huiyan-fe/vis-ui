@@ -47,6 +47,7 @@ $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
     &-label {
         display: inline-block;
         vertical-align: middle;
+        user-select: none;
     }
 
     &-wrapper {
@@ -128,6 +129,10 @@ $checkbox-prefix-cls: #{$vis-prefix}-checkbox;
                 color: $checkbox-disabled-color;
             }
         }
+    }
+
+    &-label {
+        user-select: none;
     }
 }
 

@@ -46,6 +46,7 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
     &-label {
         display: inline-block;
         vertical-align: middle;
+        user-select: none;
     }
 
     &-wrapper {
@@ -191,6 +192,10 @@ $radio-prefix-cls: #{$vis-prefix}-radio;
                 color: $radio-disabled-color;
             }
         }
+    }
+
+    &-label {
+        user-select: none;
     }
 
     &-large {
